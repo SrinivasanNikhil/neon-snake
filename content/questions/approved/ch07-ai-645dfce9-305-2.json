@@ -1,0 +1,45 @@
+{
+  "chapter": 7,
+  "conceptIds": [
+    "ch07-cardinality-modality"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 3,
+  "explanation": "At most one current loan means the maximum participation is one, so the cardinality is one. Because a copy may have no loan at the moment, participation is optional, which is modality optional.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:17.503Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "645dfce9-3050-41ab-83cf-1d73c3bc8951"
+  },
+  "id": "ch07-ai-645dfce9-305-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Cardinality: one; modality: mandatory"
+    },
+    {
+      "id": "B",
+      "text": "Cardinality: one; modality: optional"
+    },
+    {
+      "id": "C",
+      "text": "Cardinality: many; modality: mandatory"
+    },
+    {
+      "id": "D",
+      "text": "Cardinality: many; modality: optional"
+    }
+  ],
+  "prompt": "In a library model, each book copy can be on loan to at most one member at a time, and a copy may also be sitting on the shelf with no current loan. Which pair of terms best describes the participation of a copy in the loan relationship?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Cardinality and modality",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Quality improvement",
+    "title": "Data Modeling",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#quality-improvement"
+  },
+  "status": "approved"
+}

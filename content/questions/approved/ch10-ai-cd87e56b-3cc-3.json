@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-catalog"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "The catalog is the metadata layer that describes database objects such as tables and columns. It is used for administrative queries about the structure of the database, not for the data rows themselves.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:51.053Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "cd87e56b-3ccb-4bdb-ba20-fa3545022a3a"
+  },
+  "id": "ch10-ai-cd87e56b-3cc-3",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "The database catalog"
+    },
+    {
+      "id": "B",
+      "text": "A view definition"
+    },
+    {
+      "id": "C",
+      "text": "An aggregate query result"
+    },
+    {
+      "id": "D",
+      "text": "A user privilege list only"
+    }
+  ],
+  "prompt": "An administrator needs to find metadata about tables and columns in a database, such as object names and column definitions. Where should they look?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Database catalog",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Views, indexes, and the catalog",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+  },
+  "status": "approved"
+}

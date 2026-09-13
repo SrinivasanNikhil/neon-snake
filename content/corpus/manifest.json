@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "corpusVersion": "2026-08-11",
+  "title": "Data Management chapters 3-10 concept corpus",
+  "attribution": {
+    "author": "Richard T. Watson",
+    "work": "Data Management",
+    "landingPage": "https://www.richardtwatson.com/open/_book/"
+  },
+  "chapters": [
+    {
+      "chapter": 3,
+      "file": "ch03.json",
+      "title": "The Single Entity",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html"
+    },
+    {
+      "chapter": 4,
+      "file": "ch04.json",
+      "title": "The One-to-Many Relationship",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html"
+    },
+    {
+      "chapter": 5,
+      "file": "ch05.json",
+      "title": "The Many-to-Many Relationship",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html"
+    },
+    {
+      "chapter": 6,
+      "file": "ch06.json",
+      "title": "One-to-One and Recursive Relationships",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html"
+    },
+    {
+      "chapter": 7,
+      "file": "ch07.json",
+      "title": "Data Modeling",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html"
+    },
+    {
+      "chapter": 8,
+      "file": "ch08.json",
+      "title": "Normalization and other Data Modeling Methods",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html"
+    },
+    {
+      "chapter": 9,
+      "file": "ch09.json",
+      "title": "The Relational Model and Relational Algebra",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html"
+    },
+    {
+      "chapter": 10,
+      "file": "ch10.json",
+      "title": "SQL",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=214"
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+[
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-mapping"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 1,
+    "explanation": "A many-to-many relationship is mapped using a separate associative table. Each row represents one employee-project association, with foreign keys to both parent tables.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:55.545Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "3964c769-f2b8-4a92-a7ec-c7261aee797f"
+    },
+    "id": "ch05-ai-3964c769-f2b-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "A separate assignment table that stores one row per employee-project pair"
+      },
+      {
+        "id": "B",
+        "text": "A single employee table with a comma-separated list of projects"
+      },
+      {
+        "id": "C",
+        "text": "A single project table with a comma-separated list of employees"
+      },
+      {
+        "id": "D",
+        "text": "Two unrelated tables with no link between them"
+      }
+    ],
+    "prompt": "A company wants to record which employees are assigned to which projects. Which table design best represents the assignment relationship itself?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Mapping many-to-many relationships",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a relational database with an m:m relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#creating-a-relational-database-with-an-mm-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-mapping"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "For a many-to-many relationship, the linking table stores the foreign keys for both entities. That table records each specific enrollment between one student and one course.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:55.545Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "3964c769-f2b8-4a92-a7ec-c7261aee797f"
+    },
+    "id": "ch05-ai-3964c769-f2b-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "In an enrollment table that links the student and course tables"
+      },
+      {
+        "id": "B",
+        "text": "Only in the student table, because students are the main entity"
+      },
+      {
+        "id": "C",
+        "text": "Only in the course table, because courses are the main entity"
+      },
+      {
+        "id": "D",
+        "text": "In both the student and course tables as repeating groups"
+      }
+    ],
+    "prompt": "A university tracks which students enroll in which courses. A student can take many courses, and a course can have many students. In the relational design, where should the student_id and course_id values be stored?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Mapping many-to-many relationships",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a relational database with an m:m relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#creating-a-relational-database-with-an-mm-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-mapping"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "The correct relational mapping uses an associative table for the pairings. Each row identifies one association between the two original entities, typically through foreign keys.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:55.545Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "3964c769-f2b8-4a92-a7ec-c7261aee797f"
+    },
+    "id": "ch05-ai-3964c769-f2b-3",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "The relationship is represented by a table whose rows each identify one supplier-product pairing"
+      },
+      {
+        "id": "B",
+        "text": "The relationship is represented by storing the supplier name directly in the product table only"
+      },
+      {
+        "id": "C",
+        "text": "The relationship is represented by storing the product name directly in the supplier table only"
+      },
+      {
+        "id": "D",
+        "text": "The relationship cannot be represented without duplicating both tables"
+      }
+    ],
+    "prompt": "A retail system needs to record which suppliers provide which products. A supplier may provide many products, and a product may come from many suppliers. Which statement about the relational model is most accurate?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Mapping many-to-many relationships",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a relational database with an m:m relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#creating-a-relational-database-with-an-mm-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-mapping"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "A single foreign key in either parent table cannot represent a many-to-many relationship. The proper fix is an associative table that stores one row per pairing and references both sides.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:55.545Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "3964c769-f2b8-4a92-a7ec-c7261aee797f"
+    },
+    "id": "ch05-ai-3964c769-f2b-4",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Move the linkage into a separate case_doctor table with one row per doctor-case pair"
+      },
+      {
+        "id": "B",
+        "text": "Add more doctor_id columns to the case table, one for each possible doctor"
+      },
+      {
+        "id": "C",
+        "text": "Store a single case_id inside the doctor table instead"
+      },
+      {
+        "id": "D",
+        "text": "Remove both identifiers and infer the relationship from names"
+      }
+    ],
+    "prompt": "A clinic wants to track which doctors work on which cases. A doctor can work on many cases, and a case can involve many doctors. Which schema change best fixes a design that currently stores only doctor_id inside the case table?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Mapping many-to-many relationships",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a relational database with an m:m relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#creating-a-relational-database-with-an-mm-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-mapping"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "In a many-to-many design, the association table stores a foreign key to each related table so each row represents one project-team-member pairing. Those two columns must also be constrained so the same pairing is not stored repeatedly. That uniqueness can be enforced by making the two foreign keys a composite primary key or by using a surrogate key and still requiring the pair to be unique. The other choices fail because they omit one side of the relationship or ignore the need for keys altogether.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:55.545Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "3964c769-f2b8-4a92-a7ec-c7261aee797f"
+    },
+    "id": "ch05-ai-3964c769-f2b-5",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "A foreign key to projects and a foreign key to team members; these columns are typically constrained to uniquely identify each association, either as a composite primary key or with a surrogate key plus a uniqueness constraint"
+      },
+      {
+        "id": "B",
+        "text": "Only the project primary key, because the table describes projects"
+      },
+      {
+        "id": "C",
+        "text": "Only the team member primary key, because the table describes people"
+      },
+      {
+        "id": "D",
+        "text": "No keys are needed, because the table is only for reporting"
+      }
+    ],
+    "prompt": "A project management database includes projects and team members. A team member can join multiple projects, and each project can include multiple team members. Which key design most naturally belongs in the association table?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Mapping many-to-many relationships",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a relational database with an m:m relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#creating-a-relational-database-with-an-mm-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-mapping"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "The many-to-many relationship between authors and books is implemented through the associative table author_book, so the query must pass through that table. Option A correctly joins books to author_book on book_id and then filters the linking rows to author_id = 7. Option B incorrectly tries to join authors directly to books, but those tables are not directly related in the schema. Option C treats 7 as a book_id rather than an author_id. Option D returns author names, not book titles, and also uses the wrong direct join pattern.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:55.545Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "3964c769-f2b8-4a92-a7ec-c7261aee797f"
+    },
+    "id": "ch05-ai-3964c769-f2b-6",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "SELECT b.title FROM books b JOIN author_book ab ON b.book_id = ab.book_id WHERE ab.author_id = 7;"
+      },
+      {
+        "id": "B",
+        "text": "SELECT b.title FROM books b JOIN authors a ON b.book_id = a.author_id WHERE a.author_id = 7;"
+      },
+      {
+        "id": "C",
+        "text": "SELECT title FROM books WHERE book_id = 7;"
+      },
+      {
+        "id": "D",
+        "text": "SELECT a.name FROM authors a JOIN books b ON a.author_id = b.book_id WHERE a.author_id = 7;"
+      }
+    ],
+    "prompt": "A database has tables authors(author_id, name), books(book_id, title), and author_book(author_id, book_id). Each row in author_book links one author to one book. Which query correctly returns the titles of books written by author_id = 7?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Mapping many-to-many relationships",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a relational database with an m:m relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#creating-a-relational-database-with-an-mm-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-weak-composite"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 4,
+    "explanation": "A is correct because this is a weak/composite identifier pattern. The attempt exists only in the context of a candidate taking an exam, so candidate_id and exam_id identify the parent relationship, and attempt_no acts as a local discriminator that is unique within that candidate-exam pair. Together, candidate_id + exam_id + attempt_no uniquely identify each attempt. B fails because candidate_id + exam_id cannot distinguish multiple attempts for the same pair. C fails because attempt_no is not unique across all candidates for an exam. D denormalizes repeating attempt data into one column instead of representing each attempt as its own row.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:55.545Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "3964c769-f2b8-4a92-a7ec-c7261aee797f"
+    },
+    "id": "ch05-ai-3964c769-f2b-7",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Use an attempt table with candidate_id, exam_id, and attempt_no as a composite identifier"
+      },
+      {
+        "id": "B",
+        "text": "Use candidate_id and exam_id as the identifier, because they already identify the candidate-exam relationship"
+      },
+      {
+        "id": "C",
+        "text": "Use exam_id and attempt_no as the identifier, because attempt numbers are tied to exams"
+      },
+      {
+        "id": "D",
+        "text": "Use a person table column that lists all exam attempts for each candidate"
+      }
+    ],
+    "prompt": "A certification system stores candidates and exams. Each candidate can take many exams, and each exam can be taken by many candidates. Multiple attempts are allowed for the same candidate-exam pair, and the system assigns an attempt_no that is unique only within each candidate-exam pair. Which design is most appropriate?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Weak entities and composite identifiers",
+    "schemaVersion": 1,
+    "source": {
+      "section": "The many-to-many relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#the-many-to-many-relationship"
+    },
+    "status": "draft"
+  }
+]

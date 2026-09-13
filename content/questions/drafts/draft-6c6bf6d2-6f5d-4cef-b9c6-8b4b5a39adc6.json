@@ -1,0 +1,182 @@
+[
+  {
+    "chapter": 3,
+    "conceptIds": [
+      "ch03-update-delete"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "This updates exactly the row identified by `sub_id = 104`. The other UPDATE form would affect every row because it lacks a WHERE clause, while DELETE removes the row and INSERT adds a new row instead of changing the existing one.",
+    "generation": {
+      "generatedAt": "2026-08-13T15:57:40.347Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "6c6bf6d2-6f5d-4cef-b9c6-8b4b5a39adc6"
+    },
+    "id": "ch03-ai-6c6bf6d2-6f5-1",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "UPDATE subscriptions SET status = 'paused' WHERE sub_id = 104;"
+      },
+      {
+        "id": "B",
+        "text": "UPDATE subscriptions SET status = 'paused';"
+      },
+      {
+        "id": "C",
+        "text": "DELETE FROM subscriptions WHERE sub_id = 104;"
+      },
+      {
+        "id": "D",
+        "text": "INSERT INTO subscriptions (sub_id, status) VALUES (104, 'paused');"
+      }
+    ],
+    "prompt": "A table named `subscriptions` has columns `sub_id` (primary key), `status`, and `renewal_date`. You want to change only the row for subscription 104 so that its `status` becomes `'paused'`. Which statement does that safely?",
+    "provenance": "ai-generated",
+    "reviewConcept": "UPDATE changes selected rows and DELETE removes selected rows; omitting an appropriate WHERE condition can affect every row.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "DELETE and UPDATE",
+      "title": "The Single Entity",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#delete"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 3,
+    "conceptIds": [
+      "ch03-update-delete"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 1,
+    "explanation": "Without a WHERE clause, UPDATE applies to all rows in the table. It does not delete rows or require the table to be empty.",
+    "generation": {
+      "generatedAt": "2026-08-13T15:57:40.347Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "6c6bf6d2-6f5d-4cef-b9c6-8b4b5a39adc6"
+    },
+    "id": "ch03-ai-6c6bf6d2-6f5-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "It may change every row in the table."
+      },
+      {
+        "id": "B",
+        "text": "It can only change the primary key."
+      },
+      {
+        "id": "C",
+        "text": "It automatically deletes matching rows."
+      },
+      {
+        "id": "D",
+        "text": "It fails unless the table is empty."
+      }
+    ],
+    "prompt": "What is the main risk of running an UPDATE statement without a WHERE clause?",
+    "provenance": "ai-generated",
+    "reviewConcept": "UPDATE changes selected rows and DELETE removes selected rows; omitting an appropriate WHERE condition can affect every row.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "DELETE and UPDATE",
+      "title": "The Single Entity",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#delete"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 3,
+    "conceptIds": [
+      "ch03-update-delete"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "DELETE removes rows that satisfy the WHERE condition. Here, rows 1 and 2 match `ship_status = 'open'`, so they are removed and the closed order remains.",
+    "generation": {
+      "generatedAt": "2026-08-13T15:57:40.347Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "6c6bf6d2-6f5d-4cef-b9c6-8b4b5a39adc6"
+    },
+    "id": "ch03-ai-6c6bf6d2-6f5-3",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "Rows 1 and 2 are removed; row 3 remains."
+      },
+      {
+        "id": "B",
+        "text": "Only row 3 is removed."
+      },
+      {
+        "id": "C",
+        "text": "All rows are changed to `ship_status = 'open'`."
+      },
+      {
+        "id": "D",
+        "text": "The statement adds a new row with `ship_status = 'open'`."
+      }
+    ],
+    "prompt": "Assume `orders(order_id, ship_status)` contains these rows: (1,'open'), (2,'open'), (3,'closed'). What is the result of running this statement?\n\n```sql\nDELETE FROM orders WHERE ship_status = 'open';\n```",
+    "provenance": "ai-generated",
+    "reviewConcept": "UPDATE changes selected rows and DELETE removes selected rows; omitting an appropriate WHERE condition can affect every row.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "DELETE and UPDATE",
+      "title": "The Single Entity",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#delete"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 3,
+    "conceptIds": [
+      "ch03-update-delete"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "The task requires both conditions: the row must be for customer 88 and must have `city = 'Boston'`. Option A updates only when both are true. Option B ignores the city requirement, option C could affect many Boston customers, and option D removes the row instead of updating it.",
+    "generation": {
+      "generatedAt": "2026-08-13T15:57:40.347Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "6c6bf6d2-6f5d-4cef-b9c6-8b4b5a39adc6"
+    },
+    "id": "ch03-ai-6c6bf6d2-6f5-4",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "UPDATE customers SET active_flag = 0 WHERE customer_id = 88 AND city = 'Boston';"
+      },
+      {
+        "id": "B",
+        "text": "UPDATE customers SET active_flag = 0 WHERE customer_id = 88;"
+      },
+      {
+        "id": "C",
+        "text": "UPDATE customers SET active_flag = 0 WHERE city = 'Boston';"
+      },
+      {
+        "id": "D",
+        "text": "DELETE FROM customers WHERE customer_id = 88 AND city = 'Boston';"
+      }
+    ],
+    "prompt": "In `customers(customer_id, active_flag, city)`, `customer_id` uniquely identifies each customer. A manager wants to mark customer 88 as inactive, but only if that customer's row has `city = 'Boston'`. Which statement does that update?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Maintaining rows",
+    "schemaVersion": 1,
+    "source": {
+      "section": "DELETE and UPDATE",
+      "title": "The Single Entity",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#delete"
+    },
+    "status": "draft"
+  }
+]

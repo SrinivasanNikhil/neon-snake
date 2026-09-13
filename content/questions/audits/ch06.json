@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "chapter": 6,
+  "model": "gpt-5.4",
+  "auditedAt": "2026-08-13T16:21:11.709Z",
+  "questionCount": 20,
+  "summary": {
+    "pass": 17,
+    "needsEdit": 3,
+    "reject": 0
+  },
+  "reviews": [
+    {
+      "questionId": "ch06-ai-82c308cd-4fe-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem, options, and keyed answer align cleanly. Exactly one option is defensible. SQL is correct for MySQL, uses appropriate aliases, and LEFT JOIN satisfies the 'if any' requirement. Distractors are plausible and the explanation teaches self-join logic well. Difficulty 2 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-82c308cd-4fe-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Clear concept question with one unambiguous correct answer. Distractors are incorrect but plausible enough for a basic item. Explanation correctly teaches why aliases matter in self-joins. Difficulty 2 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-82c308cd-4fe-3",
+      "verdict": "needs-edit",
+      "issues": [
+        "missing-assumption",
+        "poor-explanation"
+      ],
+      "rationale": "The keyed SQL is correct in MySQL 8+ and matches the prompt, but the stem says only 'MySQL query' without stating a version or support for recursive CTEs. Since recursive CTE support is version-dependent, that assumption should be explicit. The explanation is accurate but could better note that this requires MySQL 8.0+ or equivalent support.",
+      "suggestedFix": "Revise the stem to say 'Assume MySQL 8.0+.' In the explanation, add that recursive CTE support is required and that the anchor member includes dept_id 10 while the recursive member repeatedly finds children of already found departments."
+    },
+    {
+      "questionId": "ch06-ai-82c308cd-4fe-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The query shown is valid for MySQL 8+ and the question asks about the purpose of the recursive member, which makes option A uniquely correct. Distractors are plausible and clearly distinct. Explanation is conceptually solid. Difficulty 4 is acceptable because it asks about recursive CTE behavior, not just syntax recall.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-b690682f-bdc-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The cardinality reasoning is correct and clearly framed around maximum participation. Exactly one answer is defensible, distractors are appropriate, and the explanation is accurate. Difficulty 2 fits.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-b690682f-bdc-2",
+      "verdict": "needs-edit",
+      "issues": [
+        "poor-explanation",
+        "missing-assumption"
+      ],
+      "rationale": "Option A is the best match to the stated rule, but the item mixes conceptual cardinality with an implementation pattern that implies reciprocity and exclusivity without discussing enforcement. In a single partner_id column, reciprocity and one-to-one exclusivity are business rules that are not guaranteed by the column alone. The explanation should distinguish the rule from what the data pattern merely describes.",
+      "suggestedFix": "Keep option A, but revise the stem or explanation to say 'best conceptual data pattern' rather than implying full enforcement by the column design. Add a note that reciprocal pairing and exclusivity are business rules that would require additional constraints or logic beyond just having partner_id."
+    },
+    {
+      "questionId": "ch06-ai-b690682f-bdc-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Straightforward and correct recursive cardinality question. Exactly one answer is defensible, distractors are plausible, and the explanation is sufficient for this level. Difficulty 3 is slightly generous but still acceptable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-b690682f-bdc-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The prompt clearly specifies the parent-to-child perspective, preventing ambiguity between one-to-many and many-to-one. The keyed answer is correct, distractors are serviceable, and the explanation usefully notes the perspective issue. Difficulty 2 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-d4aba820-39f-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Accurate, unambiguous basic cardinality question with one clear answer. Distractors are appropriate for introductory level. Difficulty 1 fits.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-d4aba820-39f-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Good chapter fit and concept alignment. One correct answer, plausible distractors, and an explanation that teaches the need for relationship labels when the same entities are connected in multiple ways. Difficulty 2 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-d4aba820-39f-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The foreign-key placement logic is correct and matches the chapter concept well. Exactly one answer is defensible, distractors are plausible, and the explanation appropriately ties mandatory participation and uniqueness to the design. Difficulty 3 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-d4aba820-39f-4",
+      "verdict": "needs-edit",
+      "issues": [
+        "chapter-fit",
+        "poor-explanation"
+      ],
+      "rationale": "The item introduces a recursive Account-to-Account relationship but tags concepts for one-to-one and relationship labels from the chapter's one-to-one section. The explanation says 'self-related one-to-one relationship,' but the stem never states whether each account can back up only one other account or can have only one backup, so the one-to-one aspect is unsupported. As written, the pedagogically relevant idea is labeling an ambiguous recursive relationship, not one-to-one cardinality.",
+      "suggestedFix": "Either remove ch06-one-to-one from the concept linkage and revise the explanation to focus only on labeling a recursive relationship, or explicitly add business rules showing the relationship is one-to-one on both sides."
+    },
+    {
+      "questionId": "ch06-ai-e918cf74-766-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Correct one-to-one mapping question with clear mandatory side and null-minimization rationale. One answer is best, distractors are plausible, and the explanation is instructive. Difficulty 2 is fair.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-e918cf74-766-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Well-constructed mapping question. Option A is best because it both preserves the rule and minimizes nulls. The explanation properly distinguishes between a merely workable design and the best design under the stated objective. Difficulty 3 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-e918cf74-766-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Accurate treatment of cyclic mandatory foreign keys. One answer is clearly correct, distractors are plausible misconceptions, and the explanation teaches the insertion-order problem directly. Difficulty 4 is acceptable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-e918cf74-766-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Strong scenario question with correct diagnosis of the dependency cycle. The schema and business rule align, exactly one answer is defensible, and the explanation is clear and instructive. Difficulty 5 is reasonable because it requires reading schema details and understanding mutual mandatory references.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-f61cb28c-347-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Correct and clear self-referential foreign-key question. One answer is clearly best, distractors are plausible, and the explanation accurately contrasts normalized design with poor alternatives. Difficulty 1 is suitable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-f61cb28c-347-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The question correctly identifies NULL as the representation of no parent in an optional self-referential foreign key. Distractors are plausible bad patterns. Explanation is accurate and useful. Difficulty 2 fits.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-f61cb28c-347-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This is a sound self-join reading item. SQL in option A is correct, distractors are plausible, and the explanation clearly teaches aliases plus LEFT JOIN behavior for optional managers. Difficulty 3 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch06-ai-f61cb28c-347-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The keyed answer is correct: a self-referencing predecessor_id column models a recursive one-to-many pattern because many products may share the same predecessor. Distractors reflect common confusions, and the explanation resolves them well. Difficulty 4 is acceptable.",
+      "suggestedFix": ""
+    }
+  ]
+}

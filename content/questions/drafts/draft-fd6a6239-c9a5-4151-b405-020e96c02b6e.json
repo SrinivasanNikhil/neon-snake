@@ -1,0 +1,227 @@
+[
+  {
+    "chapter": 4,
+    "conceptIds": [
+      "ch04-subqueries-views"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "A view saves a query definition and presents its result through a table-like interface. That makes the filtered result reusable without duplicating the underlying data in another base table.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:28.889Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "fd6a6239-c9a5-4151-b405-020e96c02b6e"
+    },
+    "id": "ch04-ai-fd6a6239-c9a-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Create a view based on the filtering query"
+      },
+      {
+        "id": "B",
+        "text": "Create a trigger that runs the filtering query"
+      },
+      {
+        "id": "C",
+        "text": "Create a temporary table and manually refresh it each time"
+      },
+      {
+        "id": "D",
+        "text": "Add another copy of the product rows to a separate table"
+      }
+    ],
+    "prompt": "A company often needs the same filtered list of active products in several reports. Which approach best lets the team reuse that result as if it were a table, without storing duplicate data in a new base table?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Subqueries can isolate an intermediate result, while a view gives a saved query result a reusable virtual-table interface.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Subqueries and views",
+      "title": "The One-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#subqueries"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 4,
+    "conceptIds": [
+      "ch04-subqueries-views"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 2,
+    "explanation": "A view behaves like a virtual table. When referenced in a query, the database uses the saved query definition to produce the result, rather than treating it as a separately stored copy of the data.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:28.889Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "fd6a6239-c9a5-4151-b405-020e96c02b6e"
+    },
+    "id": "ch04-ai-fd6a6239-c9a-2",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "A permanent copy of the rows stored separately from the base tables"
+      },
+      {
+        "id": "B",
+        "text": "A virtual table produced by the saved query definition"
+      },
+      {
+        "id": "C",
+        "text": "A trigger that executes before the query runs"
+      },
+      {
+        "id": "D",
+        "text": "A foreign key relationship between tables"
+      }
+    ],
+    "prompt": "Assume `RecentOrders` is a view defined from a query. What does a database typically treat `RecentOrders` as when you use it in another `SELECT` statement?\n\n```sql\nSELECT order_id\nFROM RecentOrders;\n```",
+    "provenance": "ai-generated",
+    "reviewConcept": "Subqueries can isolate an intermediate result, while a view gives a saved query result a reusable virtual-table interface.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Subqueries and views",
+      "title": "The One-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#subqueries"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 4,
+    "conceptIds": [
+      "ch04-subqueries-views"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "Option A is correct because the subquery computes one intermediate value: the average `total_spent` across all customers in `CustomerTotals`. The outer query then returns only those rows whose `total_spent` is greater than that overall average.\n\nOption B is not valid SQL in this context because `AVG(total_spent)` is an aggregate and cannot be used directly in `WHERE` without being produced by a subquery or another valid aggregate context. Option C is valid SQL, but it is the wrong logic: after grouping by `customer_id, total_spent`, each group contains rows with the same `total_spent`, so `AVG(total_spent)` within each group equals that same `total_spent`, making `total_spent > AVG(total_spent)` never true. It does not compare each customer to the overall average. Option D creates a view of all rows but does not perform the required filtering against the average.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:28.889Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "fd6a6239-c9a5-4151-b405-020e96c02b6e"
+    },
+    "id": "ch04-ai-fd6a6239-c9a-3",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "SELECT customer_id, total_spent\nFROM CustomerTotals\nWHERE total_spent > (\n  SELECT AVG(total_spent)\n  FROM CustomerTotals\n);"
+      },
+      {
+        "id": "B",
+        "text": "SELECT customer_id, total_spent\nFROM CustomerTotals\nWHERE AVG(total_spent) > total_spent;"
+      },
+      {
+        "id": "C",
+        "text": "SELECT customer_id, total_spent\nFROM CustomerTotals\nGROUP BY customer_id, total_spent\nHAVING total_spent > AVG(total_spent);"
+      },
+      {
+        "id": "D",
+        "text": "CREATE VIEW HighSpenders AS\nSELECT customer_id, total_spent\nFROM CustomerTotals;"
+      }
+    ],
+    "prompt": "A report needs the customers whose total spending is greater than the average customer total. Assume `CustomerTotals(customer_id, total_spent)` already contains one row per customer.\n\nWhich SQL statement best uses a subquery as an intermediate result to meet this requirement?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Subqueries can isolate an intermediate result, while a view gives a saved query result a reusable virtual-table interface.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Subqueries and views",
+      "title": "The One-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#subqueries"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 4,
+    "conceptIds": [
+      "ch04-subqueries-views"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 3,
+    "explanation": "The inner query is a subquery. Its job is to compute an intermediate set of department IDs, and the outer query uses that result to filter employees.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:28.889Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "fd6a6239-c9a5-4151-b405-020e96c02b6e"
+    },
+    "id": "ch04-ai-fd6a6239-c9a-4",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "It creates a reusable virtual table that is stored in the database"
+      },
+      {
+        "id": "B",
+        "text": "It produces an intermediate result used by the outer query to filter rows"
+      },
+      {
+        "id": "C",
+        "text": "It defines the primary key for `Employees`"
+      },
+      {
+        "id": "D",
+        "text": "It changes the join cardinality between the two tables"
+      }
+    ],
+    "prompt": "Consider this query:\n\n```sql\nSELECT employee_id\nFROM Employees\nWHERE department_id IN (\n  SELECT department_id\n  FROM Departments\n  WHERE region = 'West'\n);\n```\n\nWhat is the role of the inner `SELECT` statement?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Subqueries can isolate an intermediate result, while a view gives a saved query result a reusable virtual-table interface.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Subqueries and views",
+      "title": "The One-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#subqueries"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 4,
+    "conceptIds": [
+      "ch04-subqueries-views"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 4,
+    "explanation": "A view is appropriate when many users need the same query result through a reusable interface. It avoids repeating the query text and presents the result like a virtual table, while the underlying data remains in the base tables.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:28.889Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "fd6a6239-c9a5-4151-b405-020e96c02b6e"
+    },
+    "id": "ch04-ai-fd6a6239-c9a-5",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "Save the query as a view and let analysts query the view"
+      },
+      {
+        "id": "B",
+        "text": "Copy the result into a new permanent table every morning"
+      },
+      {
+        "id": "C",
+        "text": "Replace the query with a self-join on the same table"
+      },
+      {
+        "id": "D",
+        "text": "Move the query into a foreign key constraint"
+      }
+    ],
+    "prompt": "A retailer needs a stable interface for a complicated query that lists each order with its customer name and current status. Multiple analysts will query this result, and you want them to use the same definition without rewriting the query. What is the best design choice?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Subqueries can isolate an intermediate result, while a view gives a saved query result a reusable virtual-table interface.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Subqueries and views",
+      "title": "The One-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#subqueries"
+    },
+    "status": "draft"
+  }
+]

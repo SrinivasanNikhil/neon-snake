@@ -1,0 +1,45 @@
+{
+  "chapter": 6,
+  "conceptIds": [
+    "ch06-one-to-one-mapping"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "Option A is correct because the mandatory participation is on the Passport side: every passport must belong to a person, but a person may have no passport yet. Putting person_id in Passport as NOT NULL enforces that every passport references a person, and UNIQUE enforces that no person is linked to more than one passport. This choice also avoids unnecessary NULLs in Person for people who do not yet have passports. Option B can support the relationship, but it stores many NULL passport_id values for people without passports, so it does not minimize unnecessary NULLs. Option C creates a dependency cycle and forces both rows to exist immediately. Option D does not enforce the relationship in the database.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:22.517Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "e918cf74-766e-4679-9268-4f3259306fc3"
+  },
+  "id": "ch06-ai-e918cf74-766-2",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "Store `person_id` in `Passport` as a foreign key, declare it NOT NULL, and make it UNIQUE"
+    },
+    {
+      "id": "B",
+      "text": "Store `passport_id` in `Person` as a nullable foreign key and make it UNIQUE"
+    },
+    {
+      "id": "C",
+      "text": "Store foreign keys in both tables and declare both NOT NULL"
+    },
+    {
+      "id": "D",
+      "text": "Create no foreign key and match rows later using application code"
+    }
+  ],
+  "prompt": "Suppose a database is modeling an optional one-to-one relationship between `Person(person_id PK, ...)` and `Passport(passport_id PK, ...)`. A person may exist before receiving a passport, but every passport must belong to a person. Which design best avoids unnecessary NULLs while preserving that rule?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Choosing foreign-key placement",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Mapping a one-to-one relationship",
+    "title": "One-to-One and Recursive Relationships",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#mapping-a-one-to-one-relationship"
+  },
+  "status": "approved"
+}

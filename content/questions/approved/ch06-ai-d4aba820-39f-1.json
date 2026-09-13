@@ -1,0 +1,45 @@
+{
+  "chapter": 6,
+  "conceptIds": [
+    "ch06-one-to-one"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 1,
+  "explanation": "Each row on either side can match at most one row on the other side, so the relationship is one-to-one.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:13.245Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "d4aba820-39f4-4238-9bfc-1c6c7fffec68"
+  },
+  "id": "ch06-ai-d4aba820-39f-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "One-to-one"
+    },
+    {
+      "id": "B",
+      "text": "One-to-many"
+    },
+    {
+      "id": "C",
+      "text": "Many-to-many"
+    },
+    {
+      "id": "D",
+      "text": "Recursive one-to-many"
+    }
+  ],
+  "prompt": "Two tables represent people and passports. Each passport belongs to exactly one person, and each person can have at most one passport. Which relationship description best fits this situation?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Recognizing one-to-one cardinality",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Modeling a one-to-one relationship",
+    "title": "One-to-One and Recursive Relationships",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#modeling-a-one-to-one-relationship"
+  },
+  "status": "approved"
+}

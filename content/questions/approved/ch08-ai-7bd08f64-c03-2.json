@@ -1,0 +1,45 @@
+{
+  "chapter": 8,
+  "conceptIds": [
+    "ch08-method-equivalence"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "Correct design methods can differ in procedure and still lead to equivalent data structures in terms of the facts they capture. Table and column names do not have to match for the designs to represent the same business reality.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:03:56.555Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "7bd08f64-c03e-4091-ace0-a1472912a67e"
+  },
+  "id": "ch08-ai-7bd08f64-c03-2",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "They should model the same facts, though they may use different structures and design steps."
+    },
+    {
+      "id": "B",
+      "text": "Design X must be in BCNF, while Design Y cannot be normalized at all."
+    },
+    {
+      "id": "C",
+      "text": "Design Y must always store repeated values, while Design X must never do so."
+    },
+    {
+      "id": "D",
+      "text": "They can only be equivalent if they use identical table names and column names."
+    }
+  ],
+  "prompt": "A retailer is comparing two schema designs for the same business rules. Design X was built from a dependency analysis; Design Y was built from a conceptual data model. Assume both were created correctly. Which statement best describes their relationship?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Alternative design methods",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Other data modeling methods",
+    "title": "Normalization and other Data Modeling Methods",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#other-data-modeling-methods"
+  },
+  "status": "approved"
+}

@@ -1,0 +1,45 @@
+{
+  "chapter": 5,
+  "conceptIds": [
+    "ch05-mapping"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "A single foreign key in either parent table cannot represent a many-to-many relationship. The proper fix is an associative table that stores one row per pairing and references both sides.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:00:55.545Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "3964c769-f2b8-4a92-a7ec-c7261aee797f"
+  },
+  "id": "ch05-ai-3964c769-f2b-4",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Move the linkage into a separate case_doctor table with one row per doctor-case pair"
+    },
+    {
+      "id": "B",
+      "text": "Add more doctor_id columns to the case table, one for each possible doctor"
+    },
+    {
+      "id": "C",
+      "text": "Store a single case_id inside the doctor table instead"
+    },
+    {
+      "id": "D",
+      "text": "Remove both identifiers and infer the relationship from names"
+    }
+  ],
+  "prompt": "A clinic wants to track which doctors work on which cases. A doctor can work on many cases, and a case can involve many doctors. Which schema change best fixes a design that currently stores only doctor_id inside the case table?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Mapping many-to-many relationships",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Creating a relational database with an m:m relationship",
+    "title": "The Many-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#creating-a-relational-database-with-an-mm-relationship"
+  },
+  "status": "approved"
+}

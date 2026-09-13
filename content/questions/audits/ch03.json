@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "chapter": 3,
+  "model": "gpt-5.4",
+  "auditedAt": "2026-08-13T16:20:21.736Z",
+  "questionCount": 20,
+  "summary": {
+    "pass": 18,
+    "needsEdit": 2,
+    "reject": 0
+  },
+  "reviews": [
+    {
+      "questionId": "ch03-ai-1cde71c7-404-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Stem, SQL, options, key, and explanation all align. Exactly one answer is defensible, distractors are plausible, and the difficulty is appropriate for basic projection/restriction reading.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-1cde71c7-404-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The query correctly demonstrates a derived column and ordering by that derived alias. One correct answer is clear, distractors are plausible, and the explanation teaches both computed output and non-persistence of SELECT expressions.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-1cde71c7-404-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "SQL and factual interpretation are correct: the scalar subquery computes one departmental average, and the outer query compares all employees against it. Options cleanly separate common misunderstandings, and the difficulty is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-2bc1cb18-c32-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Accurate concept question on attributes with one clearly defensible answer. Distractors are plausible category confusions, and the explanation is concise but adequate for the level.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-2bc1cb18-c32-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item correctly defines an identifier as a unique value or combination of values. Alternatives are clearly wrong but still plausible enough for beginners, and the difficulty is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-2bc1cb18-c32-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Good composite-key question with correct MySQL syntax and a single defensible answer. It fits the chapter’s identifier coverage well and the explanation properly links the business rule to a composite primary key.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-2bc1cb18-c32-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The model-level description of an identifier is correct and well matched to the concept. Distractors are plausible misconceptions, and the explanation distinguishes identification from search, volatility, and aggregates.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-6c6bf6d2-6f5-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "SQL is correct, exactly one option satisfies the stated requirement, and distractors map to common DML confusions. Difficulty is suitable for introductory UPDATE usage.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-6c6bf6d2-6f5-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Clear and accurate concept check on UPDATE without WHERE. One answer is plainly correct, and the distractors reflect common beginner errors.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-6c6bf6d2-6f5-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The DELETE statement is interpreted correctly, with a concrete before-state and one unambiguous result. Explanation is accurate and instructional, and the level is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-6c6bf6d2-6f5-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The statement in option A precisely matches the business rule by requiring both predicates. Other options represent realistic mistakes, and the explanation clearly contrasts them.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-a68f1455-2bc-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Accurate direct mapping from single-entity model to one table. One answer is clearly correct, distractors are plausible structural confusions, and the explanation teaches the mapping cleanly.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-a68f1455-2bc-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Entity integrity is correctly characterized as uniqueness plus non-nullability of the primary key. The distractors are plausible misconceptions and difficulty is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-a68f1455-2bc-3",
+      "verdict": "needs-edit",
+      "issues": [
+        "missing-assumption",
+        "poor-explanation"
+      ],
+      "rationale": "The keyed answer is defensible only because the prompt says the table is otherwise empty, but the explanation mentions only NULL and omits the equally important uniqueness side of entity integrity. As written, the teaching value is narrower than the stem’s concept. The item would be stronger if it explicitly contrasted NULL and duplicate primary-key violations.",
+      "suggestedFix": "Revise the explanation to note that primary keys must be both unique and non-NULL, and that with an otherwise empty table the only listed violating row is the one with NULL `product_id`. Optionally add a duplicate-key option instead of one of the ordinary valid rows to reinforce uniqueness."
+    },
+    {
+      "questionId": "ch03-ai-a68f1455-2bc-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Option A correctly maps the entity and identifier into a single table with an appropriate primary key. The distractors are plausible and expose misunderstandings about primary keys, foreign keys, and indexes.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-ff4d8a8e-3d7-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Straightforward and accurate attribute-identification item. One answer is correct, distractors are plausible, and the explanation is suitable for the introductory level.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-ff4d8a8e-3d7-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item correctly combines model-to-table mapping with entity integrity. Exactly one answer is defensible, and the explanation clearly covers both column mapping and primary-key requirements.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-ff4d8a8e-3d7-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "SQL behavior is correct across selection, filtering, derived value calculation, and ordering. The stem and options align well, and the explanation accurately teaches all four clauses.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-ff4d8a8e-3d7-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The case-insensitive collation assumption is explicitly stated, SQL is correct, and the distractors target realistic errors involving DISTINCT placement, wrong filtered column, and exact-match confusion. Difficulty is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch03-ai-ff4d8a8e-3d7-5",
+      "verdict": "needs-edit",
+      "issues": [
+        "sql-error",
+        "weak-distractor"
+      ],
+      "rationale": "Option D is syntactically invalid SQL (`UPDATE ... WHERE ... SET`), which makes it a weak distractor because it can be dismissed on syntax rather than concept. The concept being tested is safe row-targeted UPDATE, so distractors should be incorrect but syntactically plausible.",
+      "suggestedFix": "Replace option D with a valid but conceptually wrong statement, such as `UPDATE Inventory SET Quantity = 42 WHERE ItemID = 42;` or `UPDATE Inventory SET Quantity = Quantity - 1 WHERE ItemName = '42';`, and update the explanation if needed."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-aggregate-functions"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 3,
+  "explanation": "`AVG` is an aggregate function because it summarizes multiple rows within each department group into one value. `HAVING` is the clause typically used to filter grouped results, but the average itself is computed by an aggregate function, not by a scalar function, collation rule, or embedded SQL.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:44.372Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "8f4bf742-de4e-4e5d-860f-e299edeb30e1"
+  },
+  "id": "ch10-ai-8f4bf742-de4-4",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "Scalar functions"
+    },
+    {
+      "id": "B",
+      "text": "Aggregate functions"
+    },
+    {
+      "id": "C",
+      "text": "Character collation"
+    },
+    {
+      "id": "D",
+      "text": "Embedded SQL"
+    }
+  ],
+  "prompt": "A finance team needs a report with one row per department and the average payroll for that department, typically using `GROUP BY` and then `HAVING` to keep only averages above 50000. Which SQL feature is essential for computing the department average?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Aggregate functions summarize sets or groups of rows, with grouping and filtering rules controlling the scope.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Scalar and aggregate functions",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=223"
+  },
+  "status": "approved"
+}

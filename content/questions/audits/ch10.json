@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "chapter": 10,
+  "model": "gpt-5.4",
+  "auditedAt": "2026-08-13T16:22:22.844Z",
+  "questionCount": 21,
+  "summary": {
+    "pass": 21,
+    "needsEdit": 0,
+    "reject": 0
+  },
+  "reviews": [
+    {
+      "questionId": "ch10-ai-0212a664-dd9-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem, options, and keyed answer align cleanly. Exactly one answer is defensible: granting only SELECT matches read-only access. Distractors are plausible and clearly incorrect for the stated goal. The explanation is accurate and instructional. Difficulty 2 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-0212a664-dd9-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The SQL statement in option A is correct under the stated standard-SQL assumption, and exactly one option grants read-only table access. Option D is a plausible distractor because a view alone does not grant privileges. Explanation is correct and useful. Difficulty 3 is acceptable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-0212a664-dd9-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The concept is accurately tested: embedded SQL places SQL inside a procedural program, unlike interactive SQL at a prompt. Only option B fits. Distractors are plausible without creating ambiguity. Explanation teaches the distinction clearly. Difficulty 2 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-0212a664-dd9-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The scenario clearly describes procedural control flow around row retrieval and storage, matching embedded SQL usage. Only option A is defensible. Explanation is accurate and links the scenario to the concept well. Difficulty 3 is reasonable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-35a215cc-a05-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item correctly targets CREATE TABLE as data definition. Option A is uniquely correct, distractors are plausible enough, and the explanation is accurate and instructive. Difficulty 2 fits the basic concept.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-35a215cc-a05-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem makes the intended assumption explicit through the use case of comparisons and age calculations. A temporal type is the only sound choice. Distractors are plausible and incorrect. Explanation is accurate and teaches data type matching. Difficulty 3 is fair.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-35a215cc-a05-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This is a clean concept check on collation. Only option A governs locale-specific text ordering. Distractors are plausible and clearly distinct. Explanation is correct and concise. Difficulty 3 is acceptable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-35a215cc-a05-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem properly states the key assumption that the values are identifiers, not quantities, which makes a character type clearly best. Exactly one answer is defensible, and the explanation addresses leading zeros and exact matching well. Difficulty 4 is a little high but still defensible because the item tests type-selection reasoning rather than recall alone.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-35a215cc-a05-5",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item correctly attributes differences in case-sensitive ordering/comparison behavior to collation. Only option A fits. Distractors are plausible and non-overlapping. Explanation is accurate and helpful. Difficulty 4 is slightly generous but still acceptable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-8f4bf742-de4-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item accurately distinguishes scalar from aggregate functions using row-level transformations. Only option A is correct. Distractors are plausible, and the explanation clearly teaches the one-value-per-row idea. Difficulty 2 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-8f4bf742-de4-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This is a straightforward and correct test of aggregate functions over groups of rows. Only option B fits the total-by-region requirement. Explanation is accurate, and difficulty 2 is suitable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-8f4bf742-de4-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The query is valid and the keyed answer accurately describes row-preserving scalar transformations via UPPER and ROUND. Other options are clearly incorrect without being absurd. Explanation is correct and instructional. Difficulty 3 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-8f4bf742-de4-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The question correctly isolates the essential feature needed to compute department averages: aggregate functions. Mention of GROUP BY and HAVING supports the scenario without creating ambiguity. Explanation is accurate. Difficulty 3 fits.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-94be8578-a12-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item accurately characterizes SQL as a standardized relational language for multiple tasks. Option A is uniquely correct, distractors are plausible enough, and the explanation is sound. Difficulty 1 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-94be8578-a12-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The query meaning is correctly interpreted: grouping by customer_id and summing amount yields one row per customer with a total. Only option A is defensible. Explanation is accurate and educational. Difficulty 2 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-94be8578-a12-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Option A is the only query that fully meets the requirement: products with at least one August 2026 sale plus total quantity per product. The explanation correctly identifies why B and C are incomplete and why D is flawed under standard SQL grouping rules. The date assumption is stated. Difficulty 3 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-94be8578-a12-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item correctly tests SQL’s declarative, set-oriented nature against procedural row navigation. Option A is uniquely correct. Distractors are clearly wrong but still on-topic, and the explanation teaches the key contrast. Difficulty 3 is reasonable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-cd87e56b-3cc-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The question accurately defines a view as a named virtual table derived from a query. Only option A fits. Distractors are plausible and distinct. Explanation is correct and aligned to the chapter concept. Difficulty 2 is suitable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-cd87e56b-3cc-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The SQL statement and its interpretation are correct: a unique composite index can improve retrieval on the indexed columns and enforce uniqueness of the column pair. Only option A is defensible. Explanation properly notes the leading-column behavior. Difficulty 3 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-cd87e56b-3cc-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item correctly identifies the database catalog as the source of metadata about tables and columns. Only option A matches. Explanation is accurate and useful. Difficulty 2 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch10-ai-cd87e56b-3cc-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This is a clear metadata-lookup question, and the database catalog is the only correct answer. Distractors are plausible and non-overlapping. Explanation is accurate, and difficulty 4 is somewhat high but still defensible for learners distinguishing object roles.",
+      "suggestedFix": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-embedded-sql"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 2,
+  "explanation": "Embedded SQL means SQL is placed inside a program, while the surrounding procedural code handles control flow and application logic. Typing commands at a prompt is interactive SQL.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:58.946Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "0212a664-dd95-4837-8769-49de9abd7f66"
+  },
+  "id": "ch10-ai-0212a664-dd9-3",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "A user types queries directly at a database prompt"
+    },
+    {
+      "id": "B",
+      "text": "SQL statements are written inside a procedural application that also contains program logic"
+    },
+    {
+      "id": "C",
+      "text": "A table is created with a primary key constraint"
+    },
+    {
+      "id": "D",
+      "text": "A report is produced from a grouped aggregate query"
+    }
+  ],
+  "prompt": "Which situation best describes embedded SQL rather than interactive SQL?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Interactive and embedded SQL",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Privileges and application use",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+  },
+  "status": "approved"
+}

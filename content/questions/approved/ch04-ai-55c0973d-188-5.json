@@ -1,0 +1,46 @@
+{
+  "chapter": 4,
+  "conceptIds": [
+    "ch04-one-to-many",
+    "ch04-redundancy"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "Magazine facts describe a separate entity, so they should be stored once in a `Magazine` table rather than repeated in every article row. Each article can then be related to its magazine, which matches the one-to-many structure and reduces redundancy.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:59:54.895Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "55c0973d-1885-4832-ba30-6231347d1472"
+  },
+  "id": "ch04-ai-55c0973d-188-5",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Keep magazine details in a separate `Magazine` table and relate each article to its magazine"
+    },
+    {
+      "id": "B",
+      "text": "Store `article_id` in the `Magazine` table so each magazine points to one article"
+    },
+    {
+      "id": "C",
+      "text": "Copy magazine title, issue date, and editor into every article row"
+    },
+    {
+      "id": "D",
+      "text": "Use one table for both entities and leave magazine columns blank in many rows"
+    }
+  ],
+  "prompt": "A publisher stores magazines and articles. Each article belongs to exactly one magazine, but a magazine has many articles. The team also wants to prevent the same magazine facts from being copied into every article row. Which rule best fits this design?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Separate repeated facts into their own entity in a one-to-many relationship.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Relationships",
+    "title": "The One-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#relationships"
+  },
+  "status": "approved"
+}

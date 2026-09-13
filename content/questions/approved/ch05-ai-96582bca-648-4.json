@@ -1,0 +1,45 @@
+{
+  "chapter": 5,
+  "conceptIds": [
+    "ch05-division"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 4,
+  "explanation": "Relational division asks which targets are related to every item in a source set. A vendor qualifies only if no required part is missing, which can be tested with nested non-existence or with grouped counts over the required set.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:06.175Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "96582bca-6485-46f2-8712-de0188f40b7e"
+  },
+  "id": "ch05-ai-96582bca-648-4",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use a correlated NOT EXISTS query that checks for missing required parts for each vendor, or an equivalent grouped COUNT(DISTINCT part_id) comparison against all three required IDs."
+    },
+    {
+      "id": "B",
+      "text": "Use EXISTS with one required part ID, because one match implies all three are covered."
+    },
+    {
+      "id": "C",
+      "text": "Use UNION between the three part IDs and the vendor list, because UNION keeps only common rows."
+    },
+    {
+      "id": "D",
+      "text": "Use a three-table join and return vendors that have at least one of the required parts."
+    }
+  ],
+  "prompt": "A vendor database has Vendors(vendor_id, vendor_name), Parts(part_id, part_name), and Supplies(vendor_id, part_id). You need the vendors who supply every part in a required list of three part IDs: 11, 12, and 13. Which approach is the best match for this requirement?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Relational division",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Querying an m:m relationship",
+    "title": "The Many-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#querying-an-mm-relationship"
+  },
+  "status": "approved"
+}

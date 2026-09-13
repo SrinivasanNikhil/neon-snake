@@ -1,0 +1,45 @@
+{
+  "chapter": 9,
+  "conceptIds": [
+    "ch09-relational-rules"
+  ],
+  "correctOptionId": "C",
+  "difficulty": 2,
+  "explanation": "A fully relational system is expected to provide guaranteed access to every atomic value through the relation name, primary-key value, and attribute name. Option C breaks that rule because it allows stored values that cannot be reached through this relational access method. The other options describe expected relational behavior, including table-based representation, data independence, catalogs, and set-level operations.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:28.444Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "a0dc8c37-07e7-4408-89a8-1b413622247b"
+  },
+  "id": "ch09-ai-a0dc8c37-07e-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "A table stores values in rows and columns, and the database keeps a catalog of its tables"
+    },
+    {
+      "id": "B",
+      "text": "A query can retrieve data without the application knowing where the rows are physically stored"
+    },
+    {
+      "id": "C",
+      "text": "A system stores values that cannot be retrieved by specifying the table name, primary-key value, and column name"
+    },
+    {
+      "id": "D",
+      "text": "A database supports set-based operations such as combining and comparing relations"
+    }
+  ],
+  "prompt": "Which situation would violate the rules expected of a fully relational database system?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Fully relational behavior includes guaranteed access to each stored value through relational identifiers.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "A fully relational database",
+    "title": "The Relational Model and Relational Algebra",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#a-fully-relational-database"
+  },
+  "status": "approved"
+}

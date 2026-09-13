@@ -1,0 +1,45 @@
+{
+  "chapter": 8,
+  "conceptIds": [
+    "ch08-functional-dependency"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "The stated business rule says customer_id determines customer_name, so customer_id -> customer_name is the relevant nonkey functional dependency. It is especially useful in normalization because it reveals that customer_name may be repeated across many orders due to a dependency other than the primary key. The other options are not supported by the stated rule.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:35.687Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "cc519a70-6c2a-401a-9e05-d6fedccf712c"
+  },
+  "id": "ch08-ai-cc519a70-6c2-3",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "customer_id -> customer_name"
+    },
+    {
+      "id": "B",
+      "text": "customer_name -> customer_id"
+    },
+    {
+      "id": "C",
+      "text": "order_date -> customer_id"
+    },
+    {
+      "id": "D",
+      "text": "customer_name -> order_date"
+    }
+  ],
+  "prompt": "A table Orders(order_id, customer_id, customer_name, order_date) has the rule that each customer_id corresponds to exactly one customer_name. Assume order_id is the primary key. Which nonkey functional dependency is most useful for normalization analysis?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Use a stated business rule to identify a functional dependency.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Normalization",
+    "title": "Normalization and other Data Modeling Methods",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#normalization"
+  },
+  "status": "approved"
+}

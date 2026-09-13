@@ -1,0 +1,45 @@
+{
+  "chapter": 6,
+  "conceptIds": [
+    "ch06-recursive-query"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 4,
+  "explanation": "The recursive SELECT joins the base result to Category again, using the self-reference to keep adding deeper descendants. That is what allows the query to walk through multiple levels of the hierarchy. It is not performing deduplication, sorting, or data modification.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:42.731Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "82c308cd-4feb-47f1-bf5c-75e646ce2e8c"
+  },
+  "id": "ch06-ai-82c308cd-4fe-4",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "To repeatedly add rows whose parent points to a row already in the result so the hierarchy can be expanded beyond one level"
+    },
+    {
+      "id": "B",
+      "text": "To remove duplicate category names from the table before returning rows"
+    },
+    {
+      "id": "C",
+      "text": "To sort categories so that parents appear before children"
+    },
+    {
+      "id": "D",
+      "text": "To update each child row so that its parent_category_id becomes 7"
+    }
+  ],
+  "prompt": "Consider this MySQL query against a table Category(category_id, category_name, parent_category_id):\n\nWITH RECURSIVE cte AS (\n  SELECT category_id, category_name, parent_category_id\n  FROM Category\n  WHERE category_id = 7\n  UNION ALL\n  SELECT c.category_id, c.category_name, c.parent_category_id\n  FROM Category c\n  JOIN cte ON c.parent_category_id = cte.category_id\n)\nSELECT category_name\nFROM cte;\n\nWhat is the main purpose of the recursive part of this query?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Recursive structures can be traversed by repeatedly following self-references, using suitable common table expressions where supported.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Querying a recursive 1:m relationship",
+    "title": "One-to-One and Recursive Relationships",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#querying-a-recursive-1m-relationship"
+  },
+  "status": "approved"
+}

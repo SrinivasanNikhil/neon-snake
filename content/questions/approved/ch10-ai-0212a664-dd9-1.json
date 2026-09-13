@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-privileges"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "`GRANT` assigns specific privileges on a database object. If the role should only read from `invoices`, granting only `SELECT` gives query access without also granting modification privileges such as `UPDATE` or `DELETE`. `GRANT UPDATE` would allow changes, `GRANT ALL PRIVILEGES` would allow more than read access, and `REVOKE SELECT` would remove read access instead of providing it.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:58.946Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "0212a664-dd95-4837-8769-49de9abd7f66"
+  },
+  "id": "ch10-ai-0212a664-dd9-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use `GRANT SELECT ON invoices` for the reporting role"
+    },
+    {
+      "id": "B",
+      "text": "Use `GRANT UPDATE ON invoices` for the reporting role"
+    },
+    {
+      "id": "C",
+      "text": "Use `GRANT ALL PRIVILEGES ON invoices` for the reporting role"
+    },
+    {
+      "id": "D",
+      "text": "Use `REVOKE SELECT ON invoices` from the reporting role"
+    }
+  ],
+  "prompt": "A database administrator wants the reporting role to read rows from the `invoices` table but not change or delete any invoice data. Which action best fits that goal?",
+  "provenance": "ai-generated",
+  "reviewConcept": "GRANT and REVOKE",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Privileges and application use",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+  },
+  "status": "approved"
+}

@@ -1,0 +1,45 @@
+{
+  "chapter": 6,
+  "conceptIds": [
+    "ch06-cycle-risk"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 5,
+  "explanation": "Option A is correct because both foreign keys are mandatory, so neither row can be inserted first without referencing a row that does not yet exist. The UNIQUE constraints help enforce the one-to-one cardinality, but they do not solve the insertion-order problem. The real difficulty is the circular dependency between Account and Contact. Option B is false because foreign keys can reference primary keys. Option C is false because one-to-one relationships can be mapped with foreign keys plus uniqueness. Option D is unrelated to the immediate constraint cycle.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:22.517Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "e918cf74-766e-4679-9268-4f3259306fc3"
+  },
+  "id": "ch06-ai-e918cf74-766-4",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "Each insert would violate a mandatory foreign key unless the other row already exists, so the two tables form a dependency cycle"
+    },
+    {
+      "id": "B",
+      "text": "MySQL cannot enforce foreign keys when both tables use primary keys"
+    },
+    {
+      "id": "C",
+      "text": "A one-to-one relationship cannot be represented with foreign keys at all"
+    },
+    {
+      "id": "D",
+      "text": "The problem is only that the foreign keys are not indexed"
+    }
+  ],
+  "prompt": "A schema has:\n\n`Account(account_id PK, primary_contact_id FK NOT NULL UNIQUE)`\n`Contact(contact_id PK, account_id FK NOT NULL UNIQUE)`\n\nEach account must have exactly one contact, and each contact must belong to exactly one account. A developer wants to insert a new account and its contact in separate statements without disabling constraints. What is the best explanation of why this is difficult?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Constraint cycles",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Mapping a one-to-one relationship",
+    "title": "One-to-One and Recursive Relationships",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#mapping-a-one-to-one-relationship"
+  },
+  "status": "approved"
+}

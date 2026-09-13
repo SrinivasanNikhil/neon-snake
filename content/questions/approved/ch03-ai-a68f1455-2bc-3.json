@@ -1,0 +1,45 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-create-integrity"
+  ],
+  "correctOptionId": "C",
+  "difficulty": 3,
+  "explanation": "The primary key column cannot be NULL. A row with a NULL product_id violates entity integrity, even if all other values are valid.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:57:26.638Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "a68f1455-2bcb-4246-b7c5-9f165bc691c9"
+  },
+  "id": "ch03-ai-a68f1455-2bc-3",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "(101, 'Pen', 1.25)"
+    },
+    {
+      "id": "B",
+      "text": "(102, 'Notebook', 4.50)"
+    },
+    {
+      "id": "C",
+      "text": "(NULL, 'Stapler', 8.99)"
+    },
+    {
+      "id": "D",
+      "text": "(103, 'Marker', 2.00)"
+    }
+  ],
+  "prompt": "A table is defined as follows in MySQL:\n\n```sql\nCREATE TABLE Product (\n  product_id INT,\n  product_name VARCHAR(50),\n  price DECIMAL(8,2),\n  PRIMARY KEY (product_id)\n);\n```\n\nWhich inserted row would violate the table's entity integrity rules? Assume the table is otherwise empty.",
+  "provenance": "ai-generated",
+  "reviewConcept": "CREATE and entity integrity",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Creating a single-table database",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#creating-a-single-table-database"
+  },
+  "status": "approved"
+}

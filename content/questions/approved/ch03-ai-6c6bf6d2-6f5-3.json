@@ -1,0 +1,45 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-update-delete"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "DELETE removes rows that satisfy the WHERE condition. Here, rows 1 and 2 match `ship_status = 'open'`, so they are removed and the closed order remains.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:57:40.347Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "6c6bf6d2-6f5d-4cef-b9c6-8b4b5a39adc6"
+  },
+  "id": "ch03-ai-6c6bf6d2-6f5-3",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "Rows 1 and 2 are removed; row 3 remains."
+    },
+    {
+      "id": "B",
+      "text": "Only row 3 is removed."
+    },
+    {
+      "id": "C",
+      "text": "All rows are changed to `ship_status = 'open'`."
+    },
+    {
+      "id": "D",
+      "text": "The statement adds a new row with `ship_status = 'open'`."
+    }
+  ],
+  "prompt": "Assume `orders(order_id, ship_status)` contains these rows: (1,'open'), (2,'open'), (3,'closed'). What is the result of running this statement?\n\n```sql\nDELETE FROM orders WHERE ship_status = 'open';\n```",
+  "provenance": "ai-generated",
+  "reviewConcept": "UPDATE changes selected rows and DELETE removes selected rows; omitting an appropriate WHERE condition can affect every row.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "DELETE and UPDATE",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#delete"
+  },
+  "status": "approved"
+}

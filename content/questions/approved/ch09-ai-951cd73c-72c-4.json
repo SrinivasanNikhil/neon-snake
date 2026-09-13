@@ -1,0 +1,45 @@
+{
+  "chapter": 9,
+  "conceptIds": [
+    "ch09-referential-integrity"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 4,
+  "explanation": "Because ParentID is nullable, a null foreign key is allowed when the relationship is optional. Values 5, 9, and 11 do not exist in Parent, so they would violate referential integrity.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:12.548Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "951cd73c-72c0-4b7d-a818-d59a5c1af11b"
+  },
+  "id": "ch09-ai-951cd73c-72c-4",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "INSERT INTO Child (ChildID, ParentID) VALUES (21, NULL);"
+    },
+    {
+      "id": "B",
+      "text": "INSERT INTO Child (ChildID, ParentID) VALUES (22, 5);"
+    },
+    {
+      "id": "C",
+      "text": "INSERT INTO Child (ChildID, ParentID) VALUES (23, 9);"
+    },
+    {
+      "id": "D",
+      "text": "INSERT INTO Child (ChildID, ParentID) VALUES (24, 11);"
+    }
+  ],
+  "prompt": "A MySQL database has these tables: Parent(ParentID PRIMARY KEY) and Child(ChildID PRIMARY KEY, ParentID INT NULL, FOREIGN KEY (ParentID) REFERENCES Parent(ParentID)). Which insert is allowed by referential integrity? Assume Parent currently contains ParentID values 3 and 8.",
+  "provenance": "ai-generated",
+  "reviewConcept": "An optional foreign key may be null; otherwise it must match a parent key.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Integrity rules",
+    "title": "The Relational Model and Relational Algebra",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#integrity-rules"
+  },
+  "status": "approved"
+}

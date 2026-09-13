@@ -1,0 +1,46 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-model-to-table",
+    "ch03-create-integrity"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "A single entity maps to one table, its attributes map to columns, and the identifier maps to the primary key. A primary key must uniquely identify each row and cannot be NULL, so SupplierID should be the primary key.",
+  "generation": {
+    "generatedAt": "2026-08-12T17:04:47.415Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "ff4d8a8e-3d71-46b2-a36c-14c442bdd182"
+  },
+  "id": "ch03-ai-ff4d8a8e-3d7-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Create a Supplier table with columns SupplierID, SupplierName, and Phone, and make SupplierID the primary key"
+    },
+    {
+      "id": "B",
+      "text": "Create separate tables for SupplierName and Phone, and leave SupplierID out because it duplicates data"
+    },
+    {
+      "id": "C",
+      "text": "Create a Supplier table and allow SupplierID to be NULL as long as SupplierName is unique"
+    },
+    {
+      "id": "D",
+      "text": "Store SupplierID in a text column but do not define any primary key"
+    }
+  ],
+  "prompt": "A business model has one entity, Supplier, with attributes SupplierID, SupplierName, and Phone. Which table design best matches the model and preserves entity integrity?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Translate a single-entity model into one table and enforce entity integrity.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Creating a single-table database",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#creating-a-single-table-database"
+  },
+  "status": "approved"
+}

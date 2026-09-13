@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-collation"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "Collation determines how character values are compared and ordered, including locale-specific sorting rules. The other choices affect storage, duplication, or data organization, but not text comparison and ordering rules.",
+  "generation": {
+    "generatedAt": "2026-08-12T01:38:03.014Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "35a215cc-a052-4ac6-815d-e5d1e2cfa8cc"
+  },
+  "id": "ch10-ai-35a215cc-a05-3",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Collation"
+    },
+    {
+      "id": "B",
+      "text": "Normalization"
+    },
+    {
+      "id": "C",
+      "text": "Replication"
+    },
+    {
+      "id": "D",
+      "text": "Partitioning"
+    }
+  ],
+  "prompt": "An online store serves users in multiple languages. It needs product names to sort according to the rules of a specific locale. Which database feature controls that behavior?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Collation",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Creating a table and data types",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=216"
+  },
+  "status": "approved"
+}

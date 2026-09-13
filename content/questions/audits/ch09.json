@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "chapter": 9,
+  "model": "gpt-5.4",
+  "auditedAt": "2026-08-13T16:22:05.874Z",
+  "questionCount": 20,
+  "summary": {
+    "pass": 16,
+    "needsEdit": 4,
+    "reject": 0
+  },
+  "reviews": [
+    {
+      "questionId": "ch09-ai-6d5c8636-1e4-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem cleanly asks for the definition of a domain, one option is clearly correct, distractors map to nearby concepts, and the explanation correctly distinguishes domain from relation, cardinality, and key roles.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-6d5c8636-1e4-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The question correctly tests degree versus cardinality with exactly one defensible answer. The explanation is accurate and sufficient for the stated difficulty.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-6d5c8636-1e4-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem states a clear candidate-key scenario and the correct answer, alternate key, is unambiguous. Distractors are plausible and the explanation teaches the candidate-key to primary-key to alternate-key relationship accurately.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-6d5c8636-1e4-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The schema and role of customer_id are clearly specified, making the foreign-key answer uniquely defensible. The explanation correctly rules out alternate key, primary key, and domain.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-6d5c8636-1e4-5",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The prompt accurately combines the two concepts and states enough to infer the changes. Exactly one option matches the effect on columns and rows, and the explanation is correct.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-951cd73c-72c-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem explicitly fixes the assumptions so only a null primary-key value can violate entity integrity. One answer is uniquely correct and the explanation is accurate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-951cd73c-72c-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The NOT NULL assumption prevents ambiguity about NULL foreign keys, and only one listed value exists in the parent table. The explanation correctly states referential integrity.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-951cd73c-72c-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The SQL statements are syntactically fine, the assumptions remove ambiguity about auto-generation, and inserting NULL into the primary key is guaranteed to violate entity integrity. The explanation properly avoids overclaiming about the other statements.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-951cd73c-72c-4",
+      "verdict": "needs-edit",
+      "issues": [
+        "misrated-difficulty",
+        "poor-explanation"
+      ],
+      "rationale": "The content is correct and one answer is defensible, but difficulty 4 is too high for a straightforward nullable-foreign-key check against a short parent-value list. The explanation is accurate but thin for the assigned difficulty and does not explicitly connect the nullable child column to the chapter's statement that an optional foreign key may be null.",
+      "suggestedFix": "Lower difficulty to 2 or 3, or increase complexity. Expand the explanation slightly to note that referential integrity allows NULL only because Child.ParentID is declared NULL and otherwise requires a matching Parent.ParentID value."
+    },
+    {
+      "questionId": "ch09-ai-951cd73c-72c-5",
+      "verdict": "needs-edit",
+      "issues": [
+        "misrated-difficulty",
+        "weak-distractor"
+      ],
+      "rationale": "The answer is correct, but the item is easier than difficulty 5 because it directly restates entity and referential integrity. Option D is a comparatively weak distractor because it plainly violates the already named primary-key rule, making elimination too easy.",
+      "suggestedFix": "Reduce difficulty to about 2 or 3, or make distractors subtler by varying optional versus required foreign keys and by including a choice that is nearly correct except for one integrity detail."
+    },
+    {
+      "questionId": "ch09-ai-a0dc8c37-07e-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The scenario accurately combines physical and logical data independence, and the correct option is uniquely supported. Distractors are from nearby chapter concepts and are plausibly confusable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-a0dc8c37-07e-2",
+      "verdict": "needs-edit",
+      "issues": [
+        "ambiguous-answer",
+        "missing-assumption",
+        "poor-explanation"
+      ],
+      "rationale": "Option C depends on 'primary-key value' as the guaranteed-access mechanism, but the relational rule is more broadly access by table name, primary key, and column name for stored atomic values. In a teaching context, some rows may be identified by composite keys or candidate keys, so the phrasing can confuse whether the issue is accessibility or the exact identifier form. The explanation also overstates with 'primary-key value' rather than aligning carefully to the source framing.",
+      "suggestedFix": "Reword option C and the explanation to match the guaranteed-access rule more precisely, for example: 'A system stores atomic values that cannot be retrieved by specifying the table name, a row-identifying key value, and the column name.' Alternatively state the assumption that each table has a simple primary key."
+    },
+    {
+      "questionId": "ch09-ai-a0dc8c37-07e-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The view/storage scenario clearly targets physical data independence, with one unambiguous answer. Distractors are plausible but incorrect, and the explanation is accurate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-a0dc8c37-07e-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem describes the combined characteristics of a fully relational database system and only one option fits. The explanation correctly consolidates the listed properties.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-a0dc8c37-07e-5",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The scenario distinguishes physical and logical data independence well, and option B is uniquely defensible. The explanation appropriately ties each change to the corresponding form of independence.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-a2f1a2d3-c7e-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This is a clean test of restrict versus nearby relational algebra operators. The correct answer is unique and the explanation is accurate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-a2f1a2d3-c7e-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The relational algebra expression in A correctly restricts before projecting, and B is invalid for the stated condition after salary is projected away. The explanation teaches the operator order clearly.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-a2f1a2d3-c7e-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem correctly states union compatibility and asks for tuples common to both relations, making intersect uniquely correct. Distractors are appropriate and the explanation is accurate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-a2f1a2d3-c7e-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The question accurately contrasts product with join in a simple matching-key scenario. One answer is clearly correct and the explanation reinforces the concept effectively.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch09-ai-a2f1a2d3-c7e-5",
+      "verdict": "needs-edit",
+      "issues": [
+        "missing-assumption",
+        "poor-explanation"
+      ],
+      "rationale": "The core concept is right, but the stem omits the second relation or required-course set that makes relational division well-formed; as written, it describes only CourseTaken(student, course) and an external requirement set. The explanation mentions 'another set' but the item never states that relation explicitly, so the algebraic setup is under-specified.",
+      "suggestedFix": "State the second relation in the stem, e.g. 'Given CourseTaken(student, course) and Required(course)...' Then explain that division of CourseTaken by Required returns students related to every required course."
+    }
+  ]
+}

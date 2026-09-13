@@ -1,0 +1,45 @@
+{
+  "chapter": 9,
+  "conceptIds": [
+    "ch09-entity-integrity"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 1,
+  "explanation": "Entity integrity requires that no component of a primary key be null. Because OrderID is the primary key, a row with OrderID = NULL violates entity integrity. The other options all use non-null primary-key values, so they do not violate this rule under the stated assumptions.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:12.548Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "951cd73c-72c0-4b7d-a818-d59a5c1af11b"
+  },
+  "id": "ch09-ai-951cd73c-72c-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "A row with OrderID = 1057"
+    },
+    {
+      "id": "B",
+      "text": "A row with OrderID = NULL"
+    },
+    {
+      "id": "C",
+      "text": "A row with OrderID = 2044"
+    },
+    {
+      "id": "D",
+      "text": "A row with OrderID = 3190"
+    }
+  ],
+  "prompt": "Assume OrderID is the table's primary key and all non-key domain rules are satisfied. Which row violates entity integrity?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Entity integrity means every primary-key value must be non-null.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Integrity rules",
+    "title": "The Relational Model and Relational Algebra",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#integrity-rules"
+  },
+  "status": "approved"
+}

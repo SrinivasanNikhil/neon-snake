@@ -1,0 +1,45 @@
+{
+  "chapter": 9,
+  "conceptIds": [
+    "ch09-entity-integrity"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 1,
+  "explanation": "Entity integrity requires that no component of a primary key be null. Because InvoiceNo is the enforced primary key and must be supplied by the statement, inserting NULL for InvoiceNo is guaranteed to violate entity integrity. The other statements do not place NULL in the primary key; whether they succeed could depend on other constraints not stated here.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:12.548Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "951cd73c-72c0-4b7d-a818-d59a5c1af11b"
+  },
+  "id": "ch09-ai-951cd73c-72c-3",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "INSERT INTO Invoice (InvoiceNo, Amount) VALUES (NULL, 250.00);"
+    },
+    {
+      "id": "B",
+      "text": "INSERT INTO Invoice (InvoiceNo, Amount) VALUES (9001, 250.00);"
+    },
+    {
+      "id": "C",
+      "text": "INSERT INTO Invoice (InvoiceNo, Amount) VALUES (9002, NULL);"
+    },
+    {
+      "id": "D",
+      "text": "INSERT INTO Invoice (InvoiceNo, Amount) VALUES (9003, 0.00);"
+    }
+  ],
+  "prompt": "Assume Invoice is a standard relational table with an enforced primary key InvoiceNo, and InvoiceNo is supplied by the INSERT statement rather than auto-generated. Which statement is guaranteed to violate entity integrity?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Entity integrity means primary key attributes cannot be null.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Integrity rules",
+    "title": "The Relational Model and Relational Algebra",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#integrity-rules"
+  },
+  "status": "approved"
+}

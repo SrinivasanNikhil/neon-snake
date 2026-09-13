@@ -1,0 +1,45 @@
+{
+  "chapter": 7,
+  "conceptIds": [
+    "ch07-building-blocks"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "A is correct because relationships are one of the core building blocks of a data model and are used to represent how entities are connected. Attributes describe properties of an entity, identifiers distinguish entity instances, and calculations are not the main purpose of a relationship in a conceptual model.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:57.134Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "c4212d19-5aeb-400c-a3af-9bb78faf9442"
+  },
+  "id": "ch07-ai-c4212d19-5ae-4",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "To show how instances of Customer and Order are associated with each other"
+    },
+    {
+      "id": "B",
+      "text": "To list every attribute that belongs to both entities"
+    },
+    {
+      "id": "C",
+      "text": "To replace the identifier of each entity with a shared code"
+    },
+    {
+      "id": "D",
+      "text": "To calculate values that are missing from one of the entities"
+    }
+  ],
+  "prompt": "In a conceptual data model, what is the main role of a relationship between two entities such as Customer and Order?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Modeling building blocks",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Data modeling",
+    "title": "Data Modeling",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-modeling"
+  },
+  "status": "approved"
+}

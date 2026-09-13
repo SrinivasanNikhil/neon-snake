@@ -1,0 +1,45 @@
+{
+  "chapter": 7,
+  "conceptIds": [
+    "ch07-identifiers-naming"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 2,
+  "explanation": "B is best because identifiers should be stable and unambiguous. If office names can change, office_name is not stable enough to serve as the identifier. office_id can remain the same even when the descriptive label changes.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:28.409Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "636d6c20-f31a-4103-98af-f800ddf45312"
+  },
+  "id": "ch07-ai-636d6c20-f31-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use office_name as the primary identifier because it is human-readable."
+    },
+    {
+      "id": "B",
+      "text": "Use office_id as the identifier and keep office_name as a descriptive label."
+    },
+    {
+      "id": "C",
+      "text": "Use both office_id and office_name as interchangeable identifiers."
+    },
+    {
+      "id": "D",
+      "text": "Remove identifiers and rely on row order to distinguish offices."
+    }
+  ],
+  "prompt": "A company stores office locations in a table with columns office_id and office_name. The business decides that office names may change over time, but each office must still be identified the same way across reports and integrations. Which design choice is best?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Identifiers and naming",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Data modeling hints",
+    "title": "Data Modeling",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-modeling-hints"
+  },
+  "status": "approved"
+}

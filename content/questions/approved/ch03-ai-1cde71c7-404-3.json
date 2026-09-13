@@ -1,0 +1,45 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-aggregate-subquery"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 4,
+  "explanation": "The subquery returns one value: the average `salary` for rows where `department_id = 10`. The outer query compares every employee's salary to that single value. Because the outer query has no condition limiting rows to department 10, qualifying employees can come from any department.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:57:33.176Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "1cde71c7-404f-4a5a-b9e3-9b0a32c44f5e"
+  },
+  "id": "ch03-ai-1cde71c7-404-3",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "Employees from any department whose salary is greater than the average salary of employees in department 10."
+    },
+    {
+      "id": "B",
+      "text": "Only employees in department 10 whose salary is greater than their department average."
+    },
+    {
+      "id": "C",
+      "text": "One row containing just the average salary for department 10."
+    },
+    {
+      "id": "D",
+      "text": "Employees whose salary is greater than the highest salary in department 10."
+    }
+  ],
+  "prompt": "A table `employee` has columns `employee_id`, `department_id`, and `salary`. What does this query return?\n\n```sql\nSELECT employee_id, salary\nFROM employee\nWHERE salary > (\n  SELECT AVG(salary)\n  FROM employee\n  WHERE department_id = 10\n);\n```",
+  "provenance": "ai-generated",
+  "reviewConcept": "Aggregates and subqueries",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Querying a single-table database",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#querying-a-single-table-database"
+  },
+  "status": "approved"
+}

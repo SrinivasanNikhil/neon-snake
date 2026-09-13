@@ -1,0 +1,45 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-update-delete"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 1,
+  "explanation": "Without a WHERE clause, UPDATE applies to all rows in the table. It does not delete rows or require the table to be empty.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:57:40.347Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "6c6bf6d2-6f5d-4cef-b9c6-8b4b5a39adc6"
+  },
+  "id": "ch03-ai-6c6bf6d2-6f5-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "It may change every row in the table."
+    },
+    {
+      "id": "B",
+      "text": "It can only change the primary key."
+    },
+    {
+      "id": "C",
+      "text": "It automatically deletes matching rows."
+    },
+    {
+      "id": "D",
+      "text": "It fails unless the table is empty."
+    }
+  ],
+  "prompt": "What is the main risk of running an UPDATE statement without a WHERE clause?",
+  "provenance": "ai-generated",
+  "reviewConcept": "UPDATE changes selected rows and DELETE removes selected rows; omitting an appropriate WHERE condition can affect every row.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "DELETE and UPDATE",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#delete"
+  },
+  "status": "approved"
+}

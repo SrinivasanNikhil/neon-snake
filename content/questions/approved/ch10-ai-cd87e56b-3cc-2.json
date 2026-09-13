@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-indexes"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "A composite index on `(customer_id, order_date)` can improve access for queries that use those indexed columns, particularly ones beginning with the leading column `customer_id`. Because the index is `UNIQUE`, the database also enforces that no two rows can have the same combination of `customer_id` and `order_date`. It does not create a view, it does not guarantee full-row uniqueness across all columns, and it does not enforce any rule on `total_amount`.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:51.053Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "cd87e56b-3ccb-4bdb-ba20-fa3545022a3a"
+  },
+  "id": "ch10-ai-cd87e56b-3cc-2",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "It can speed retrieval for searches that use the indexed columns, especially `customer_id` and `customer_id` with `order_date`, and it enforces uniqueness of each `(customer_id, order_date)` pair."
+    },
+    {
+      "id": "B",
+      "text": "It creates a virtual table that shows only one row for each customer and date."
+    },
+    {
+      "id": "C",
+      "text": "It guarantees that every row in `Orders` is unique in all columns."
+    },
+    {
+      "id": "D",
+      "text": "It enforces that `total_amount` must be greater than zero."
+    }
+  ],
+  "prompt": "A table `Orders(order_id, customer_id, order_date, total_amount)` already contains many rows. Which statement about this index is most accurate?\n\n```sql\nCREATE UNIQUE INDEX idx_orders_customer_date\nON Orders(customer_id, order_date);\n```",
+  "provenance": "ai-generated",
+  "reviewConcept": "Indexes",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Views, indexes, and the catalog",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+  },
+  "status": "approved"
+}

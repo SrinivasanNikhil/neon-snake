@@ -1,0 +1,182 @@
+[
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-functional-dependency"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 1,
+    "explanation": "If one attribute set always determines the value of another, that is a functional dependency. Here, a given employee number identifies one employee name, even if names are not unique.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:35.687Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "cc519a70-6c2a-401a-9e05-d6fedccf712c"
+    },
+    "id": "ch08-ai-cc519a70-6c2-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Employee number functionally determines employee name"
+      },
+      {
+        "id": "B",
+        "text": "Employee name functionally determines employee number"
+      },
+      {
+        "id": "C",
+        "text": "Employee number and employee name determine each other in both directions"
+      },
+      {
+        "id": "D",
+        "text": "Neither attribute determines the other"
+      }
+    ],
+    "prompt": "In a company database, each employee number maps to exactly one employee name, while the same name can appear for more than one employee number. What does the dependency between employee number and employee name mean?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Recognize when one attribute set determines another.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Normalization",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#normalization"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-anomalies"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "When the same fact is repeated across multiple rows, updating it can require many changes and create inconsistent values if some are missed. That is a modification anomaly.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:35.687Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "cc519a70-6c2a-401a-9e05-d6fedccf712c"
+    },
+    "id": "ch08-ai-cc519a70-6c2-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "A modification anomaly"
+      },
+      {
+        "id": "B",
+        "text": "A missing foreign key"
+      },
+      {
+        "id": "C",
+        "text": "A transaction isolation issue"
+      },
+      {
+        "id": "D",
+        "text": "A view maintenance issue"
+      }
+    ],
+    "prompt": "A sales table stores customer email, customer phone, and order data in the same row. When a customer changes phone number, every past order row must be updated or the database becomes inconsistent. What kind of problem is this?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Identify insert, update, and delete anomalies caused by poor structure.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Normalization",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#normalization"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-functional-dependency"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "The stated business rule says customer_id determines customer_name, so customer_id -> customer_name is the relevant nonkey functional dependency. It is especially useful in normalization because it reveals that customer_name may be repeated across many orders due to a dependency other than the primary key. The other options are not supported by the stated rule.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:35.687Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "cc519a70-6c2a-401a-9e05-d6fedccf712c"
+    },
+    "id": "ch08-ai-cc519a70-6c2-3",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "customer_id -> customer_name"
+      },
+      {
+        "id": "B",
+        "text": "customer_name -> customer_id"
+      },
+      {
+        "id": "C",
+        "text": "order_date -> customer_id"
+      },
+      {
+        "id": "D",
+        "text": "customer_name -> order_date"
+      }
+    ],
+    "prompt": "A table Orders(order_id, customer_id, customer_name, order_date) has the rule that each customer_id corresponds to exactly one customer_name. Assume order_id is the primary key. Which nonkey functional dependency is most useful for normalization analysis?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Use a stated business rule to identify a functional dependency.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Normalization",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#normalization"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-anomalies"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 4,
+    "explanation": "This design is vulnerable to modification anomalies because one relation combines facts that should be stored separately. The difficulty of storing author information before any borrowing occurs is an insertion anomaly, and losing author information when the last borrowing row is deleted is a deletion anomaly. Those are classic modification anomalies caused by poor structure.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:35.687Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "cc519a70-6c2a-401a-9e05-d6fedccf712c"
+    },
+    "id": "ch08-ai-cc519a70-6c2-4",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Modification anomalies from storing unrelated facts together"
+      },
+      {
+        "id": "B",
+        "text": "A need for more indexes on author_name"
+      },
+      {
+        "id": "C",
+        "text": "A requirement to use a composite primary key"
+      },
+      {
+        "id": "D",
+        "text": "A referential integrity failure caused by cascade rules"
+      }
+    ],
+    "prompt": "A single relation mixes book facts, author facts, and borrowing facts in the same rows, using attributes such as book_title, author_name, and borrower_contact. If a book has never been borrowed, storing its author information is awkward. If the last borrowing row for a book is deleted, the only stored author information for that book may also disappear. What structural problem does this most clearly illustrate?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Connect redundant storage to insert, update, and delete anomalies.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Normalization",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#normalization"
+    },
+    "status": "draft"
+  }
+]

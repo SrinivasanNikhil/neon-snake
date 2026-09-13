@@ -1,0 +1,45 @@
+{
+  "chapter": 4,
+  "conceptIds": [
+    "ch04-group-having"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "`GROUP BY product_id` forms one group per product, `COUNT(*)` counts how many order-line rows are in each group, and `HAVING COUNT(*) > 10` keeps only the groups whose count exceeds 10. So the result is the set of products appearing in more than 10 order lines.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:00:14.879Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "5edcae3f-ded9-41f7-bab0-73e326a27c1e"
+  },
+  "id": "ch04-ai-5edcae3f-ded-2",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "Products whose number of order lines is greater than 10"
+    },
+    {
+      "id": "B",
+      "text": "Individual order lines where `COUNT(*)` is greater than 10"
+    },
+    {
+      "id": "C",
+      "text": "Every product, with a label showing whether its count is over 10"
+    },
+    {
+      "id": "D",
+      "text": "Rows filtered before grouping so only products already above 10 are counted"
+    }
+  ],
+  "prompt": "A sales database has `OrderLine(order_id, product_id, qty)`. Consider this query:\n\n```sql\nSELECT product_id, COUNT(*) AS line_count\nFROM OrderLine\nGROUP BY product_id\nHAVING COUNT(*) > 10;\n```\n\nWhat does this query return?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Use GROUP BY and HAVING to filter grouped results by aggregate values.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Querying a two-table database",
+    "title": "The One-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#querying-a-two-table-database"
+  },
+  "status": "approved"
+}

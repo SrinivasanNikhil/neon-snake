@@ -1,0 +1,45 @@
+{
+  "chapter": 5,
+  "conceptIds": [
+    "ch05-three-table-join"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "To retrieve both sides of a many-to-many relationship, each main table must be joined to the associative table using its own matching key. That is why Employees joins to Enrollments on employee_id and Courses joins to Enrollments on course_id.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:06.175Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "96582bca-6485-46f2-8712-de0188f40b7e"
+  },
+  "id": "ch05-ai-96582bca-648-1",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "Join Employees to Enrollments on employee_id, then join Courses to Enrollments on course_id."
+    },
+    {
+      "id": "B",
+      "text": "Join Employees directly to Courses on employee_id = course_id."
+    },
+    {
+      "id": "C",
+      "text": "Join Employees to Courses once, then join Enrollments only if no rows are found."
+    },
+    {
+      "id": "D",
+      "text": "Use UNION to combine employee names and course names into one list."
+    }
+  ],
+  "prompt": "A company stores training assignments in three tables: Employees(employee_id, employee_name), Courses(course_id, course_name), and Enrollments(employee_id, course_id). Which query pattern correctly returns each employee name with the courses they are enrolled in?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Three-table joins",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Querying an m:m relationship",
+    "title": "The Many-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#querying-an-mm-relationship"
+  },
+  "status": "approved"
+}

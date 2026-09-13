@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "chapter": 4,
+  "model": "gpt-5.4",
+  "auditedAt": "2026-08-13T16:20:38.740Z",
+  "questionCount": 20,
+  "summary": {
+    "pass": 19,
+    "needsEdit": 1,
+    "reject": 0
+  },
+  "reviews": [
+    {
+      "questionId": "ch04-ai-55c0973d-188-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem, options, and keyed answer align cleanly. Exactly one option describes a one-to-many relationship correctly, distractors are plausible misconceptions, and the explanation accurately teaches the parent/child-side idea. Difficulty 1 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-55c0973d-188-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This is factually correct and well aligned to the redundancy concept. Option A is the only defensible answer, the distractors reflect common denormalization mistakes, and the explanation clearly states why the city belongs with the customer entity. Difficulty 2 is reasonable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-55c0973d-188-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item correctly tests foreign-key placement in a one-to-many design. Option A is uniquely correct, the distractors are plausible but wrong for clear reasons, and the explanation accurately links one-side and many-side key placement. Difficulty 2 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-55c0973d-188-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The question combines one-to-many modeling and redundancy avoidance effectively. Only option B satisfies both conditions, and the explanation teaches both entity separation and foreign-key linkage. Difficulty 2 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-55c0973d-188-5",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item is conceptually sound, with one clearly correct option and plausible distractors based on wrong-side key placement or redundancy. The explanation correctly emphasizes storing magazine facts once and relating articles to magazines. Difficulty 2 fits.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-5edcae3f-ded-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The SQL is correct, the query result is described accurately, and only option A matches an inner join on the foreign key. Distractors are plausible alternatives such as aggregation or outer join behavior. The explanation teaches row matching and exclusion of unmatched departments. Difficulty 2 is fair.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-5edcae3f-ded-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This accurately assesses GROUP BY with HAVING. The query and explanation are correct, only option A is defensible, and the distractors reflect common confusion about row-level versus group-level filtering. Difficulty 3 is reasonable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-5edcae3f-ded-3",
+      "verdict": "needs-edit",
+      "issues": [
+        "poor-explanation",
+        "weak-distractor"
+      ],
+      "rationale": "The keyed answer is correct, but the stem says the report prints a subtotal each time the customer name changes. In this context, the subtotal is more naturally by some detail field grouped under customer, not by customer itself, so the explanation is somewhat loose and does not clearly connect the break field to the subtotaled detail values. Also, distractors B-D are not especially plausible reporting-technique alternatives, making the item easier than stated.",
+      "suggestedFix": "Revise the stem to make the grouping clearer, e.g., 'A report lists invoice lines sorted by customer name and prints a subtotal whenever the customer name changes.' Improve distractors with more plausible report/query terms, and expand the explanation to clarify that the control field is the sorted attribute whose value change triggers the subtotal."
+    },
+    {
+      "questionId": "ch04-ai-5edcae3f-ded-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem and options align, the correct SQL join is unambiguous, and the distractors are plausible wrong queries. The explanation correctly distinguishes a proper join, missing join, wrong join condition, and Cartesian product. Difficulty 3 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-5edcae3f-ded-5",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The SQL is correct, assumptions are explicit, and the keyed answer precisely matches the effect of WHERE, GROUP BY, COUNT(DISTINCT), and HAVING. Distractors target realistic misunderstandings. Difficulty 4 is acceptable though on the easier side for advanced beginners.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-f6e2b465-d26-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This is a straightforward and accurate test of foreign-key mapping. Only option A is correct, distractors are plausible misconceptions, and the explanation clearly states why the one-side key goes into the many-side table. Difficulty 2 is fitting.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-f6e2b465-d26-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The statement of referential integrity is accurate, the assumption about a non-null foreign key is explicit, and only option A is defensible. The explanation is concise and correct. Difficulty 2 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-f6e2b465-d26-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The SQL inserts are valid as framed, the nullability assumption is explicitly stated, and option C is the only insert that violates referential integrity. The explanation correctly distinguishes valid parent matches from an invalid nonmatching key and allowed NULL. Difficulty 3 is fair.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-f6e2b465-d26-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The DDL and interpretation are correct. Option A accurately describes `employee.dept_id` as a foreign key storing the parent identifier in the many-side table, while the distractors are clearly wrong but still plausible enough. Difficulty 3 is acceptable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-f6e2b465-d26-5",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item correctly focuses on referential integrity as the rule preventing orphaned foreign-key references. Only option B directly supports the stated goal, and the explanation is accurate and instructive. Difficulty 3 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-fd6a6239-c9a-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This is accurate and aligned to the source’s treatment of views as reusable virtual tables. Option A is uniquely correct, distractors are plausible alternatives, and the explanation is clear. Difficulty 2 is suitable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-fd6a6239-c9a-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item correctly describes how a view is treated in query use. Only option B is defensible, the distractors are plausible misunderstandings, and the explanation teaches the virtual-table idea accurately. Difficulty 2 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-fd6a6239-c9a-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The SQL and logic are correct, and the stem explicitly provides the needed assumption that `CustomerTotals` already contains one row per customer. Option A is the only query that uses a subquery appropriately to compare against the overall average. The explanation is strong and pedagogically useful. Difficulty 3 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-fd6a6239-c9a-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This is a clean subquery-reading item. The inner query’s role is correctly identified as producing an intermediate result for the outer filter, and the distractors are plausible but clearly incorrect. The explanation is concise and accurate. Difficulty 3 fits.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch04-ai-fd6a6239-c9a-5",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem clearly asks for a reusable, stable query interface, and a view is the single best answer. Distractors are plausible but incorrect, and the explanation accurately ties the choice to virtual-table reuse without duplication. Difficulty 4 is acceptable.",
+      "suggestedFix": ""
+    }
+  ]
+}

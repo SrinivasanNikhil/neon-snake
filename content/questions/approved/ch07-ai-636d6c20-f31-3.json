@@ -1,0 +1,45 @@
+{
+  "chapter": 7,
+  "conceptIds": [
+    "ch07-iterative-modeling"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 2,
+  "explanation": "Models improve when they are challenged, tested, and checked for completeness. Repeated review with client participation helps surface missing details and weak assumptions.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:28.409Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "636d6c20-f31a-4103-98af-f800ddf45312"
+  },
+  "id": "ch07-ai-636d6c20-f31-3",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Because the first draft is always correct if it uses standard notation."
+    },
+    {
+      "id": "B",
+      "text": "Because repeated review helps reveal missing facts, unclear assumptions, and gaps in completeness."
+    },
+    {
+      "id": "C",
+      "text": "Because models should be finalized before talking to users."
+    },
+    {
+      "id": "D",
+      "text": "Because iteration is only needed when the database will be physical."
+    }
+  ],
+  "prompt": "Why is data modeling usually treated as an iterative activity rather than a one-time task?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Iterative modeling",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Data modeling hints",
+    "title": "Data Modeling",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-modeling-hints"
+  },
+  "status": "approved"
+}

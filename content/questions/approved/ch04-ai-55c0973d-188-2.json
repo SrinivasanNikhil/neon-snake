@@ -1,0 +1,45 @@
+{
+  "chapter": 4,
+  "conceptIds": [
+    "ch04-redundancy"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "When a fact describes its own entity, storing it once there avoids repeating the same data across many related rows. The customer city belongs with the customer, while invoices can point to that customer.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:59:54.895Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "55c0973d-1885-4832-ba30-6231347d1472"
+  },
+  "id": "ch04-ai-55c0973d-188-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Keep the city only in the customer table and reference the customer from each invoice"
+    },
+    {
+      "id": "B",
+      "text": "Duplicate the city in every invoice row so queries are faster"
+    },
+    {
+      "id": "C",
+      "text": "Replace the customer identifier with the customer city"
+    },
+    {
+      "id": "D",
+      "text": "Store the city once per invoice line item and once per invoice header"
+    }
+  ],
+  "prompt": "A sales app stores each invoice with the customer’s city in every invoice row. If the customer moves, many old rows would need updates. Which design choice best reduces this redundancy?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Move repeated facts to the entity they describe.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Relationships",
+    "title": "The One-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#relationships"
+  },
+  "status": "approved"
+}

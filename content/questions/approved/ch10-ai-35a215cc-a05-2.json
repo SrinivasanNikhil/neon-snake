@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-data-types"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 3,
+  "explanation": "A temporal type is the best fit when the column stores dates and supports date-related operations such as comparison or arithmetic. Character and Boolean types do not model the value domain as well, and a large-object type is far too broad for a date field.",
+  "generation": {
+    "generatedAt": "2026-08-12T01:38:03.014Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "35a215cc-a052-4ac6-815d-e5d1e2cfa8cc"
+  },
+  "id": "ch10-ai-35a215cc-a05-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "A character type, because dates are easiest to sort alphabetically."
+    },
+    {
+      "id": "B",
+      "text": "A temporal type, because it matches date-based values and date operations."
+    },
+    {
+      "id": "C",
+      "text": "A large-object type, because birthdays can vary in length."
+    },
+    {
+      "id": "D",
+      "text": "A Boolean type, because a birth date is either present or absent."
+    }
+  ],
+  "prompt": "A customer database stores a column called birth_date, and the application often needs to compare dates and calculate ages. Which data type choice is most appropriate?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Choosing data types",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Creating a table and data types",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=216"
+  },
+  "status": "approved"
+}

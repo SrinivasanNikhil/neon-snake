@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "chapter": 8,
+  "model": "gpt-5.4",
+  "auditedAt": "2026-08-13T16:21:44.587Z",
+  "questionCount": 20,
+  "summary": {
+    "pass": 18,
+    "needsEdit": 2,
+    "reject": 0
+  },
+  "reviews": [
+    {
+      "questionId": "ch08-ai-0cfda02d-6a3-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Stem, options, and keyed answer align. Exactly one answer is defensible: moving EmployeeName and ProjectName to entity tables removes partial dependencies on parts of the composite key, which is the core 2NF issue. Distractors are plausible but clearly incorrect. Explanation is accurate and instructional. Difficulty 2 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-0cfda02d-6a3-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Clear assumptions are stated, and the question correctly targets partial dependency under a composite key. StudentName is the only nonkey attribute depending on only StudentID, so exactly one answer is correct. Explanation correctly distinguishes nonkey attributes from key attributes. Difficulty 3 is reasonable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-0cfda02d-6a3-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem provides enough assumptions to infer that OrderDate depends on OrderID and ProductName depends on ProductID, making both partial dependencies and thus 2NF violations. Only option C is correct. Distractors are plausible. Explanation teaches the concept well. Difficulty 4 is acceptable because the learner must evaluate multiple attributes.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-4d44f4f0-752-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The functional dependencies and candidate keys are stated, and the keyed answer accurately captures the BCNF-specific issue: Advisor is a determinant but not a candidate key. The explanation correctly notes why 3NF can still hold when the dependent attribute is prime. Difficulty 2 is fair for a direct concept check with assumptions supplied.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-4d44f4f0-752-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This is a sound higher-normal-forms question. The scenario clearly describes independent sets of values for the same determinant, which is the hallmark of a multivalued dependency. Exactly one answer is defensible. Explanation is accurate and chapter-fit. Difficulty 3 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-4d44f4f0-752-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stated FDs and candidate keys support the conclusion that C is a determinant but not a candidate key, so BCNF is violated. The explanation is factually correct and appropriately distinguishes BCNF from 3NF. Distractors are plausible enough. Difficulty 4 is acceptable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-7bd08f64-c03-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Accurate chapter-fit question on equivalence of design methods. Only option B reflects the source idea that different methods should converge on structures representing the same facts. Explanation is concise but adequate. Difficulty 2 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-7bd08f64-c03-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem states the key assumption that both designs were created correctly, which makes option A uniquely defensible. The distractors are clearly wrong but still plausible misconceptions. Explanation is accurate and relevant. Difficulty 3 is acceptable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-7bd08f64-c03-3",
+      "verdict": "needs-edit",
+      "issues": [
+        "near-duplicate",
+        "misrated-difficulty"
+      ],
+      "rationale": "This item tests essentially the same concept and same inference as the previous two method-equivalence questions, with only superficial wording changes. It adds little new educational value and is not substantively harder despite being rated 4. The keyed answer is correct, but the set is redundant.",
+      "suggestedFix": "Replace with a distinct application question, such as asking how to evaluate whether two differently named schemas capture the same facts or constraints. Lower the difficulty if kept in its current form."
+    },
+    {
+      "questionId": "ch08-ai-7dbbcc25-692-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The scenario correctly describes a transitive dependency: OrderID identifies CustomerID, and CustomerID determines customer details. Option B is the best normalization step toward 3NF. Explanation is accurate and clear. Difficulty 2 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-7dbbcc25-692-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Good 3NF scenario with explicit assumptions. ProductName and UnitPrice depend on ProductID rather than directly on the key, so separating Product is the correct redesign. Distractors are plausible and meaningfully distinct. Explanation is strong and teaches the transitive-dependency idea. Difficulty 3 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-7dbbcc25-692-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem clearly states the candidate-key assumption and the manager-sharing assumption needed to infer the transitive dependency. Option A is uniquely correct. The explanation accurately rules out 1NF and 2NF distractors. Difficulty 4 is somewhat high but still defensible because learners must reason through the dependency chain.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-cc519a70-6c2-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Simple and correct functional-dependency item. The mapping described supports only employee number -> employee name. Explanation is accurate. Difficulty 1 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-cc519a70-6c2-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The scenario cleanly describes repeated customer facts causing update inconsistency, which is a modification anomaly. Distractors are plausible enough and only one answer is defensible. Explanation is correct. Difficulty 2 fits.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-cc519a70-6c2-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The business rule directly supports customer_id -> customer_name, making the answer unambiguous. The explanation properly connects the FD to normalization analysis. Difficulty 3 is slightly generous but still acceptable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-cc519a70-6c2-4",
+      "verdict": "needs-edit",
+      "issues": [
+        "ambiguous-answer",
+        "poor-explanation"
+      ],
+      "rationale": "The scenario specifically illustrates insertion and deletion anomalies, but the keyed answer and explanation collapse these under the broader phrase 'modification anomalies.' Some texts use modification anomaly broadly, but many learners will distinguish insert, update, and delete anomalies separately. Because the stem asks what it 'most clearly illustrates,' the wording can cause ambiguity between the umbrella category and the specific anomaly types mentioned in the stem.",
+      "suggestedFix": "Revise the stem to ask for the broader structural category, or add options that explicitly distinguish insertion/deletion anomalies from the umbrella term. For example: 'What broader structural problem do these insertion and deletion problems illustrate?' Then keep the current answer."
+    },
+    {
+      "questionId": "ch08-ai-ccaac0af-4bb-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Correct 1NF item. A multivalued phone_numbers column violates single-valued attributes, and separate related rows are the best fix. Explanation is accurate and aligned with the source. Difficulty 2 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-ccaac0af-4bb-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The table design in option B is the only one in 1NF under the stated assumption of one row per invoice line. The distractors represent common anti-patterns: lists in a cell and repeating columns. Explanation is clear. Difficulty 2 is suitable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-ccaac0af-4bb-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Solid 1NF repair question. Creating a separate SupplierEmail table is the standard fix for a multivalued attribute. Distractors are plausible and incorrect. Explanation is accurate. Difficulty 3 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch08-ai-ccaac0af-4bb-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This correctly identifies the main 1NF issue as a non-single-valued attribute. Option D is a plausible distractor because it overstates the remedy, which helps discriminate understanding. Explanation is accurate. Difficulty 3 is reasonable.",
+      "suggestedFix": ""
+    }
+  ]
+}

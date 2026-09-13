@@ -1,0 +1,45 @@
+{
+  "chapter": 6,
+  "conceptIds": [
+    "ch06-relationship-labels"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "When the same entities participate in multiple relationships, labels distinguish the different meanings so the model is unambiguous.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:13.245Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "d4aba820-39f4-4238-9bfc-1c6c7fffec68"
+  },
+  "id": "ch06-ai-d4aba820-39f-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "They clarify which relationship is meant when the same entities are connected in more than one way"
+    },
+    {
+      "id": "B",
+      "text": "They eliminate the need for foreign keys"
+    },
+    {
+      "id": "C",
+      "text": "They automatically enforce uniqueness"
+    },
+    {
+      "id": "D",
+      "text": "They turn a one-to-one relationship into a recursive relationship"
+    }
+  ],
+  "prompt": "A company has two different relationships between the same pair of entities, Employee and Department: one for where an employee works, and one for which department manages the employee record. Why are relationship labels useful here?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Using relationship descriptors to distinguish meanings",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Modeling a one-to-one relationship",
+    "title": "One-to-One and Recursive Relationships",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#modeling-a-one-to-one-relationship"
+  },
+  "status": "approved"
+}

@@ -1,0 +1,45 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-order-derived"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "The expression `subtotal * (1 + tax_rate)` computes a derived value for each row and labels it `total_charge` in the result. `ORDER BY total_charge DESC` then sorts the output from the largest computed total to the smallest. The query reports derived values; it does not store them permanently.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:57:33.176Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "1cde71c7-404f-4a5a-b9e3-9b0a32c44f5e"
+  },
+  "id": "ch03-ai-1cde71c7-404-2",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "It returns each `invoice_id` with a calculated `total_charge`, sorted from highest total charge to lowest."
+    },
+    {
+      "id": "B",
+      "text": "It permanently stores `total_charge` as a new column in `invoice` and sorts by `invoice_id`."
+    },
+    {
+      "id": "C",
+      "text": "It returns only invoices whose calculated total charge is above the average total charge."
+    },
+    {
+      "id": "D",
+      "text": "It sorts rows by `subtotal` descending and displays `tax_rate` as `total_charge`."
+    }
+  ],
+  "prompt": "A table `invoice` has columns `invoice_id`, `subtotal`, and `tax_rate`. What does this query do?\n\n```sql\nSELECT invoice_id, subtotal * (1 + tax_rate) AS total_charge\nFROM invoice\nORDER BY total_charge DESC;\n```",
+  "provenance": "ai-generated",
+  "reviewConcept": "Ordering and derived values",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Querying a single-table database",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#querying-a-single-table-database"
+  },
+  "status": "approved"
+}

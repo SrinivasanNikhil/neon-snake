@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "chapter": 10,
+  "title": "SQL",
+  "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=214",
+  "summary": "Consolidates SQL as a standard, declarative relational language and surveys definition, querying, reusable database objects, security, and application use.",
+  "sections": [
+    {
+      "title": "Structured query language",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=214",
+      "concepts": [
+        { "id": "ch10-sql-standard", "title": "SQL as a standard language", "summary": "SQL is a standardized, declarative language used to define, query, maintain, and control relational data across database products." },
+        { "id": "ch10-set-processing", "title": "Set-oriented processing", "summary": "SQL states the desired relational result and operates on sets of rows rather than requiring record-by-record navigation." }
+      ]
+    },
+    {
+      "title": "Creating a table and data types",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=216",
+      "concepts": [
+        { "id": "ch10-definition", "title": "Data definition", "summary": "CREATE TABLE specifies columns, data types, keys, nullability, and other constraints that define a relation." },
+        { "id": "ch10-data-types", "title": "Choosing data types", "summary": "Character, numeric, temporal, Boolean, and large-object types should be chosen to match the values and operations a column requires." },
+        { "id": "ch10-collation", "title": "Collation", "summary": "Collation rules determine how character values are compared and ordered for a language or locale." }
+      ]
+    },
+    {
+      "title": "Scalar and aggregate functions",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=223",
+      "concepts": [
+        { "id": "ch10-scalar-functions", "title": "Scalar functions", "summary": "Scalar functions transform one value per evaluated row, including text, numeric, and date-time values." },
+        { "id": "ch10-aggregate-functions", "title": "Aggregate functions", "summary": "Aggregate functions summarize sets or groups of rows, with grouping and filtering rules controlling the scope." }
+      ]
+    },
+    {
+      "title": "Views, indexes, and the catalog",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html",
+      "concepts": [
+        { "id": "ch10-views", "title": "Views", "summary": "A view is a named virtual table derived from a query and can simplify or constrain access to underlying tables." },
+        { "id": "ch10-indexes", "title": "Indexes", "summary": "An index stores an ordered access structure that can speed retrieval and may also enforce uniqueness when defined that way." },
+        { "id": "ch10-catalog", "title": "Database catalog", "summary": "The catalog exposes metadata about database objects such as tables and columns for administrative queries." }
+      ]
+    },
+    {
+      "title": "Privileges and application use",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html",
+      "concepts": [
+        { "id": "ch10-privileges", "title": "GRANT and REVOKE", "summary": "GRANT assigns specific object privileges to a principal and REVOKE removes previously assigned privileges." },
+        { "id": "ch10-embedded-sql", "title": "Interactive and embedded SQL", "summary": "SQL can be used interactively or embedded within a procedural program whose control flow handles row-by-row application processing." }
+      ]
+    }
+  ]
+}

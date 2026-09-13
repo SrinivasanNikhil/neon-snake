@@ -1,0 +1,45 @@
+{
+  "chapter": 7,
+  "conceptIds": [
+    "ch07-identifiers-naming"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 2,
+  "explanation": "B is correct because labels should be meaningful to stakeholders and unambiguous in context. An abbreviation understood by only one department is likely to confuse other reviewers and reduce shared understanding. A, C, and D all describe good naming practice: consistency, stakeholder-recognized terms, and clarity.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:28.409Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "636d6c20-f31a-4103-98af-f800ddf45312"
+  },
+  "id": "ch07-ai-636d6c20-f31-5",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Using the same label for the same business concept throughout the model"
+    },
+    {
+      "id": "B",
+      "text": "Using an abbreviation that only one department understands as an entity name"
+    },
+    {
+      "id": "C",
+      "text": "Choosing a term that business stakeholders commonly use"
+    },
+    {
+      "id": "D",
+      "text": "Picking a label whose meaning is clear in the model's context"
+    }
+  ],
+  "prompt": "Which naming choice is most likely to confuse people reviewing a shared business data model?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Identifiers and naming",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Data modeling hints",
+    "title": "Data Modeling",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-modeling-hints"
+  },
+  "status": "approved"
+}

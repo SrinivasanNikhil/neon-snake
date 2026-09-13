@@ -1,0 +1,45 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-model-to-table"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 4,
+  "explanation": "The single-entity model maps directly to one table. The identifier should become the primary key, and the remaining attributes should become regular columns. Option A does this correctly.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:57:26.638Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "a68f1455-2bcb-4246-b7c5-9f165bc691c9"
+  },
+  "id": "ch03-ai-a68f1455-2bc-4",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "CREATE TABLE Patient (\n  patient_number INT PRIMARY KEY,\n  full_name VARCHAR(80),\n  date_of_birth DATE\n);"
+    },
+    {
+      "id": "B",
+      "text": "CREATE TABLE Patient (\n  full_name VARCHAR(80) PRIMARY KEY,\n  patient_number INT,\n  date_of_birth DATE\n);"
+    },
+    {
+      "id": "C",
+      "text": "CREATE TABLE Patient (\n  patient_number INT,\n  full_name VARCHAR(80),\n  date_of_birth DATE,\n  FOREIGN KEY (patient_number) REFERENCES Patient(patient_number)\n);"
+    },
+    {
+      "id": "D",
+      "text": "CREATE TABLE Patient (\n  patient_number INT,\n  full_name VARCHAR(80),\n  date_of_birth DATE,\n  INDEX(patient_number)\n);"
+    }
+  ],
+  "prompt": "A small clinic models only one entity, Patient. The business rules are:\n- each patient is identified by one patient_number\n- each patient has a full_name and a date_of_birth\n- the design must store the entity in one table\n\nWhich MySQL table definition best matches that model?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Mapping a model to a table",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Creating a single-table database",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#creating-a-single-table-database"
+  },
+  "status": "approved"
+}

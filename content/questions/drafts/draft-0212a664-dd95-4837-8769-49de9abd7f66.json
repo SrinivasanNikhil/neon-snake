@@ -1,0 +1,182 @@
+[
+  {
+    "chapter": 10,
+    "conceptIds": [
+      "ch10-privileges"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "`GRANT` assigns specific privileges on a database object. If the role should only read from `invoices`, granting only `SELECT` gives query access without also granting modification privileges such as `UPDATE` or `DELETE`. `GRANT UPDATE` would allow changes, `GRANT ALL PRIVILEGES` would allow more than read access, and `REVOKE SELECT` would remove read access instead of providing it.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:58.946Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "0212a664-dd95-4837-8769-49de9abd7f66"
+    },
+    "id": "ch10-ai-0212a664-dd9-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Use `GRANT SELECT ON invoices` for the reporting role"
+      },
+      {
+        "id": "B",
+        "text": "Use `GRANT UPDATE ON invoices` for the reporting role"
+      },
+      {
+        "id": "C",
+        "text": "Use `GRANT ALL PRIVILEGES ON invoices` for the reporting role"
+      },
+      {
+        "id": "D",
+        "text": "Use `REVOKE SELECT ON invoices` from the reporting role"
+      }
+    ],
+    "prompt": "A database administrator wants the reporting role to read rows from the `invoices` table but not change or delete any invoice data. Which action best fits that goal?",
+    "provenance": "ai-generated",
+    "reviewConcept": "GRANT and REVOKE",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Privileges and application use",
+      "title": "SQL",
+      "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 10,
+    "conceptIds": [
+      "ch10-privileges"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "`GRANT SELECT ON customer TO analyst;` gives the analyst read access to the table. `REVOKE` removes a privilege rather than granting one, and `GRANT UPDATE` would allow changes to data. Creating a view does not itself grant any privilege to the analyst; it only defines another database object.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:58.946Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "0212a664-dd95-4837-8769-49de9abd7f66"
+    },
+    "id": "ch10-ai-0212a664-dd9-2",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "GRANT SELECT ON customer TO analyst;"
+      },
+      {
+        "id": "B",
+        "text": "REVOKE SELECT ON customer FROM analyst;"
+      },
+      {
+        "id": "C",
+        "text": "GRANT UPDATE ON customer TO analyst;"
+      },
+      {
+        "id": "D",
+        "text": "CREATE VIEW customer_public AS SELECT * FROM customer;"
+      }
+    ],
+    "prompt": "Assume standard SQL privilege syntax and that user names are already valid in the DBMS. An analyst should be able to read rows from the `customer` table but not modify them. Which statement best grants that capability?",
+    "provenance": "ai-generated",
+    "reviewConcept": "GRANT and REVOKE",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Privileges and application use",
+      "title": "SQL",
+      "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 10,
+    "conceptIds": [
+      "ch10-embedded-sql"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 2,
+    "explanation": "Embedded SQL means SQL is placed inside a program, while the surrounding procedural code handles control flow and application logic. Typing commands at a prompt is interactive SQL.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:58.946Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "0212a664-dd95-4837-8769-49de9abd7f66"
+    },
+    "id": "ch10-ai-0212a664-dd9-3",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "A user types queries directly at a database prompt"
+      },
+      {
+        "id": "B",
+        "text": "SQL statements are written inside a procedural application that also contains program logic"
+      },
+      {
+        "id": "C",
+        "text": "A table is created with a primary key constraint"
+      },
+      {
+        "id": "D",
+        "text": "A report is produced from a grouped aggregate query"
+      }
+    ],
+    "prompt": "Which situation best describes embedded SQL rather than interactive SQL?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Interactive and embedded SQL",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Privileges and application use",
+      "title": "SQL",
+      "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 10,
+    "conceptIds": [
+      "ch10-embedded-sql"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "The SQL is being used inside a program that controls the loop and processes rows one at a time. That matches embedded SQL with procedural row-by-row application logic, not interactive SQL or a privilege or view operation.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:58.946Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "0212a664-dd95-4837-8769-49de9abd7f66"
+    },
+    "id": "ch10-ai-0212a664-dd9-4",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "It relies on embedded SQL with row-by-row processing handled by the program"
+      },
+      {
+        "id": "B",
+        "text": "It is purely interactive SQL because each row is handled separately"
+      },
+      {
+        "id": "C",
+        "text": "It is a GRANT/REVOKE workflow because privileges control the loop"
+      },
+      {
+        "id": "D",
+        "text": "It is a view definition because the database manages all control flow"
+      }
+    ],
+    "prompt": "A payroll program runs this logic:\n\n1. Retrieve the next employee row.\n2. If the employee exists, compute tax in application code.\n3. Store the result.\n4. Repeat until no rows remain.\n\nWhich statement best characterizes this design?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Interactive and embedded SQL",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Privileges and application use",
+      "title": "SQL",
+      "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+    },
+    "status": "draft"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "chapter": 6,
+  "conceptIds": [
+    "ch06-recursive-cardinality"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 2,
+  "explanation": "From the parent side, one category can be related to many child categories, while each child points back to one parent. That is a recursive one-to-many relationship. The parent/child perspective matters here: the same structure can be described as many-to-one from child to parent, but the question explicitly asks from parent to child.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:49.782Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "b690682f-bdc6-44f9-b5f3-da5914ed9ee5"
+  },
+  "id": "ch06-ai-b690682f-bdc-4",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "One-to-one"
+    },
+    {
+      "id": "B",
+      "text": "One-to-many"
+    },
+    {
+      "id": "C",
+      "text": "Many-to-many"
+    },
+    {
+      "id": "D",
+      "text": "Zero-to-zero"
+    }
+  ],
+  "prompt": "A table `Category(category_id, parent_category_id)` stores categories where `parent_category_id` references `Category.category_id`. From the parent-category perspective, if one parent category can have several child categories and each child category has one parent, what recursive cardinality is being modeled?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Recursive cardinalities",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Recursive one-to-one and many-to-many relationships",
+    "title": "One-to-One and Recursive Relationships",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#modeling-a-recursive-many-to-many-relationship"
+  },
+  "status": "approved"
+}

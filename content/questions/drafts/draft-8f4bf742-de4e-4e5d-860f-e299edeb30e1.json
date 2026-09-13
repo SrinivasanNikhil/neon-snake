@@ -1,0 +1,182 @@
+[
+  {
+    "chapter": 10,
+    "conceptIds": [
+      "ch10-scalar-functions"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "Scalar functions operate on individual values from each row and return one result per evaluated row. Uppercasing a name and measuring its length are both row-by-row transformations, not summaries across multiple rows.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:44.372Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "8f4bf742-de4e-4e5d-860f-e299edeb30e1"
+    },
+    "id": "ch10-ai-8f4bf742-de4-1",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "Scalar functions"
+      },
+      {
+        "id": "B",
+        "text": "Aggregate functions"
+      },
+      {
+        "id": "C",
+        "text": "Indexes"
+      },
+      {
+        "id": "D",
+        "text": "Views"
+      }
+    ],
+    "prompt": "A reporting query needs to display each employee's last name in uppercase and the length of their first name. Which SQL feature is being used when the query applies functions to each row’s column values one row at a time?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Scalar functions transform one value per evaluated row, including text, numeric, and date-time values.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Scalar and aggregate functions",
+      "title": "SQL",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=223"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 10,
+    "conceptIds": [
+      "ch10-aggregate-functions"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 2,
+    "explanation": "Aggregate functions summarize multiple rows, often after grouping them by a column such as region. A total revenue calculation combines values across a set, so it is an aggregate task rather than a scalar transformation.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:44.372Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "8f4bf742-de4e-4e5d-860f-e299edeb30e1"
+    },
+    "id": "ch10-ai-8f4bf742-de4-2",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "Scalar functions"
+      },
+      {
+        "id": "B",
+        "text": "Aggregate functions"
+      },
+      {
+        "id": "C",
+        "text": "Collation"
+      },
+      {
+        "id": "D",
+        "text": "Data types"
+      }
+    ],
+    "prompt": "A sales manager wants the total revenue for each region, ignoring individual orders once they have been grouped by region. Which SQL feature is the best fit?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Aggregate functions summarize sets or groups of rows, with grouping and filtering rules controlling the scope.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Scalar and aggregate functions",
+      "title": "SQL",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=223"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 10,
+    "conceptIds": [
+      "ch10-scalar-functions"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "UPPER and ROUND are scalar functions because they act on individual values in each row. The query keeps the same row-level result set and adds transformed output columns; it does not group, update, or filter the table.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:44.372Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "8f4bf742-de4e-4e5d-860f-e299edeb30e1"
+    },
+    "id": "ch10-ai-8f4bf742-de4-3",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "It returns one row per order and transforms two column values in each row."
+      },
+      {
+        "id": "B",
+        "text": "It returns one row per customer with summed order totals."
+      },
+      {
+        "id": "C",
+        "text": "It changes the stored values in the orders table."
+      },
+      {
+        "id": "D",
+        "text": "It filters out rows where order_total is not numeric."
+      }
+    ],
+    "prompt": "What does the following query do?\n\n```sql\nSELECT order_id,\n       UPPER(customer_name) AS customer_name_upper,\n       ROUND(order_total, 2) AS order_total_rounded\nFROM orders;\n```",
+    "provenance": "ai-generated",
+    "reviewConcept": "Scalar functions transform one value per evaluated row, including text, numeric, and date-time values.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Scalar and aggregate functions",
+      "title": "SQL",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=223"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 10,
+    "conceptIds": [
+      "ch10-aggregate-functions"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 3,
+    "explanation": "`AVG` is an aggregate function because it summarizes multiple rows within each department group into one value. `HAVING` is the clause typically used to filter grouped results, but the average itself is computed by an aggregate function, not by a scalar function, collation rule, or embedded SQL.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:44.372Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "8f4bf742-de4e-4e5d-860f-e299edeb30e1"
+    },
+    "id": "ch10-ai-8f4bf742-de4-4",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "Scalar functions"
+      },
+      {
+        "id": "B",
+        "text": "Aggregate functions"
+      },
+      {
+        "id": "C",
+        "text": "Character collation"
+      },
+      {
+        "id": "D",
+        "text": "Embedded SQL"
+      }
+    ],
+    "prompt": "A finance team needs a report with one row per department and the average payroll for that department, typically using `GROUP BY` and then `HAVING` to keep only averages above 50000. Which SQL feature is essential for computing the department average?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Aggregate functions summarize sets or groups of rows, with grouping and filtering rules controlling the scope.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Scalar and aggregate functions",
+      "title": "SQL",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=223"
+    },
+    "status": "draft"
+  }
+]

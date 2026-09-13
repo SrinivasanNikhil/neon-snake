@@ -1,0 +1,45 @@
+{
+  "chapter": 9,
+  "conceptIds": [
+    "ch09-domain-relation"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 1,
+  "explanation": "A domain is the allowed set of atomic values for an attribute. The other choices describe a relation, cardinality, or a key-like link between tables.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:04.847Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "6d5c8636-1e4d-4317-8f8c-f572288b814d"
+  },
+  "id": "ch09-ai-6d5c8636-1e4-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "The set of valid atomic values allowed for one attribute, such as all acceptable postal codes"
+    },
+    {
+      "id": "B",
+      "text": "Any table that stores customers and orders together"
+    },
+    {
+      "id": "C",
+      "text": "The number of rows in a table"
+    },
+    {
+      "id": "D",
+      "text": "A column used to connect two tables"
+    }
+  ],
+  "prompt": "In a customer database, which statement best describes a domain in the relational model?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Domains and relations",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Data structures",
+    "title": "The Relational Model and Relational Algebra",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#data-structures"
+  },
+  "status": "approved"
+}

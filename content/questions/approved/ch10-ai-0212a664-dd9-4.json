@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-embedded-sql"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "The SQL is being used inside a program that controls the loop and processes rows one at a time. That matches embedded SQL with procedural row-by-row application logic, not interactive SQL or a privilege or view operation.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:58.946Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "0212a664-dd95-4837-8769-49de9abd7f66"
+  },
+  "id": "ch10-ai-0212a664-dd9-4",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "It relies on embedded SQL with row-by-row processing handled by the program"
+    },
+    {
+      "id": "B",
+      "text": "It is purely interactive SQL because each row is handled separately"
+    },
+    {
+      "id": "C",
+      "text": "It is a GRANT/REVOKE workflow because privileges control the loop"
+    },
+    {
+      "id": "D",
+      "text": "It is a view definition because the database manages all control flow"
+    }
+  ],
+  "prompt": "A payroll program runs this logic:\n\n1. Retrieve the next employee row.\n2. If the employee exists, compute tax in application code.\n3. Store the result.\n4. Repeat until no rows remain.\n\nWhich statement best characterizes this design?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Interactive and embedded SQL",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Privileges and application use",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+  },
+  "status": "approved"
+}

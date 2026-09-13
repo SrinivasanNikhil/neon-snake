@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-data-types"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 4,
+  "explanation": "A character type is the best fit because the values are short text identifiers and may include letters or leading zeros, such as `007`. A Boolean type is too limited for multiple distinct codes, a large-object type is unnecessary for short values, and a temporal type stores dates or times rather than status codes.",
+  "generation": {
+    "generatedAt": "2026-08-12T01:38:03.014Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "35a215cc-a052-4ac6-815d-e5d1e2cfa8cc"
+  },
+  "id": "ch10-ai-35a215cc-a05-4",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use a character type sized to fit the codes."
+    },
+    {
+      "id": "B",
+      "text": "Use a Boolean type because there are only a few possible statuses."
+    },
+    {
+      "id": "C",
+      "text": "Use a large-object text type so future codes have no practical limit."
+    },
+    {
+      "id": "D",
+      "text": "Use a temporal type because statuses can change over time."
+    }
+  ],
+  "prompt": "A table column stores short status codes such as `A1`, `B2`, and `007`. The values are identifiers used for exact matching and indexing, not quantities for arithmetic. Which data type strategy is best?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Choosing data types",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Creating a table and data types",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=216"
+  },
+  "status": "approved"
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "chapter": 7,
+  "title": "Data Modeling",
+  "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html",
+  "summary": "Treats data modeling as a collaborative design discipline focused on well-formed, high-fidelity representations of organizational facts and relationships.",
+  "sections": [
+    {
+      "title": "Data modeling",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-modeling",
+      "concepts": [
+        { "id": "ch07-model-purpose", "title": "Purpose and scope", "summary": "A data model identifies facts and relationships that must be stored without deciding physical storage or process logic." },
+        { "id": "ch07-building-blocks", "title": "Modeling building blocks", "summary": "Entities, attributes, identifiers, and relationships form the core vocabulary for communicating a database design." }
+      ]
+    },
+    {
+      "title": "Data model quality",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-model-quality",
+      "concepts": [
+        { "id": "ch07-well-formed", "title": "Well-formed models", "summary": "A well-formed model follows notation rules, names every entity, supplies identifiers, records relationships, and avoids ambiguous labels." },
+        { "id": "ch07-high-fidelity", "title": "High-fidelity models", "summary": "A high-fidelity model accurately reflects the real-world context, including relevant relationships, constraints, and exceptions." }
+      ]
+    },
+    {
+      "title": "Quality improvement",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#quality-improvement",
+      "concepts": [
+        { "id": "ch07-context-exceptions", "title": "Context and exceptions", "summary": "Model quality depends on intended use, so designers test edge cases and exceptions rather than assuming the first simple model is sufficient." },
+        { "id": "ch07-cardinality-modality", "title": "Cardinality and modality", "summary": "Cardinality describes maximum participation and modality describes whether participation is optional or mandatory." },
+        { "id": "ch07-generalization", "title": "Generalization and entity types", "summary": "Shared facts across related entity types can be generalized into a broader entity while subtype-specific facts remain distinct." }
+      ]
+    },
+    {
+      "title": "Data modeling hints",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-modeling-hints",
+      "concepts": [
+        { "id": "ch07-identifiers-naming", "title": "Identifiers and naming", "summary": "Identifiers and labels should be stable, meaningful to stakeholders, internally consistent, and unambiguous in context." },
+        { "id": "ch07-iterative-modeling", "title": "Iterative modeling", "summary": "Models improve through repeated challenge, testing, integration, and completeness checks with client participation." }
+      ]
+    }
+  ]
+}

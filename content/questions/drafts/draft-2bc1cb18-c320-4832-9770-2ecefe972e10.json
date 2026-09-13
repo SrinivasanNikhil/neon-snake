@@ -1,0 +1,183 @@
+[
+  {
+    "chapter": 3,
+    "conceptIds": [
+      "ch03-entity-attributes"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 1,
+    "explanation": "An attribute is a piece of information recorded about each entity instance. In a customer model, values like email or phone number are attributes because they describe each customer.",
+    "generation": {
+      "generatedAt": "2026-08-13T15:57:19.555Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "2bc1cb18-c320-4832-9770-2ecefe972e10"
+    },
+    "id": "ch03-ai-2bc1cb18-c32-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "A fact stored about each customer, such as email or phone number"
+      },
+      {
+        "id": "B",
+        "text": "A rule that controls which users can view the table"
+      },
+      {
+        "id": "C",
+        "text": "A saved query used to display customer rows"
+      },
+      {
+        "id": "D",
+        "text": "A physical file that holds the table on disk"
+      }
+    ],
+    "prompt": "A small company wants to keep one table of its customers. Which statement best describes an attribute in that model?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Entities and attributes",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Modeling a single-entity database",
+      "title": "The Single Entity",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#modeling-a-single-entity-database"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 3,
+    "conceptIds": [
+      "ch03-identifiers"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "An identifier must uniquely distinguish each entity instance. If one column is not enough, a combination of columns can serve as the identifier as long as the combination is unique for every row.",
+    "generation": {
+      "generatedAt": "2026-08-13T15:57:19.555Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "2bc1cb18-c320-4832-9770-2ecefe972e10"
+    },
+    "id": "ch03-ai-2bc1cb18-c32-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Use a value, or combination of values, that is unique for every row"
+      },
+      {
+        "id": "B",
+        "text": "Use any descriptive column, even if some rows repeat it"
+      },
+      {
+        "id": "C",
+        "text": "Use the column with the longest text values"
+      },
+      {
+        "id": "D",
+        "text": "Use a column only if it can contain duplicate values"
+      }
+    ],
+    "prompt": "A library system records one row per book copy. It needs a way to distinguish every row even when two copies share the same title and author. Which design best fits that need?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Identifiers",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Modeling a single-entity database",
+      "title": "The Single Entity",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#modeling-a-single-entity-database"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 3,
+    "conceptIds": [
+      "ch03-identifiers"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "The rule says no single column is enough, but the combination of product_code and warehouse_code must be unique for each row. A composite primary key on those two columns matches that requirement.",
+    "generation": {
+      "generatedAt": "2026-08-13T15:57:19.555Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "2bc1cb18-c320-4832-9770-2ecefe972e10"
+    },
+    "id": "ch03-ai-2bc1cb18-c32-3",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "PRIMARY KEY (product_code, warehouse_code)"
+      },
+      {
+        "id": "B",
+        "text": "PRIMARY KEY (product_code)"
+      },
+      {
+        "id": "C",
+        "text": "PRIMARY KEY (warehouse_code)"
+      },
+      {
+        "id": "D",
+        "text": "UNIQUE (description, price)"
+      }
+    ],
+    "prompt": "A table named Product has columns (product_code, warehouse_code, description, price). Business rules say that the same product_code may appear in more than one warehouse, but the pair (product_code, warehouse_code) must identify each row exactly once. Which key definition best matches that rule in MySQL?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Identifiers",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Modeling a single-entity database",
+      "title": "The Single Entity",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#modeling-a-single-entity-database"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 3,
+    "conceptIds": [
+      "ch03-entity-attributes",
+      "ch03-identifiers"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "An identifier is the attribute or combination of attributes that uniquely distinguishes each instance of the entity. The other choices describe query convenience, volatility, or aggregate information rather than identification.",
+    "generation": {
+      "generatedAt": "2026-08-13T15:57:19.555Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "2bc1cb18-c320-4832-9770-2ecefe972e10"
+    },
+    "id": "ch03-ai-2bc1cb18-c32-4",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "It is the attribute, or set of attributes, that uniquely separates one subscription from every other subscription"
+      },
+      {
+        "id": "B",
+        "text": "It is any attribute that happens to be frequently searched"
+      },
+      {
+        "id": "C",
+        "text": "It is the attribute that changes most often over time"
+      },
+      {
+        "id": "D",
+        "text": "It is a column that stores the total number of subscriptions"
+      }
+    ],
+    "prompt": "A startup is designing one table for its subscriptions. Each row represents one subscription. Which statement is the best model-level description of the table's identifier?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Identifiers",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Modeling a single-entity database",
+      "title": "The Single Entity",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#modeling-a-single-entity-database"
+    },
+    "status": "draft"
+  }
+]

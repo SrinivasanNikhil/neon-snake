@@ -1,0 +1,45 @@
+{
+  "chapter": 6,
+  "conceptIds": [
+    "ch06-cycle-risk"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 4,
+  "explanation": "Mutual mandatory references create a cycle. If each row needs the other to exist first, there is no straightforward insertion order that satisfies both constraints at once.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:22.517Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "e918cf74-766e-4679-9268-4f3259306fc3"
+  },
+  "id": "ch06-ai-e918cf74-766-3",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Either row may be impossible to insert first because each one needs the other to already exist."
+    },
+    {
+      "id": "B",
+      "text": "The database will always automatically convert the relationship into many-to-many."
+    },
+    {
+      "id": "C",
+      "text": "The foreign keys will be treated as optional, so no constraint problem occurs."
+    },
+    {
+      "id": "D",
+      "text": "The tables must be merged into one table, or the design is invalid."
+    }
+  ],
+  "prompt": "Two tables each require a mandatory foreign key to the other: `A` must reference exactly one `B`, and `B` must reference exactly one `A`. What is the main practical problem with this design when inserting new rows?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Constraint cycles",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Mapping a one-to-one relationship",
+    "title": "One-to-One and Recursive Relationships",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#mapping-a-one-to-one-relationship"
+  },
+  "status": "approved"
+}

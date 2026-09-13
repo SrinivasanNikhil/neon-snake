@@ -1,0 +1,45 @@
+{
+  "chapter": 4,
+  "conceptIds": [
+    "ch04-subqueries-views"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 3,
+  "explanation": "The inner query is a subquery. Its job is to compute an intermediate set of department IDs, and the outer query uses that result to filter employees.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:00:28.889Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "fd6a6239-c9a5-4151-b405-020e96c02b6e"
+  },
+  "id": "ch04-ai-fd6a6239-c9a-4",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "It creates a reusable virtual table that is stored in the database"
+    },
+    {
+      "id": "B",
+      "text": "It produces an intermediate result used by the outer query to filter rows"
+    },
+    {
+      "id": "C",
+      "text": "It defines the primary key for `Employees`"
+    },
+    {
+      "id": "D",
+      "text": "It changes the join cardinality between the two tables"
+    }
+  ],
+  "prompt": "Consider this query:\n\n```sql\nSELECT employee_id\nFROM Employees\nWHERE department_id IN (\n  SELECT department_id\n  FROM Departments\n  WHERE region = 'West'\n);\n```\n\nWhat is the role of the inner `SELECT` statement?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Subqueries can isolate an intermediate result, while a view gives a saved query result a reusable virtual-table interface.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Subqueries and views",
+    "title": "The One-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#subqueries"
+  },
+  "status": "approved"
+}

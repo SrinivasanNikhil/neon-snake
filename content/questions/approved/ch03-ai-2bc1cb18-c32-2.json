@@ -1,0 +1,45 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-identifiers"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "An identifier must uniquely distinguish each entity instance. If one column is not enough, a combination of columns can serve as the identifier as long as the combination is unique for every row.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:57:19.555Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "2bc1cb18-c320-4832-9770-2ecefe972e10"
+  },
+  "id": "ch03-ai-2bc1cb18-c32-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use a value, or combination of values, that is unique for every row"
+    },
+    {
+      "id": "B",
+      "text": "Use any descriptive column, even if some rows repeat it"
+    },
+    {
+      "id": "C",
+      "text": "Use the column with the longest text values"
+    },
+    {
+      "id": "D",
+      "text": "Use a column only if it can contain duplicate values"
+    }
+  ],
+  "prompt": "A library system records one row per book copy. It needs a way to distinguish every row even when two copies share the same title and author. Which design best fits that need?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Identifiers",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Modeling a single-entity database",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#modeling-a-single-entity-database"
+  },
+  "status": "approved"
+}

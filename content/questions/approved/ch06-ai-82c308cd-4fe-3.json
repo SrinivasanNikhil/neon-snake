@@ -1,0 +1,45 @@
+{
+  "chapter": 6,
+  "conceptIds": [
+    "ch06-recursive-query"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "A recursive common table expression starts with the anchor row (dept_id 10) and then repeatedly adds rows whose parent points to a row already found, which is how you traverse all descendant levels. B only finds one level and is not recursive. C returns only direct children. D does not follow the hierarchy and includes unrelated rows.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:42.731Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "82c308cd-4feb-47f1-bf5c-75e646ce2e8c"
+  },
+  "id": "ch06-ai-82c308cd-4fe-3",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "WITH RECURSIVE dept_tree AS (\n  SELECT dept_id, dept_name, parent_dept_id\n  FROM Department\n  WHERE dept_id = 10\n  UNION ALL\n  SELECT d.dept_id, d.dept_name, d.parent_dept_id\n  FROM Department d\n  JOIN dept_tree t ON d.parent_dept_id = t.dept_id\n)\nSELECT * FROM dept_tree;"
+    },
+    {
+      "id": "B",
+      "text": "SELECT d.dept_id, d.dept_name, d.parent_dept_id\nFROM Department d\nJOIN Department p ON d.dept_id = p.parent_dept_id\nWHERE p.dept_id = 10;"
+    },
+    {
+      "id": "C",
+      "text": "SELECT dept_id, dept_name, parent_dept_id\nFROM Department\nWHERE parent_dept_id = 10;"
+    },
+    {
+      "id": "D",
+      "text": "SELECT dept_id, dept_name, parent_dept_id\nFROM Department\nWHERE dept_id = 10 OR parent_dept_id IS NOT NULL;"
+    }
+  ],
+  "prompt": "A table Department(dept_id, dept_name, parent_dept_id) stores a hierarchy of departments. parent_dept_id is NULL for the top department and otherwise points to another Department row.\n\nWhich MySQL query returns every department at any depth under the department with dept_id = 10, including dept_id 10 itself?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Recursive structures can be traversed by repeatedly following self-references, using suitable common table expressions where supported.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Querying a recursive 1:m relationship",
+    "title": "One-to-One and Recursive Relationships",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#querying-a-recursive-1m-relationship"
+  },
+  "status": "approved"
+}

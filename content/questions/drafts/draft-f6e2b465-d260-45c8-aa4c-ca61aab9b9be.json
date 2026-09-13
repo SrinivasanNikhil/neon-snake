@@ -1,0 +1,227 @@
+[
+  {
+    "chapter": 4,
+    "conceptIds": [
+      "ch04-foreign-key"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "In a one-to-many design, the key from the one side is stored in the many-side table. That lets each employee row reference exactly one department while many employees can share the same department value.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:03.512Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "f6e2b465-d260-45c8-aa4c-ca61aab9b9be"
+    },
+    "id": "ch04-ai-f6e2b465-d26-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Put the department identifier in the Employees table as a foreign key"
+      },
+      {
+        "id": "B",
+        "text": "Put the employee identifier in the Departments table as a foreign key"
+      },
+      {
+        "id": "C",
+        "text": "Create one separate table row for every employee-department pair"
+      },
+      {
+        "id": "D",
+        "text": "Store the department name only in the Employees table and leave it unmatched"
+      }
+    ],
+    "prompt": "A company stores departments and employees in two tables. Each employee belongs to exactly one department, and the department identifier should be stored so that each employee row points to its department. Which design best implements this relationship?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Foreign-key mapping",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a database with a 1:m relationship",
+      "title": "The One-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#creating-a-database-with-a-1m-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 4,
+    "conceptIds": [
+      "ch04-referential-integrity"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "For a non-null foreign key, referential integrity requires that the value match an existing key in the referenced parent table. It does not require the value to be the largest, unique in the child table, or automatically generated.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:03.512Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "f6e2b465-d260-45c8-aa4c-ca61aab9b9be"
+    },
+    "id": "ch04-ai-f6e2b465-d26-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "The foreign-key value must match an existing parent key value"
+      },
+      {
+        "id": "B",
+        "text": "The foreign-key value must be greater than every parent key value"
+      },
+      {
+        "id": "C",
+        "text": "The foreign-key value must be unique across all child rows"
+      },
+      {
+        "id": "D",
+        "text": "The foreign-key value must be generated automatically by the database"
+      }
+    ],
+    "prompt": "Assume a child table has a non-null foreign key that references a parent table. What must be true for the child row to satisfy referential integrity?",
+    "provenance": "ai-generated",
+    "reviewConcept": "A non-null foreign key must match an existing referenced key.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a database with a 1:m relationship",
+      "title": "The One-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#creating-a-database-with-a-1m-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 4,
+    "conceptIds": [
+      "ch04-referential-integrity"
+    ],
+    "correctOptionId": "C",
+    "difficulty": 3,
+    "explanation": "Because `customer_id` is a foreign key, any non-null value must match an existing `customers.customer_id`. Values 10 and 20 are valid because those parent rows exist, and `NULL` is allowed by the stated assumption. Value 30 has no matching parent row, so that insert violates referential integrity.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:03.512Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "f6e2b465-d260-45c8-aa4c-ca61aab9b9be"
+    },
+    "id": "ch04-ai-f6e2b465-d26-3",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "```sql\nINSERT INTO orders(customer_id, order_date)\nVALUES (10, '2026-01-15');\n```"
+      },
+      {
+        "id": "B",
+        "text": "```sql\nINSERT INTO orders(customer_id, order_date)\nVALUES (20, '2026-01-16');\n```"
+      },
+      {
+        "id": "C",
+        "text": "```sql\nINSERT INTO orders(customer_id, order_date)\nVALUES (30, '2026-01-17');\n```"
+      },
+      {
+        "id": "D",
+        "text": "```sql\nINSERT INTO orders(customer_id, order_date)\nVALUES (NULL, '2026-01-18');\n```"
+      }
+    ],
+    "prompt": "A table `orders(customer_id, order_date)` has `customer_id` defined as a foreign key to `customers(customer_id)`. Assume `orders.customer_id` allows `NULL`, and `customers` currently contains only customer IDs 10 and 20. Which insert would violate referential integrity?",
+    "provenance": "ai-generated",
+    "reviewConcept": "A non-null foreign key must reference an existing parent row.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a database with a 1:m relationship",
+      "title": "The One-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#creating-a-database-with-a-1m-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 4,
+    "conceptIds": [
+      "ch04-foreign-key"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "`department` is the one side and `employee` is the many side, because one department can have many employees. So `employee.dept_id` stores the department’s key value in the employee table as a foreign key, which is how a one-to-many relationship is implemented.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:03.512Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "f6e2b465-d260-45c8-aa4c-ca61aab9b9be"
+    },
+    "id": "ch04-ai-f6e2b465-d26-4",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "It stores the one-side table's identifier in the many-side table as a foreign key"
+      },
+      {
+        "id": "B",
+        "text": "It is the primary key that uniquely identifies each department"
+      },
+      {
+        "id": "C",
+        "text": "It is a computed column that counts employees per department"
+      },
+      {
+        "id": "D",
+        "text": "It is a junction table that resolves a many-to-many relationship"
+      }
+    ],
+    "prompt": "Consider these tables:\n\n```sql\nCREATE TABLE department (\n  dept_id INT PRIMARY KEY,\n  dept_name VARCHAR(50)\n);\n\nCREATE TABLE employee (\n  emp_id INT PRIMARY KEY,\n  dept_id INT,\n  emp_name VARCHAR(50),\n  FOREIGN KEY (dept_id) REFERENCES department(dept_id)\n);\n```\n\nWhich statement best describes the role of `employee.dept_id`?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Implement a one-to-many relationship by storing the one-side key in the many-side table.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a database with a 1:m relationship",
+      "title": "The One-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#creating-a-database-with-a-1m-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 4,
+    "conceptIds": [
+      "ch04-referential-integrity"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 3,
+    "explanation": "The stated goal is to prevent references to missing customers. Referential integrity does that by requiring each non-null foreign-key value to match an existing key in the parent table. The other options either allow bad references or avoid the key relationship entirely.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:03.512Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "f6e2b465-d260-45c8-aa4c-ca61aab9b9be"
+    },
+    "id": "ch04-ai-f6e2b465-d26-5",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Allow the foreign-key column to accept values that do not appear in the parent table"
+      },
+      {
+        "id": "B",
+        "text": "Require each non-null `customer_id` in `invoice` to match a `customer_id` in `customer`"
+      },
+      {
+        "id": "C",
+        "text": "Store the customer name instead of the customer key in the `invoice` table"
+      },
+      {
+        "id": "D",
+        "text": "Remove the foreign key and rely on application memory to track customers"
+      }
+    ],
+    "prompt": "A sales database has `invoice(customer_id)` where `customer_id` is a foreign key to `customer(customer_id)`. The business wants to prevent invoices from referring to customers that do not exist. Which rule most directly supports that goal?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Referential integrity prevents non-null foreign keys from pointing to missing parent rows.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a database with a 1:m relationship",
+      "title": "The One-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#creating-a-database-with-a-1m-relationship"
+    },
+    "status": "draft"
+  }
+]

@@ -1,0 +1,317 @@
+[
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-associative-entity"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 2,
+    "explanation": "A many-to-many relationship is normally resolved with a separate associative table. That table holds one row per instructor-course pairing and links back to both original entities.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:41.144Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a6f6fc20-1440-4e9f-becf-bf30ada502fd"
+    },
+    "id": "ch05-ai-a6f6fc20-144-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Put the course id in the instructor table and allow multiple values in that column"
+      },
+      {
+        "id": "B",
+        "text": "Create a separate table that stores each instructor-course pairing"
+      },
+      {
+        "id": "C",
+        "text": "Merge instructors and courses into one table"
+      },
+      {
+        "id": "D",
+        "text": "Store the relationship only in the course table because courses are the more important entity"
+      }
+    ],
+    "prompt": "A company tracks which instructors can teach which courses. An instructor may teach many courses, and a course may be taught by many instructors. What is the best way to represent this in a relational design?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Associative entities",
+    "schemaVersion": 1,
+    "source": {
+      "section": "The many-to-many relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#the-many-to-many-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-relationship-facts"
+    ],
+    "correctOptionId": "C",
+    "difficulty": 2,
+    "explanation": "The number of days is a fact about the specific customer-bike rental, not about either entity on its own. Attributes like that belong on the associative entity that represents the relationship.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:41.144Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a6f6fc20-1440-4e9f-becf-bf30ada502fd"
+    },
+    "id": "ch05-ai-a6f6fc20-144-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "In the customer table, because it describes the customer"
+      },
+      {
+        "id": "B",
+        "text": "In the bike table, because it describes the bike"
+      },
+      {
+        "id": "C",
+        "text": "In the table that links customers to bikes, because it describes the rental pairing"
+      },
+      {
+        "id": "D",
+        "text": "In both customer and bike tables so it can be queried from either side"
+      }
+    ],
+    "prompt": "A rental system records which customer rented which bike, and it also records the number of days rented for that specific rental. Where should the number of days be stored?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Facts about a relationship",
+    "schemaVersion": 1,
+    "source": {
+      "section": "The many-to-many relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#the-many-to-many-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-weak-composite"
+    ],
+    "correctOptionId": "C",
+    "difficulty": 3,
+    "explanation": "When a local value is only unique in the context of a related entity, a composite identifier is appropriate. The branch id supplies the broader context, and the shelf label distinguishes the copy within that branch.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:41.144Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a6f6fc20-1440-4e9f-becf-bf30ada502fd"
+    },
+    "id": "ch05-ai-a6f6fc20-144-3",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Use the shelf label alone as the primary key because it is meaningful to staff"
+      },
+      {
+        "id": "B",
+        "text": "Use a generated id only, and discard the branch id"
+      },
+      {
+        "id": "C",
+        "text": "Use a composite identifier made from the branch id and the shelf label"
+      },
+      {
+        "id": "D",
+        "text": "Use the shelf label as a foreign key to the branch table"
+      }
+    ],
+    "prompt": "A library catalogs book copies using a shelf label that is only unique within a branch. A copy can be identified by combining the branch id with the shelf label. Which design best matches this situation?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Weak entities and composite identifiers",
+    "schemaVersion": 1,
+    "source": {
+      "section": "The many-to-many relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#the-many-to-many-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-associative-entity"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "A many-to-many relationship is represented with a separate linking table that stores the ids from both parent tables. That table captures each employee-project association directly.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:41.144Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a6f6fc20-1440-4e9f-becf-bf30ada502fd"
+    },
+    "id": "ch05-ai-a6f6fc20-144-4",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "employee_project(employee_id, project_id)"
+      },
+      {
+        "id": "B",
+        "text": "employee_projects(title, name)"
+      },
+      {
+        "id": "C",
+        "text": "employee(project_id, employee_id, name)"
+      },
+      {
+        "id": "D",
+        "text": "project(employee_id, project_id, title)"
+      }
+    ],
+    "prompt": "A training database has tables employees(employee_id, name) and projects(project_id, title). Each employee can work on many projects and each project can have many employees. Which additional table design is the best fit?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Associative entities",
+    "schemaVersion": 1,
+    "source": {
+      "section": "The many-to-many relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#the-many-to-many-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-relationship-facts"
+    ],
+    "correctOptionId": "C",
+    "difficulty": 3,
+    "explanation": "Join date and status describe the specific membership between a member and a club. Relationship facts belong in the associative table, not in either entity table alone.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:41.144Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a6f6fc20-1440-4e9f-becf-bf30ada502fd"
+    },
+    "id": "ch05-ai-a6f6fc20-144-5",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "In members, because they depend on the person"
+      },
+      {
+        "id": "B",
+        "text": "In clubs, because they depend on the club"
+      },
+      {
+        "id": "C",
+        "text": "In memberships, because they depend on the member-club pairing"
+      },
+      {
+        "id": "D",
+        "text": "In a separate lookup table with one row per join date and status"
+      }
+    ],
+    "prompt": "A membership system stores members(member_id, name), clubs(club_id, club_name), and memberships(member_id, club_id, join_date, status). The join date and status describe the membership itself. Where should those columns be stored?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Facts about a relationship",
+    "schemaVersion": 1,
+    "source": {
+      "section": "The many-to-many relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#the-many-to-many-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-weak-composite"
+    ],
+    "correctOptionId": "C",
+    "difficulty": 4,
+    "explanation": "Because line_no is only unique within a specific invoice, it cannot identify a row by itself. Combining invoice_id with line_no creates a unique composite identifier for each line item.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:41.144Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a6f6fc20-1440-4e9f-becf-bf30ada502fd"
+    },
+    "id": "ch05-ai-a6f6fc20-144-6",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "invoice_id alone"
+      },
+      {
+        "id": "B",
+        "text": "line_no alone"
+      },
+      {
+        "id": "C",
+        "text": "(invoice_id, line_no)"
+      },
+      {
+        "id": "D",
+        "text": "(product_id, quantity)"
+      }
+    ],
+    "prompt": "A table stores line items for invoices as invoice_line(invoice_id, line_no, product_id, quantity). Assume line_no starts at 1 for each invoice and is only unique within that invoice. Which key best identifies a line item?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Weak entities and composite identifiers",
+    "schemaVersion": 1,
+    "source": {
+      "section": "The many-to-many relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#the-many-to-many-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-relationship-facts"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 4,
+    "explanation": "A is correct because role is a fact about the relationship between a particular person and a particular event. It does not describe the person alone, since the same volunteer can perform different roles at different events. It also does not describe the event alone, since different volunteers can have different roles at the same event. That makes the linking table the proper place for the attribute. B and C are tempting but wrong because they attach role to only one side of the many-to-many relationship. D is wrong because relationship facts belong specifically on the associative entity, not arbitrarily on either participating table.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:00:41.144Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a6f6fc20-1440-4e9f-becf-bf30ada502fd"
+    },
+    "id": "ch05-ai-a6f6fc20-144-7",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "In the linking table between person and event, because role describes a specific person-event assignment"
+      },
+      {
+        "id": "B",
+        "text": "In the person table, because a volunteer usually has one main role"
+      },
+      {
+        "id": "C",
+        "text": "In the event table, because each event defines the roles it needs"
+      },
+      {
+        "id": "D",
+        "text": "In either the person or event table, because role describes both equally well"
+      }
+    ],
+    "prompt": "A volunteer system records which person worked at which event. It also stores the role performed for each assignment, such as usher, greeter, or registration. A volunteer may serve in different roles at different events, and the same event may assign different roles to different volunteers. Where should role be stored?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Facts about a relationship",
+    "schemaVersion": 1,
+    "source": {
+      "section": "The many-to-many relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#the-many-to-many-relationship"
+    },
+    "status": "draft"
+  }
+]

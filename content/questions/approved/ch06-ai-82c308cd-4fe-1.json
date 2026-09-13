@@ -1,0 +1,45 @@
+{
+  "chapter": 6,
+  "conceptIds": [
+    "ch06-self-join"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "Option A is correct because it uses a self join, treating Employee once as the employee row and once as the manager row. The join condition matches e.manager_id to m.emp_id, which finds the manager's row. LEFT JOIN is the right choice because the requirement says 'if any,' so employees with NULL manager_id must still appear, with manager_name returned as NULL. Option B reverses the relationship and finds subordinates instead of each employee's manager. Option C returns the manager's id, not the manager's name. Option D joins each row to itself by emp_id, so it would show the employee's own name as the manager name.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:42.731Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "82c308cd-4feb-47f1-bf5c-75e646ce2e8c"
+  },
+  "id": "ch06-ai-82c308cd-4fe-1",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "SELECT e.full_name, m.full_name AS manager_name\nFROM Employee e\nLEFT JOIN Employee m ON e.manager_id = m.emp_id;"
+    },
+    {
+      "id": "B",
+      "text": "SELECT e.full_name, m.full_name AS manager_name\nFROM Employee e\nJOIN Employee m ON e.emp_id = m.manager_id;"
+    },
+    {
+      "id": "C",
+      "text": "SELECT full_name, manager_id AS manager_name\nFROM Employee;"
+    },
+    {
+      "id": "D",
+      "text": "SELECT e.full_name, m.full_name AS manager_name\nFROM Employee e\nLEFT JOIN Employee m ON e.emp_id = m.emp_id;"
+    }
+  ],
+  "prompt": "A company stores employees in a single table:\n\nEmployee(emp_id, full_name, manager_id)\n\nwhere manager_id contains the emp_id of that employee's direct manager, or NULL for top-level managers.\n\nWhich query returns each employee's name together with their manager's name, if any?\n\nAssume MySQL syntax and that the table has multiple employees.",
+  "provenance": "ai-generated",
+  "reviewConcept": "Aliases let a query treat one table as separate logical roles so a row can be matched to a related row in the same table.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Querying a recursive 1:m relationship",
+    "title": "One-to-One and Recursive Relationships",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#querying-a-recursive-1m-relationship"
+  },
+  "status": "approved"
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-first-normal-form"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 2,
+    "explanation": "First normal form requires each column value to be single-valued. When a fact can occur multiple times, it should be represented in related rows rather than as a repeated list inside one column.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:43.194Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "ccaac0af-4bb3-40c1-a0cb-6ecf211957f3"
+    },
+    "id": "ch08-ai-ccaac0af-4bb-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Keep the column and add a rule that entries must use commas consistently"
+      },
+      {
+        "id": "B",
+        "text": "Split each phone number into a separate related row"
+      },
+      {
+        "id": "C",
+        "text": "Store the phone numbers in a longer text field"
+      },
+      {
+        "id": "D",
+        "text": "Move the customer name into a separate table"
+      }
+    ],
+    "prompt": "A company stores one row per customer order. In the column `phone_numbers`, some rows contain one number, while others contain several numbers separated by commas. Which change best brings the table into first normal form?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Single-valued attributes and repeating groups belong in related rows, not in one field.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "First normal form",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#first-normal-form"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-first-normal-form"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 2,
+    "explanation": "Option B is correct because first normal form requires single-valued columns, so each row should store one product_id for one invoice line. Options A and D store multiple values in one column, and option C uses repeating columns for the same kind of fact. Those designs violate the chapter's idea that repeating or multivalued facts should be represented in related rows instead.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:43.194Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "ccaac0af-4bb3-40c1-a0cb-6ecf211957f3"
+    },
+    "id": "ch08-ai-ccaac0af-4bb-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "An invoice table with a `product_ids` column that stores `P12;P15;P19` in one cell"
+      },
+      {
+        "id": "B",
+        "text": "An invoice table with one row per line item and one `product_id` value in each row"
+      },
+      {
+        "id": "C",
+        "text": "An invoice table with separate columns `product1`, `product2`, and `product3`"
+      },
+      {
+        "id": "D",
+        "text": "An invoice table with a `products` column that stores both product codes and quantities as a semicolon-separated list"
+      }
+    ],
+    "prompt": "Which table design is in first normal form? Assume one row represents one invoice line.",
+    "provenance": "ai-generated",
+    "reviewConcept": "1NF requires single-valued attributes and avoids lists or repeating groups inside a row.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "First normal form",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#first-normal-form"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-first-normal-form"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 3,
+    "explanation": "First normal form is violated when a column contains multiple values for the same fact. The usual fix is to move the repeating fact into a separate related table so each row contains a single email address.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:43.194Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "ccaac0af-4bb3-40c1-a0cb-6ecf211957f3"
+    },
+    "id": "ch08-ai-ccaac0af-4bb-3",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "Leave the table as is and require semicolons between email addresses"
+      },
+      {
+        "id": "B",
+        "text": "Create a separate `SupplierEmail` table with one row per email address and a supplier reference"
+      },
+      {
+        "id": "C",
+        "text": "Add more columns such as `email2` and `email3` to the `Supplier` table"
+      },
+      {
+        "id": "D",
+        "text": "Store only the first email address and discard the rest"
+      }
+    ],
+    "prompt": "A `Supplier` table has columns `supplier_id`, `name`, and `contact_emails`. The `contact_emails` column sometimes contains multiple email addresses in one cell. Which design is the best first-normal-form fix? Assume you still need to keep all email addresses for each supplier.",
+    "provenance": "ai-generated",
+    "reviewConcept": "Use related rows for repeating facts so each column remains single-valued.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "First normal form",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#first-normal-form"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-first-normal-form"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 3,
+    "explanation": "The issue is that one column holds multiple skill values for some employees. First normal form requires each attribute value to be single and atomic; repeating facts should be stored in related rows.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:43.194Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "ccaac0af-4bb3-40c1-a0cb-6ecf211957f3"
+    },
+    "id": "ch08-ai-ccaac0af-4bb-4",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "The table has too many rows for each employee"
+      },
+      {
+        "id": "B",
+        "text": "The `skills` attribute is not single-valued"
+      },
+      {
+        "id": "C",
+        "text": "The employee name should be the primary key"
+      },
+      {
+        "id": "D",
+        "text": "The table must be split into one table per skill"
+      }
+    ],
+    "prompt": "A payroll table has one row per employee. The `skills` attribute contains values like `Excel;SQL;Python` for some employees and a single value for others. What is the main normalization problem here?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Detect multivalued attributes as a first-normal-form violation.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "First normal form",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#first-normal-form"
+    },
+    "status": "draft"
+  }
+]

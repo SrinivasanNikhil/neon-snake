@@ -1,0 +1,46 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-select-filter",
+    "ch03-order-derived"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "SELECT chooses the output columns, WHERE keeps only rows meeting the stock condition, the expression calculates a derived value, and ORDER BY sorts by that derived value in descending order.",
+  "generation": {
+    "generatedAt": "2026-08-12T17:04:47.415Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "ff4d8a8e-3d71-46b2-a36c-14c442bdd182"
+  },
+  "id": "ch03-ai-ff4d8a8e-3d7-3",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "Product names and computed inventory values for products with at least 10 units in stock, sorted from highest to lowest inventory value"
+    },
+    {
+      "id": "B",
+      "text": "All products, sorted alphabetically by ProductName, with UnitPrice and UnitsInStock unchanged"
+    },
+    {
+      "id": "C",
+      "text": "Only the total inventory value for the entire table, with no product names shown"
+    },
+    {
+      "id": "D",
+      "text": "Products with fewer than 10 units in stock, sorted from lowest to highest value"
+    }
+  ],
+  "prompt": "A table named Product has columns ProductName, UnitPrice, and UnitsInStock. What does the following query return?\n\n```sql\nSELECT ProductName, UnitPrice * UnitsInStock AS InventoryValue\nFROM Product\nWHERE UnitsInStock >= 10\nORDER BY InventoryValue DESC;\n```",
+  "provenance": "ai-generated",
+  "reviewConcept": "Read a query that filters rows and orders by a calculated column.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Querying a single-table database",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#querying-a-single-table-database"
+  },
+  "status": "approved"
+}

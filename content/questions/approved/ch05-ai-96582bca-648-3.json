@@ -1,0 +1,45 @@
+{
+  "chapter": 5,
+  "conceptIds": [
+    "ch05-exists"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "NOT EXISTS is the correct pattern for finding rows in the first table that have no matching related rows in the second table. The correlated subquery checks whether any membership row exists for each student.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:06.175Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "96582bca-6485-46f2-8712-de0188f40b7e"
+  },
+  "id": "ch05-ai-96582bca-648-3",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "SELECT student_name FROM Students s WHERE NOT EXISTS (SELECT 1 FROM ClubMembers cm WHERE cm.student_id = s.student_id);"
+    },
+    {
+      "id": "B",
+      "text": "SELECT student_name FROM Students s WHERE EXISTS (SELECT 1 FROM ClubMembers cm WHERE cm.student_id = s.student_id);"
+    },
+    {
+      "id": "C",
+      "text": "SELECT student_name FROM Students s JOIN ClubMembers cm ON cm.student_id = s.student_id;"
+    },
+    {
+      "id": "D",
+      "text": "SELECT student_name FROM Students s UNION SELECT student_id FROM ClubMembers;"
+    }
+  ],
+  "prompt": "A school tracks Students(student_id, student_name) and ClubMembers(student_id, club_id). You need the names of students who are not members of any club. Which query pattern is correct?",
+  "provenance": "ai-generated",
+  "reviewConcept": "EXISTS and NOT EXISTS",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Querying an m:m relationship",
+    "title": "The Many-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#querying-an-mm-relationship"
+  },
+  "status": "approved"
+}

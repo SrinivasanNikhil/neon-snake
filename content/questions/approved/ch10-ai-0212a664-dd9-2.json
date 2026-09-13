@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-privileges"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "`GRANT SELECT ON customer TO analyst;` gives the analyst read access to the table. `REVOKE` removes a privilege rather than granting one, and `GRANT UPDATE` would allow changes to data. Creating a view does not itself grant any privilege to the analyst; it only defines another database object.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:58.946Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "0212a664-dd95-4837-8769-49de9abd7f66"
+  },
+  "id": "ch10-ai-0212a664-dd9-2",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "GRANT SELECT ON customer TO analyst;"
+    },
+    {
+      "id": "B",
+      "text": "REVOKE SELECT ON customer FROM analyst;"
+    },
+    {
+      "id": "C",
+      "text": "GRANT UPDATE ON customer TO analyst;"
+    },
+    {
+      "id": "D",
+      "text": "CREATE VIEW customer_public AS SELECT * FROM customer;"
+    }
+  ],
+  "prompt": "Assume standard SQL privilege syntax and that user names are already valid in the DBMS. An analyst should be able to read rows from the `customer` table but not modify them. Which statement best grants that capability?",
+  "provenance": "ai-generated",
+  "reviewConcept": "GRANT and REVOKE",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Privileges and application use",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+  },
+  "status": "approved"
+}

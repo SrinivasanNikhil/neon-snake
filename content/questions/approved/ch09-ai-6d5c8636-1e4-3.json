@@ -1,0 +1,45 @@
+{
+  "chapter": 9,
+  "conceptIds": [
+    "ch09-keys"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 2,
+  "explanation": "Candidate keys are columns that can uniquely identify rows. Once one candidate key is chosen as the primary key, the other candidate key(s) are alternate keys.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:04.847Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "6d5c8636-1e4d-4317-8f8c-f572288b814d"
+  },
+  "id": "ch09-ai-6d5c8636-1e4-3",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "A foreign key"
+    },
+    {
+      "id": "B",
+      "text": "An alternate key"
+    },
+    {
+      "id": "C",
+      "text": "A composite key"
+    },
+    {
+      "id": "D",
+      "text": "A surrogate key"
+    }
+  ],
+  "prompt": "A table stores employee records. Two different columns can each uniquely identify every employee: employee_id and national_id. If employee_id is chosen as the primary key, what is national_id called?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Relational keys",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Data structures",
+    "title": "The Relational Model and Relational Algebra",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#data-structures"
+  },
+  "status": "approved"
+}

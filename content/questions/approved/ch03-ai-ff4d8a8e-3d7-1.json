@@ -1,0 +1,45 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-entity-attributes"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 1,
+  "explanation": "An attribute stores a fact about each instance of an entity. In this case, color or battery capacity are examples of facts that describe each scooter.",
+  "generation": {
+    "generatedAt": "2026-08-12T17:04:47.415Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "ff4d8a8e-3d71-46b2-a36c-14c442bdd182"
+  },
+  "id": "ch03-ai-ff4d8a8e-3d7-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "A fact recorded about each scooter, such as its color or battery capacity"
+    },
+    {
+      "id": "B",
+      "text": "A rule that says every scooter must have a unique serial number"
+    },
+    {
+      "id": "C",
+      "text": "A collection of scooters that share the same manufacturer"
+    },
+    {
+      "id": "D",
+      "text": "A query that sorts scooters by battery level"
+    }
+  ],
+  "prompt": "A company is designing a table for its fleet of delivery scooters. Which choice best describes an attribute in the model?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Identify entities and attributes in a simple single-entity model.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Modeling a single-entity database",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#modeling-a-single-entity-database"
+  },
+  "status": "approved"
+}

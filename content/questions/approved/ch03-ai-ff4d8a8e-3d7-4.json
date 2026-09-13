@@ -1,0 +1,45 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-pattern-distinct"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "Option A is correct because `WHERE CustomerName LIKE '%a%'` restricts the rows to customers whose names contain the letter `a` under the stated case-insensitive matching assumption, and `COUNT(DISTINCT Email)` counts unique email values while ignoring NULLs. Option B is incorrect because `DISTINCT` is applied to the single aggregate result, not to the email values being counted. Option C filters the wrong column and counts distinct customer names instead of distinct email addresses. Option D tests for a name exactly equal to `a`, not a name that contains `a`.",
+  "generation": {
+    "generatedAt": "2026-08-12T17:04:47.415Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "ff4d8a8e-3d71-46b2-a36c-14c442bdd182"
+  },
+  "id": "ch03-ai-ff4d8a8e-3d7-4",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "SELECT COUNT(DISTINCT Email) FROM Customer WHERE CustomerName LIKE '%a%';"
+    },
+    {
+      "id": "B",
+      "text": "SELECT DISTINCT COUNT(Email) FROM Customer WHERE CustomerName LIKE '%a%';"
+    },
+    {
+      "id": "C",
+      "text": "SELECT COUNT(DISTINCT CustomerName) FROM Customer WHERE Email LIKE '%a%';"
+    },
+    {
+      "id": "D",
+      "text": "SELECT COUNT(DISTINCT Email) FROM Customer WHERE CustomerName = 'a';"
+    }
+  ],
+  "prompt": "A table `Customer` has columns `CustomerName` and `Email`. Assume string matching uses the table's default case-insensitive collation. You need one query that returns the number of distinct non-NULL email addresses used by customers whose names contain the letter `a` or `A`. Which query is best?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Patterns and duplicate removal",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Querying a single-table database",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#querying-a-single-table-database"
+  },
+  "status": "approved"
+}

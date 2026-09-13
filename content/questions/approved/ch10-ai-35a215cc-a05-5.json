@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-collation"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 4,
+  "explanation": "Collation controls how text is compared and ordered, so it can determine whether case differences affect sorting or comparison. Keys, isolation levels, and aggregates do not define string ordering rules.",
+  "generation": {
+    "generatedAt": "2026-08-12T01:38:03.014Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "35a215cc-a052-4ac6-815d-e5d1e2cfa8cc"
+  },
+  "id": "ch10-ai-35a215cc-a05-5",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "They use different collation rules for character comparison and sorting."
+    },
+    {
+      "id": "B",
+      "text": "They use different primary keys for the customer table."
+    },
+    {
+      "id": "C",
+      "text": "They use different transaction isolation levels."
+    },
+    {
+      "id": "D",
+      "text": "They use different aggregate functions when reading the names."
+    }
+  ],
+  "prompt": "Two databases store the same customer names. In one database, uppercase and lowercase letters are treated as equivalent for ordering; in the other, they are not. What is the most likely reason for the difference?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Collation",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Creating a table and data types",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=216"
+  },
+  "status": "approved"
+}

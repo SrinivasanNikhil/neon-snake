@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "chapter": 7,
+  "model": "gpt-5.4",
+  "auditedAt": "2026-08-13T16:21:26.647Z",
+  "questionCount": 20,
+  "summary": {
+    "pass": 19,
+    "needsEdit": 1,
+    "reject": 0
+  },
+  "reviews": [
+    {
+      "questionId": "ch07-ai-636d6c20-f31-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem is clear, the options align, and exactly one answer is defensible from the chapter guidance on stable, meaningful, unambiguous naming. Distractors are plausible and clearly incorrect. Explanation teaches the principle adequately. Difficulty 2 is reasonable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-636d6c20-f31-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Clear scenario with stated assumption that names may change over time, making office_id the only stable identifier. Exactly one correct answer. Distractors are plausible. Explanation correctly connects stability and identifier choice. Difficulty is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-636d6c20-f31-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item cleanly tests iterative modeling. One answer is clearly best, and the distractors reflect common misconceptions. Explanation is accurate and instructional. Difficulty 2 fits the straightforward conceptual contrast.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-636d6c20-f31-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Strong scenario-based application of iterative modeling. The discovered business fact motivates revision and re-review, and only one option fits the chapter. Explanation reinforces the concept. Difficulty 2 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-636d6c20-f31-5",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The question is clear and aligned with naming guidance. Option B is the only defensible answer, and the other options are plausible positives. Explanation teaches why stakeholder-understandable, unambiguous labels matter. Difficulty is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-645dfce9-305-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Good application of context and exceptions. The stem states the conflicting business case clearly, and A is uniquely correct. Distractors are plausible but incorrect. Explanation directly ties back to intended context and exceptions. Difficulty 2 fits.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-645dfce9-305-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item correctly distinguishes maximum participation from optional participation. The wording is precise enough for a single defensible answer. Explanation is accurate and teaching-focused. Difficulty 3 is fair because learners must apply two terms together.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-645dfce9-305-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This is a solid generalization question with a clear supertype/subtype pattern. Exactly one answer is defensible, distractors are plausible, and explanation captures shared versus subtype-specific facts. Difficulty 3 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-645dfce9-305-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The business rules are explicit, and option A correctly maps optionality and cardinality in both directions. Distractors each violate a stated rule. Explanation is accurate and sufficiently instructive. Difficulty 4 is credible due to the bidirectional reasoning required.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-645dfce9-305-5",
+      "verdict": "needs-edit",
+      "issues": [
+        "ambiguous-answer",
+        "missing-assumption",
+        "poor-explanation"
+      ],
+      "rationale": "Option A is likely intended, but the phrase 'some trips can switch type before departure' raises unresolved modeling assumptions about whether subtype membership is fixed, overlapping, or time-varying. Without clarifying whether a trip is domestic or international at one time versus across its lifecycle, the 'strongest takeaway' is somewhat open-ended. The explanation also stops short of addressing the design implication of changing subtype classification.",
+      "suggestedFix": "Clarify the assumption, e.g., 'a trip is classified as either domestic or international at any given time, but that classification may change before departure.' Then revise the key and explanation to emphasize that shared attributes can be generalized, while subtype design must also handle lifecycle exceptions or mutable classification."
+    },
+    {
+      "questionId": "ch07-ai-c4212d19-5ae-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Clean foundational item aligned with the chapter's statement of data-model purpose. Only one answer is correct, distractors are clearly from other design layers, and the explanation is accurate. Difficulty 1 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-c4212d19-5ae-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Straightforward recall of the core modeling vocabulary. The correct option is unambiguous and the distractors are plausible categories from adjacent topics. Explanation is accurate. Difficulty 1 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-c4212d19-5ae-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This scenario cleanly applies the purpose of a data model without drifting into physical design. Exactly one correct answer, plausible distractors, and a concise explanation that teaches the distinction. Difficulty 2 fits.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-c4212d19-5ae-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem and options align well, and option A correctly describes the role of a relationship in a conceptual model. Distractors are plausible but distinct from relationship semantics. Explanation is sound. Difficulty 2 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-c4212d19-5ae-5",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Good boundary-setting question about modeling scope. The use of Supplier, Product, and Order keeps it concrete, while the correct answer stays at the conceptual level. Explanation is accurate and the difficulty level is reasonable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-fc86de32-746-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Strong well-formedness item. The correct answer directly reflects the chapter's criteria, and the distractors point to inappropriate implementation or process concerns. Explanation is accurate and useful. Difficulty 2 is fair.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-fc86de32-746-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item clearly targets well-formedness defects: missing name, vague label, missing relationship. Exactly one answer is defensible. Explanation distinguishes this concept from other database concerns. Difficulty 3 is acceptable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-fc86de32-746-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The omitted split-delivery case is a good example of reduced fidelity to real-world relationships. The distractors are implausible enough to avoid ambiguity while still functioning. Explanation teaches the fidelity concept correctly. Difficulty 2 fits.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-fc86de32-746-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The business rule clearly implies many-to-many participation, making A uniquely correct and well aligned with high-fidelity modeling. Explanation is strong and contrasts each distractor effectively. Difficulty 3 is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch07-ai-fc86de32-746-5",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This is a good distinction question between well-formedness and high fidelity. The missing business constraint affects fidelity, not necessarily structural well-formedness, so A is uniquely defensible. Explanation teaches the contrast well. Difficulty 4 is credible.",
+      "suggestedFix": ""
+    }
+  ]
+}

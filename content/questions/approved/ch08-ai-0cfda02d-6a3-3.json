@@ -1,0 +1,45 @@
+{
+  "chapter": 8,
+  "conceptIds": [
+    "ch08-second-normal-form"
+  ],
+  "correctOptionId": "C",
+  "difficulty": 4,
+  "explanation": "With a composite key, any nonkey attribute that depends on just one component is a partial dependency. OrderDate depends on OrderID alone, and ProductName depends on ProductID alone, so both break second normal form. Quantity depends on the full combination and does not create that specific problem.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:48.570Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "0cfda02d-6a3b-4c33-b98e-6972b1e733cc"
+  },
+  "id": "ch08-ai-0cfda02d-6a3-3",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "The table is already in second normal form because each row represents one order-product combination"
+    },
+    {
+      "id": "B",
+      "text": "Only ProductName violates second normal form because it depends on ProductID alone"
+    },
+    {
+      "id": "C",
+      "text": "OrderDate and ProductName violate second normal form because each depends on only part of the key"
+    },
+    {
+      "id": "D",
+      "text": "Quantity violates second normal form because it must depend on both key columns"
+    }
+  ],
+  "prompt": "A relation has a composite primary key (OrderID, ProductID) and the following nonkey attributes: OrderDate, ProductName, and Quantity. Assume each order can contain many products, and each product can appear in many orders. Which statement best describes the normalization issue?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Second normal form",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Second normal form",
+    "title": "Normalization and other Data Modeling Methods",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#second-normal-form"
+  },
+  "status": "approved"
+}

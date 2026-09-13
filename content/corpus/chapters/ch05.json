@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "chapter": 5,
+  "title": "The Many-to-Many Relationship",
+  "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html",
+  "summary": "Covers associative entities, relational mapping of many-to-many relationships, three-table joins, existence tests, relational division, and set operations.",
+  "sections": [
+    {
+      "title": "The many-to-many relationship",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#the-many-to-many-relationship",
+      "concepts": [
+        { "id": "ch05-associative-entity", "title": "Associative entities", "summary": "A many-to-many relationship is resolved through an associative entity connected to each original entity by a one-to-many relationship." },
+        { "id": "ch05-relationship-facts", "title": "Facts about a relationship", "summary": "Attributes that describe a pairing belong on the associative entity because they describe neither participating entity alone." },
+        { "id": "ch05-weak-composite", "title": "Weak entities and composite identifiers", "summary": "An associative or weak entity may rely on a related entity's identifier plus a local value to form a unique composite identifier." }
+      ]
+    },
+    {
+      "title": "Creating a relational database with an m:m relationship",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#creating-a-relational-database-with-an-mm-relationship",
+      "concepts": [
+        { "id": "ch05-mapping", "title": "Mapping many-to-many relationships", "summary": "The associative table contains foreign keys for both related tables, with a primary key chosen to identify each association." }
+      ]
+    },
+    {
+      "title": "Querying an m:m relationship",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#querying-an-mm-relationship",
+      "concepts": [
+        { "id": "ch05-three-table-join", "title": "Three-table joins", "summary": "Querying both sides of a many-to-many relationship joins each original table to the associative table with a separate matching condition." },
+        { "id": "ch05-exists", "title": "EXISTS and NOT EXISTS", "summary": "EXISTS tests whether at least one related row satisfies a condition; NOT EXISTS succeeds only when no such row exists." },
+        { "id": "ch05-division", "title": "Relational division", "summary": "Questions asking which targets relate to every source can be expressed through nested non-existence tests or equivalent grouped counts." },
+        { "id": "ch05-set-operations", "title": "Set operations", "summary": "UNION combines rows from either compatible result, while INTERSECT retains rows present in both compatible results." }
+      ]
+    }
+  ]
+}

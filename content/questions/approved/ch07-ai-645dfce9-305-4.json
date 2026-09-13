@@ -1,0 +1,46 @@
+{
+  "chapter": 7,
+  "conceptIds": [
+    "ch07-context-exceptions",
+    "ch07-cardinality-modality"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 4,
+  "explanation": "A is correct because a person can participate in the relationship optionally and with a maximum of one active plan. A plan can also participate optionally, since a plan might currently have no people assigned, and its maximum participation is many. The other options violate either the person's maximum of one plan or the optional participation stated in the scenario.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:17.503Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "645dfce9-3050-41ab-83cf-1d73c3bc8951"
+  },
+  "id": "ch07-ai-645dfce9-305-4",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Person to Plan: optional, at most one; Plan to Person: optional, many"
+    },
+    {
+      "id": "B",
+      "text": "Person to Plan: mandatory, many; Plan to Person: mandatory, one"
+    },
+    {
+      "id": "C",
+      "text": "Person to Plan: mandatory, one; Plan to Person: optional, at most one"
+    },
+    {
+      "id": "D",
+      "text": "Person to Plan: optional, many; Plan to Person: mandatory, many"
+    }
+  ],
+  "prompt": "A membership system has these rules: each person may have zero or one active membership plan at a time; each plan may be linked to zero, one, or many people; and some people are entered into the system before choosing any plan. Which relationship description best fits these rules?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Cardinality and modality",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Quality improvement",
+    "title": "Data Modeling",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#quality-improvement"
+  },
+  "status": "approved"
+}

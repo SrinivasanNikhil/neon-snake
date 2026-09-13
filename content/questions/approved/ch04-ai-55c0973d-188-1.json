@@ -1,0 +1,45 @@
+{
+  "chapter": 4,
+  "conceptIds": [
+    "ch04-one-to-many"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 1,
+  "explanation": "In a one-to-many relationship, one row on the parent side can relate to many rows on the child side. Here, a department can have many employees, and each employee is linked to one department.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:59:54.895Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "55c0973d-1885-4832-ba30-6231347d1472"
+  },
+  "id": "ch04-ai-55c0973d-188-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Each employee can belong to many departments, and each department can belong to many employees"
+    },
+    {
+      "id": "B",
+      "text": "One department can be associated with many employees, while each employee belongs to one department"
+    },
+    {
+      "id": "C",
+      "text": "Each department must be split into multiple tables because it has many employees"
+    },
+    {
+      "id": "D",
+      "text": "The employee table should store one row for every department"
+    }
+  ],
+  "prompt": "A company keeps one record for each department and many records for the employees in that department. Which description best matches this relationship?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Identify a one-to-many relationship.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Relationships",
+    "title": "The One-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#relationships"
+  },
+  "status": "approved"
+}

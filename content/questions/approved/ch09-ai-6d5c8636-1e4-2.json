@@ -1,0 +1,45 @@
+{
+  "chapter": 9,
+  "conceptIds": [
+    "ch09-degree-cardinality"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 2,
+  "explanation": "Degree means the number of columns, so it is 7. Cardinality means the number of rows, so it is 240.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:04.847Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "6d5c8636-1e4d-4317-8f8c-f572288b814d"
+  },
+  "id": "ch09-ai-6d5c8636-1e4-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Degree 240, cardinality 7"
+    },
+    {
+      "id": "B",
+      "text": "Degree 7, cardinality 240"
+    },
+    {
+      "id": "C",
+      "text": "Degree 7, cardinality 7"
+    },
+    {
+      "id": "D",
+      "text": "Degree 240, cardinality 240"
+    }
+  ],
+  "prompt": "A relation named Inventory has 7 attributes and 240 rows. What are its degree and cardinality?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Degree and cardinality",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Data structures",
+    "title": "The Relational Model and Relational Algebra",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#data-structures"
+  },
+  "status": "approved"
+}

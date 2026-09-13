@@ -1,0 +1,45 @@
+{
+  "chapter": 5,
+  "conceptIds": [
+    "ch05-weak-composite"
+  ],
+  "correctOptionId": "C",
+  "difficulty": 4,
+  "explanation": "Because line_no is only unique within a specific invoice, it cannot identify a row by itself. Combining invoice_id with line_no creates a unique composite identifier for each line item.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:00:41.144Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "a6f6fc20-1440-4e9f-becf-bf30ada502fd"
+  },
+  "id": "ch05-ai-a6f6fc20-144-6",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "invoice_id alone"
+    },
+    {
+      "id": "B",
+      "text": "line_no alone"
+    },
+    {
+      "id": "C",
+      "text": "(invoice_id, line_no)"
+    },
+    {
+      "id": "D",
+      "text": "(product_id, quantity)"
+    }
+  ],
+  "prompt": "A table stores line items for invoices as invoice_line(invoice_id, line_no, product_id, quantity). Assume line_no starts at 1 for each invoice and is only unique within that invoice. Which key best identifies a line item?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Weak entities and composite identifiers",
+  "schemaVersion": 1,
+  "source": {
+    "section": "The many-to-many relationship",
+    "title": "The Many-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#the-many-to-many-relationship"
+  },
+  "status": "approved"
+}

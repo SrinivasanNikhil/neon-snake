@@ -1,0 +1,228 @@
+[
+  {
+    "chapter": 7,
+    "conceptIds": [
+      "ch07-model-purpose"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 1,
+    "explanation": "A data model is used to capture the facts and relationships that matter for the database. Physical storage choices and process logic are separate design concerns, so option A is the best answer.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:57.134Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "c4212d19-5aeb-400c-a3af-9bb78faf9442"
+    },
+    "id": "ch07-ai-c4212d19-5ae-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "It identifies the facts and relationships that need to be stored."
+      },
+      {
+        "id": "B",
+        "text": "It decides exactly how data will be indexed and physically laid out on disk."
+      },
+      {
+        "id": "C",
+        "text": "It defines the user interface screens for entering data."
+      },
+      {
+        "id": "D",
+        "text": "It replaces the need to understand business rules before design begins."
+      }
+    ],
+    "prompt": "Which statement best describes the purpose of a data model in database design?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Purpose and scope",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Data modeling",
+      "title": "Data Modeling",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-modeling"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 7,
+    "conceptIds": [
+      "ch07-building-blocks"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 1,
+    "explanation": "The basic vocabulary of data modeling includes entities, attributes, identifiers, and relationships. The other choices describe implementation tools or application features, not the modeling building blocks.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:57.134Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "c4212d19-5aeb-400c-a3af-9bb78faf9442"
+    },
+    "id": "ch07-ai-c4212d19-5ae-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Entities, attributes, identifiers, and relationships"
+      },
+      {
+        "id": "B",
+        "text": "Forms, macros, triggers, and indexes"
+      },
+      {
+        "id": "C",
+        "text": "Servers, schemas, backups, and jobs"
+      },
+      {
+        "id": "D",
+        "text": "Reports, dashboards, alerts, and workflows"
+      }
+    ],
+    "prompt": "Which set contains the core building blocks used to describe a database design?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Modeling building blocks",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Data modeling",
+      "title": "Data Modeling",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-modeling"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 7,
+    "conceptIds": [
+      "ch07-model-purpose"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "A is correct because a data model is used to identify the facts and relationships that must be stored. It does not primarily decide physical storage details, application code, or interface design.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:57.134Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "c4212d19-5aeb-400c-a3af-9bb78faf9442"
+    },
+    "id": "ch07-ai-c4212d19-5ae-3",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Describing required facts and relationships for the database"
+      },
+      {
+        "id": "B",
+        "text": "Choosing the fastest physical storage layout"
+      },
+      {
+        "id": "C",
+        "text": "Writing application code for order entry"
+      },
+      {
+        "id": "D",
+        "text": "Generating user interface mockups"
+      }
+    ],
+    "prompt": "A team is designing a customer database. They want a diagram that captures which facts must be stored and how customers relate to orders, but they do not want to decide table indexes or file storage yet. What is the diagram mainly for?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Purpose and scope",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Data modeling",
+      "title": "Data Modeling",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-modeling"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 7,
+    "conceptIds": [
+      "ch07-building-blocks"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "A is correct because relationships are one of the core building blocks of a data model and are used to represent how entities are connected. Attributes describe properties of an entity, identifiers distinguish entity instances, and calculations are not the main purpose of a relationship in a conceptual model.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:57.134Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "c4212d19-5aeb-400c-a3af-9bb78faf9442"
+    },
+    "id": "ch07-ai-c4212d19-5ae-4",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "To show how instances of Customer and Order are associated with each other"
+      },
+      {
+        "id": "B",
+        "text": "To list every attribute that belongs to both entities"
+      },
+      {
+        "id": "C",
+        "text": "To replace the identifier of each entity with a shared code"
+      },
+      {
+        "id": "D",
+        "text": "To calculate values that are missing from one of the entities"
+      }
+    ],
+    "prompt": "In a conceptual data model, what is the main role of a relationship between two entities such as Customer and Order?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Modeling building blocks",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Data modeling",
+      "title": "Data Modeling",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-modeling"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 7,
+    "conceptIds": [
+      "ch07-model-purpose",
+      "ch07-building-blocks"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "At the modeling stage, the focus is on identifying the relevant facts and relationships, such as suppliers, products, and orders. Exact SQL, permissions, and screen design are later implementation concerns.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:57.134Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "c4212d19-5aeb-400c-a3af-9bb78faf9442"
+    },
+    "id": "ch07-ai-c4212d19-5ae-5",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Only the facts and relationships needed to represent the business situation"
+      },
+      {
+        "id": "B",
+        "text": "The exact SQL statements that will create the tables and indexes"
+      },
+      {
+        "id": "C",
+        "text": "The employee permissions required to update each table"
+      },
+      {
+        "id": "D",
+        "text": "The screen layout users will see when entering orders"
+      }
+    ],
+    "prompt": "A designer proposes storing `Supplier`, `Product`, and `Order` because the business needs to track who supplies what and what was ordered. Which statement best matches what a data model should capture at this stage?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Purpose and scope",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Data modeling",
+      "title": "Data Modeling",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-modeling"
+    },
+    "status": "draft"
+  }
+]

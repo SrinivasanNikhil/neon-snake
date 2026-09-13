@@ -1,0 +1,45 @@
+{
+  "chapter": 9,
+  "conceptIds": [
+    "ch09-unary-operators"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "Restrict selects rows that meet a predicate. Project selects columns, union combines compatible relations, and join combines rows based on a matching condition.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:19.586Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "a2f1a2d3-c7e0-4cfb-aaf0-43518ba1b6b7"
+  },
+  "id": "ch09-ai-a2f1a2d3-c7e-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Restrict"
+    },
+    {
+      "id": "B",
+      "text": "Project"
+    },
+    {
+      "id": "C",
+      "text": "Union"
+    },
+    {
+      "id": "D",
+      "text": "Join"
+    }
+  ],
+  "prompt": "In relational algebra, which operation returns only the rows that satisfy a condition, while leaving the original relation unchanged?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Restrict selects rows based on a condition; project selects columns.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Relational algebra",
+    "title": "The Relational Model and Relational Algebra",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#relational-algebra"
+  },
+  "status": "approved"
+}

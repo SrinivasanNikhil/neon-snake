@@ -1,0 +1,45 @@
+{
+  "chapter": 6,
+  "conceptIds": [
+    "ch06-recursive-foreign-key"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 4,
+  "explanation": "A row that can point to another row in the same table through a foreign key is a recursive relationship. Because each product can reference at most one predecessor, the mapping is recursive one-to-many: many products may share the same predecessor, while each product points to at most one predecessor.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:30.491Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "f61cb28c-347f-40e4-8c01-6b84f4baf723"
+  },
+  "id": "ch06-ai-f61cb28c-347-4",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is a recursive one-to-many relationship mapped with a foreign key back to the same table"
+    },
+    {
+      "id": "B",
+      "text": "It is a many-to-many relationship that requires a bridge table"
+    },
+    {
+      "id": "C",
+      "text": "It is a one-to-one relationship because each product has at most one predecessor"
+    },
+    {
+      "id": "D",
+      "text": "It cannot be enforced with a foreign key because self-references are impossible"
+    }
+  ],
+  "prompt": "A product table has columns product_id, product_name, and predecessor_id. Each product can have at most one predecessor, and that predecessor must be another row in the same table. If a product has no predecessor, predecessor_id is NULL. Which statement is true about this design?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Self-referential foreign keys",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Mapping a recursive one-to-many relationship",
+    "title": "One-to-One and Recursive Relationships",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#mapping-a-recursive-one-to-many-relationship"
+  },
+  "status": "approved"
+}

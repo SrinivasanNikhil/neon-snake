@@ -1,0 +1,45 @@
+{
+  "chapter": 9,
+  "conceptIds": [
+    "ch09-relational-rules"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 3,
+  "explanation": "The description gathers the main requirements associated with fully relational behavior: tabular representation, guaranteed access, null handling, a catalog, integrity, set-level operation support, and data independence. Those collectively identify a fully relational database system.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:28.444Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "a0dc8c37-07e7-4408-89a8-1b413622247b"
+  },
+  "id": "ch09-ai-a0dc8c37-07e-4",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "A normalized schema"
+    },
+    {
+      "id": "B",
+      "text": "A fully relational database system"
+    },
+    {
+      "id": "C",
+      "text": "A star schema"
+    },
+    {
+      "id": "D",
+      "text": "A distributed transaction protocol"
+    }
+  ],
+  "prompt": "A database designer says, 'We will only consider the system acceptable if it uses tables, supports access to each value through the relational structure, handles missing values according to the system rules, keeps a catalog, enforces integrity, supports set-level operations, and protects applications from storage and logical changes.' What is the designer describing?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Recognize the combined rule set that defines fully relational behavior.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "A fully relational database",
+    "title": "The Relational Model and Relational Algebra",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#a-fully-relational-database"
+  },
+  "status": "approved"
+}

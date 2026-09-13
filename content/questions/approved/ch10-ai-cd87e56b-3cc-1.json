@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-views"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "A view is a named virtual table defined by a query, so it can present only the rows and columns needed, such as active customers. An index is for access speed, the catalog stores metadata about database objects, and a privilege controls access rather than defining a query-derived table.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:51.053Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "cd87e56b-3ccb-4bdb-ba20-fa3545022a3a"
+  },
+  "id": "ch10-ai-cd87e56b-3cc-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "A view"
+    },
+    {
+      "id": "B",
+      "text": "An index"
+    },
+    {
+      "id": "C",
+      "text": "A catalog entry"
+    },
+    {
+      "id": "D",
+      "text": "A privilege"
+    }
+  ],
+  "prompt": "A reporting team wants a named virtual table derived from a query that shows only active customers. Which database object best fits that need?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Views",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Views, indexes, and the catalog",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+  },
+  "status": "approved"
+}

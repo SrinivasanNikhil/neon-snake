@@ -1,0 +1,45 @@
+{
+  "chapter": 7,
+  "conceptIds": [
+    "ch07-high-fidelity"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "A is correct because a high-fidelity model should match the real business context, including the fact that one customer can hold several plans and one plan can apply to many customers. Modeling that many-to-many relationship preserves the stated facts. B loses valid multiple-plan cases, C collapses two different real-world things into one entity, and D fails to represent an important business relationship at all.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:06.053Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "fc86de32-7466-4305-8a6c-2e92cf05ed69"
+  },
+  "id": "ch07-ai-fc86de32-746-4",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Model a many-to-many relationship between Customer and Plan."
+    },
+    {
+      "id": "B",
+      "text": "Store a single Plan attribute in Customer because one current plan is enough for modeling."
+    },
+    {
+      "id": "C",
+      "text": "Merge Customer and Plan into one entity because they both belong to the membership system."
+    },
+    {
+      "id": "D",
+      "text": "Omit the relationship until physical database design decides how to store it."
+    }
+  ],
+  "prompt": "A membership business has customers and plans. The business rules say a customer may hold multiple plans at the same time, and each plan may be held by many customers. In a conceptual data model, which choice best preserves a high-fidelity representation of this situation?",
+  "provenance": "ai-generated",
+  "reviewConcept": "High-fidelity models",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Data model quality",
+    "title": "Data Modeling",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-model-quality"
+  },
+  "status": "approved"
+}

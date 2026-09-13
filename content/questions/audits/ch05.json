@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "chapter": 5,
+  "model": "gpt-5.4",
+  "auditedAt": "2026-08-13T16:20:54.941Z",
+  "questionCount": 20,
+  "summary": {
+    "pass": 18,
+    "needsEdit": 2,
+    "reject": 0
+  },
+  "reviews": [
+    {
+      "questionId": "ch05-ai-3964c769-f2b-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Stem, options, and keyed answer align cleanly. Exactly one answer is defensible, distractors are plausible as common bad designs, and the explanation correctly teaches associative-table mapping for a many-to-many relationship at an appropriate introductory difficulty.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-3964c769-f2b-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Accurate many-to-many mapping question with one clear correct answer. The distractors reflect recognizable misconceptions, and the explanation correctly states that both foreign keys belong in the linking table. Difficulty 2 is reasonable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-3964c769-f2b-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The item is factually correct, chapter-appropriate, and unambiguous. Option A is uniquely defensible, distractors are plausible incorrect denormalizations, and the explanation teaches the associative-table pattern adequately.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-3964c769-f2b-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Good repair-of-schema scenario for many-to-many mapping. Only the separate linking table solves the stated problem properly. Distractors are plausible poor designs, and the explanation correctly explains why a single foreign key in one parent table is insufficient.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-3964c769-f2b-5",
+      "verdict": "needs-edit",
+      "issues": [
+        "missing-assumption",
+        "poor-explanation"
+      ],
+      "rationale": "Option A is basically correct, but the stem asks which key design 'most naturally belongs' in the association table without stating whether the course assumes composite keys, surrogate keys, or both. The option itself bundles two designs, which weakens precision. The explanation is generally sound but would teach better if the stem/option structure forced one clearer design choice.",
+      "suggestedFix": "State the modeling assumption explicitly and ask either (a) which columns must be present in the association table key candidate, with A = project_id and team_member_id, or (b) which constraint is required to prevent duplicate pairings. Avoid combining composite-PK and surrogate-plus-unique into one option unless the stem asks for all valid designs."
+    },
+    {
+      "questionId": "ch05-ai-3964c769-f2b-6",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "SQL is correct and matches the schema. Exactly one option returns book titles for a given author through the associative table. Distractors are plausible wrong joins or wrong filtering logic, and the explanation clearly teaches why the join must go through author_book.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-3964c769-f2b-7",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Strong composite-identifier item. The assumptions are stated clearly: attempt_no is unique only within each candidate-exam pair. Option A is uniquely correct, distractors are plausible, and the explanation correctly teaches a weak/composite identifier pattern. Difficulty 4 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-96582bca-648-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Accurate three-table-join concept item. The correct pattern is clearly distinguished from direct-join and non-join distractors. Explanation teaches the key idea that each entity joins to the associative table on its own key.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-96582bca-648-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Well-formed EXISTS item. Option A is the only properly correlated existence test for the stated requirement. Distractors are plausible and diagnostically useful, especially the uncorrelated EXISTS and reversed NOT EXISTS cases. Difficulty is appropriate.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-96582bca-648-3",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Correct NOT EXISTS anti-match pattern with one clear answer. Options B and C are common confusions, and D is obviously different in operation. Explanation is concise but sufficient for the concept and difficulty.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-96582bca-648-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "This appropriately targets relational division. Option A correctly names both the classic NOT EXISTS formulation and a grouped COUNT(DISTINCT ...) equivalent; the other options each miss the 'every required part' logic. Explanation is accurate and chapter-fit.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-96582bca-648-5",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Clean conceptual test of relational division. Only option B expresses an 'every item in a required set' business question. Distractors are distinct enough from the target concept, and the explanation is correct.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-96582bca-648-6",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Accurate and appropriately simple set-operations item. UNION is uniquely correct for either-list without duplicates. Explanation correctly contrasts UNION with INTERSECT and unrelated operations.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-a6f6fc20-144-1",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Solid associative-entity question. The correct answer is clear, distractors are plausible bad modeling choices, and the explanation correctly teaches the one-row-per-pairing idea. Difficulty 2 is suitable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-a6f6fc20-144-2",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Accurate relationship-facts item. The attribute described belongs to the rental relationship rather than either entity. Distractors are plausible misconceptions, and the explanation teaches the concept effectively.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-a6f6fc20-144-3",
+      "verdict": "needs-edit",
+      "issues": [
+        "chapter-fit",
+        "ambiguous-answer"
+      ],
+      "rationale": "Although composite identification is valid, this example is not clearly tied to the chapter's many-to-many/associative-entity treatment. It instead reads like a generic composite-key item about branch-local labels. Also, 'book copy' identified by branch plus shelf label is somewhat muddled because shelf labels typically identify locations, not copies, which weakens clarity.",
+      "suggestedFix": "Replace with a clearer weak/composite identifier that arises from this chapter's relationship context, such as enrollment_attempt(student_id, course_id, attempt_no) or order_line(order_id, line_no). If keeping the library theme, say 'copy_no is unique only within a branch' rather than 'shelf label.'"
+    },
+    {
+      "questionId": "ch05-ai-a6f6fc20-144-4",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "The stem and options align, and A is the only proper associative table design among the choices. Distractors are plausible malformed table designs. Explanation is concise and correct.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-a6f6fc20-144-5",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Correctly tests placement of relationship attributes in an associative table. Exactly one answer is defensible, and the explanation accurately distinguishes relationship facts from entity attributes. Difficulty 3 is acceptable.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-a6f6fc20-144-6",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Clear composite-key question with assumptions stated. Option C is uniquely correct, distractors are plausible, and the explanation correctly teaches why line_no needs invoice context. Difficulty 4 is credible.",
+      "suggestedFix": ""
+    },
+    {
+      "questionId": "ch05-ai-a6f6fc20-144-7",
+      "verdict": "pass",
+      "issues": [],
+      "rationale": "Strong relationship-facts item. The scenario makes clear that role varies by person-event pairing, so the linking table is the only defensible location. Explanation is instructive and appropriately detailed.",
+      "suggestedFix": ""
+    }
+  ]
+}

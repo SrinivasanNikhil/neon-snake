@@ -1,0 +1,182 @@
+[
+  {
+    "chapter": 10,
+    "conceptIds": [
+      "ch10-views"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "A view is a named virtual table defined by a query, so it can present only the rows and columns needed, such as active customers. An index is for access speed, the catalog stores metadata about database objects, and a privilege controls access rather than defining a query-derived table.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:51.053Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "cd87e56b-3ccb-4bdb-ba20-fa3545022a3a"
+    },
+    "id": "ch10-ai-cd87e56b-3cc-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "A view"
+      },
+      {
+        "id": "B",
+        "text": "An index"
+      },
+      {
+        "id": "C",
+        "text": "A catalog entry"
+      },
+      {
+        "id": "D",
+        "text": "A privilege"
+      }
+    ],
+    "prompt": "A reporting team wants a named virtual table derived from a query that shows only active customers. Which database object best fits that need?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Views",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Views, indexes, and the catalog",
+      "title": "SQL",
+      "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 10,
+    "conceptIds": [
+      "ch10-indexes"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "A composite index on `(customer_id, order_date)` can improve access for queries that use those indexed columns, particularly ones beginning with the leading column `customer_id`. Because the index is `UNIQUE`, the database also enforces that no two rows can have the same combination of `customer_id` and `order_date`. It does not create a view, it does not guarantee full-row uniqueness across all columns, and it does not enforce any rule on `total_amount`.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:51.053Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "cd87e56b-3ccb-4bdb-ba20-fa3545022a3a"
+    },
+    "id": "ch10-ai-cd87e56b-3cc-2",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "It can speed retrieval for searches that use the indexed columns, especially `customer_id` and `customer_id` with `order_date`, and it enforces uniqueness of each `(customer_id, order_date)` pair."
+      },
+      {
+        "id": "B",
+        "text": "It creates a virtual table that shows only one row for each customer and date."
+      },
+      {
+        "id": "C",
+        "text": "It guarantees that every row in `Orders` is unique in all columns."
+      },
+      {
+        "id": "D",
+        "text": "It enforces that `total_amount` must be greater than zero."
+      }
+    ],
+    "prompt": "A table `Orders(order_id, customer_id, order_date, total_amount)` already contains many rows. Which statement about this index is most accurate?\n\n```sql\nCREATE UNIQUE INDEX idx_orders_customer_date\nON Orders(customer_id, order_date);\n```",
+    "provenance": "ai-generated",
+    "reviewConcept": "Indexes",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Views, indexes, and the catalog",
+      "title": "SQL",
+      "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 10,
+    "conceptIds": [
+      "ch10-catalog"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "The catalog is the metadata layer that describes database objects such as tables and columns. It is used for administrative queries about the structure of the database, not for the data rows themselves.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:51.053Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "cd87e56b-3ccb-4bdb-ba20-fa3545022a3a"
+    },
+    "id": "ch10-ai-cd87e56b-3cc-3",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "The database catalog"
+      },
+      {
+        "id": "B",
+        "text": "A view definition"
+      },
+      {
+        "id": "C",
+        "text": "An aggregate query result"
+      },
+      {
+        "id": "D",
+        "text": "A user privilege list only"
+      }
+    ],
+    "prompt": "An administrator needs to find metadata about tables and columns in a database, such as object names and column definitions. Where should they look?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Database catalog",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Views, indexes, and the catalog",
+      "title": "SQL",
+      "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 10,
+    "conceptIds": [
+      "ch10-catalog"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 4,
+    "explanation": "The database catalog stores metadata about database objects such as tables and columns, so it is the appropriate place to check column names and data types. An index helps access rows efficiently, `GRANT` manages privileges, and embedded SQL concerns how SQL is used inside a host program rather than where metadata is stored.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:51.053Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "cd87e56b-3ccb-4bdb-ba20-fa3545022a3a"
+    },
+    "id": "ch10-ai-cd87e56b-3cc-4",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "The database catalog"
+      },
+      {
+        "id": "B",
+        "text": "An index on `Orders`"
+      },
+      {
+        "id": "C",
+        "text": "A `GRANT` statement"
+      },
+      {
+        "id": "D",
+        "text": "An embedded SQL program"
+      }
+    ],
+    "prompt": "An administrator wants to verify the names and data types of columns in the base table `Orders`. Which resource is designed for this kind of database metadata lookup?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Database catalog",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Views, indexes, and the catalog",
+      "title": "SQL",
+      "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+    },
+    "status": "draft"
+  }
+]

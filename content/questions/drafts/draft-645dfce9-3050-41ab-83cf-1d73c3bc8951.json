@@ -1,0 +1,229 @@
+[
+  {
+    "chapter": 7,
+    "conceptIds": [
+      "ch07-context-exceptions"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "A good model has to fit the intended context, including edge cases and exceptions. If some requests are created before a customer exists, the original rule is too narrow and should be adjusted to reflect the real business situation.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:17.503Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "645dfce9-3050-41ab-83cf-1d73c3bc8951"
+    },
+    "id": "ch07-ai-645dfce9-305-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "The model may not fit an important exception in the intended business context."
+      },
+      {
+        "id": "B",
+        "text": "The model uses too many entity types."
+      },
+      {
+        "id": "C",
+        "text": "The model cannot be implemented in SQL."
+      },
+      {
+        "id": "D",
+        "text": "The model should always treat every relationship as mandatory."
+      }
+    ],
+    "prompt": "A team models customer support requests and first draws a simple rule that every request must be linked to exactly one customer. During review, they realize some requests are created by internal staff before a customer account exists. What is the best reason to revisit the model?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Context and exceptions",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Quality improvement",
+      "title": "Data Modeling",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#quality-improvement"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 7,
+    "conceptIds": [
+      "ch07-cardinality-modality"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 3,
+    "explanation": "At most one current loan means the maximum participation is one, so the cardinality is one. Because a copy may have no loan at the moment, participation is optional, which is modality optional.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:17.503Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "645dfce9-3050-41ab-83cf-1d73c3bc8951"
+    },
+    "id": "ch07-ai-645dfce9-305-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Cardinality: one; modality: mandatory"
+      },
+      {
+        "id": "B",
+        "text": "Cardinality: one; modality: optional"
+      },
+      {
+        "id": "C",
+        "text": "Cardinality: many; modality: mandatory"
+      },
+      {
+        "id": "D",
+        "text": "Cardinality: many; modality: optional"
+      }
+    ],
+    "prompt": "In a library model, each book copy can be on loan to at most one member at a time, and a copy may also be sitting on the shelf with no current loan. Which pair of terms best describes the participation of a copy in the loan relationship?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Cardinality and modality",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Quality improvement",
+      "title": "Data Modeling",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#quality-improvement"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 7,
+    "conceptIds": [
+      "ch07-generalization"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "When related entity types share some facts but also have subtype-specific facts, generalization is appropriate. Shared attributes belong in the broader entity, while attributes that apply only to one subtype stay in that subtype.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:17.503Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "645dfce9-3050-41ab-83cf-1d73c3bc8951"
+    },
+    "id": "ch07-ai-645dfce9-305-3",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Keep the shared facts in a broader supertype and put salary and hourly rate in separate subtypes"
+      },
+      {
+        "id": "B",
+        "text": "Store salary and hourly rate in the same attribute because they both represent pay"
+      },
+      {
+        "id": "C",
+        "text": "Eliminate the shared name and email fields from the model"
+      },
+      {
+        "id": "D",
+        "text": "Force employees and contractors into one entity with no subtype distinctions"
+      }
+    ],
+    "prompt": "A company stores information about employees and contractors. Both have a name and a work email, but only employees have a salary and only contractors have an hourly rate. What is the best modeling approach?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Generalization and entity types",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Quality improvement",
+      "title": "Data Modeling",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#quality-improvement"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 7,
+    "conceptIds": [
+      "ch07-context-exceptions",
+      "ch07-cardinality-modality"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 4,
+    "explanation": "A is correct because a person can participate in the relationship optionally and with a maximum of one active plan. A plan can also participate optionally, since a plan might currently have no people assigned, and its maximum participation is many. The other options violate either the person's maximum of one plan or the optional participation stated in the scenario.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:17.503Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "645dfce9-3050-41ab-83cf-1d73c3bc8951"
+    },
+    "id": "ch07-ai-645dfce9-305-4",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Person to Plan: optional, at most one; Plan to Person: optional, many"
+      },
+      {
+        "id": "B",
+        "text": "Person to Plan: mandatory, many; Plan to Person: mandatory, one"
+      },
+      {
+        "id": "C",
+        "text": "Person to Plan: mandatory, one; Plan to Person: optional, at most one"
+      },
+      {
+        "id": "D",
+        "text": "Person to Plan: optional, many; Plan to Person: mandatory, many"
+      }
+    ],
+    "prompt": "A membership system has these rules: each person may have zero or one active membership plan at a time; each plan may be linked to zero, one, or many people; and some people are entered into the system before choosing any plan. Which relationship description best fits these rules?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Cardinality and modality",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Quality improvement",
+      "title": "Data Modeling",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#quality-improvement"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 7,
+    "conceptIds": [
+      "ch07-generalization",
+      "ch07-context-exceptions"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 4,
+    "explanation": "Generalization can capture the common trip facts in a supertype while keeping subtype-specific facts separate. But the later discovery that trips may change type is exactly the kind of exception that should be tested during quality improvement, so the model must be checked against that context as well.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:17.503Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "645dfce9-3050-41ab-83cf-1d73c3bc8951"
+    },
+    "id": "ch07-ai-645dfce9-305-5",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "A shared supertype may reduce duplication, but the model still needs testing for changing edge cases and exceptions"
+      },
+      {
+        "id": "B",
+        "text": "The two trip types should never share any attributes because their rules differ"
+      },
+      {
+        "id": "C",
+        "text": "Changing trip type means the model should ignore subtype-specific attributes"
+      },
+      {
+        "id": "D",
+        "text": "Edge cases only matter after the database is implemented"
+      }
+    ],
+    "prompt": "A travel company starts with separate models for domestic trips and international trips. Both share booking date and traveler name. International trips also need passport country, while domestic trips do not. Later, the team notices that some trips can switch type before departure. What is the strongest modeling takeaway?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Generalization and entity types",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Quality improvement",
+      "title": "Data Modeling",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#quality-improvement"
+    },
+    "status": "draft"
+  }
+]

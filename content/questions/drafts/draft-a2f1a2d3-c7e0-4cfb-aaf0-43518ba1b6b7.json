@@ -1,0 +1,227 @@
+[
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-unary-operators"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "Restrict selects rows that meet a predicate. Project selects columns, union combines compatible relations, and join combines rows based on a matching condition.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:19.586Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a2f1a2d3-c7e0-4cfb-aaf0-43518ba1b6b7"
+    },
+    "id": "ch09-ai-a2f1a2d3-c7e-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Restrict"
+      },
+      {
+        "id": "B",
+        "text": "Project"
+      },
+      {
+        "id": "C",
+        "text": "Union"
+      },
+      {
+        "id": "D",
+        "text": "Join"
+      }
+    ],
+    "prompt": "In relational algebra, which operation returns only the rows that satisfy a condition, while leaving the original relation unchanged?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Restrict selects rows based on a condition; project selects columns.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Relational algebra",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#relational-algebra"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-unary-operators"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "The correct expression first restricts Employee to rows where salary > 80000, using σ, and then projects only emp_id and dept, using π. That is exactly what option A does. Option B projects away salary before applying the salary condition, so the restriction cannot be evaluated on the projected relation. Options C and D apply the wrong attributes and do not produce the requested result.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:19.586Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a2f1a2d3-c7e0-4cfb-aaf0-43518ba1b6b7"
+    },
+    "id": "ch09-ai-a2f1a2d3-c7e-2",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "π_{emp_id, dept}(σ_{salary > 80000}(Employee))"
+      },
+      {
+        "id": "B",
+        "text": "σ_{salary > 80000}(π_{emp_id, dept}(Employee))"
+      },
+      {
+        "id": "C",
+        "text": "π_{salary}(σ_{emp_id > 80000}(Employee))"
+      },
+      {
+        "id": "D",
+        "text": "σ_{dept}(π_{emp_id, salary}(Employee))"
+      }
+    ],
+    "prompt": "Let Employee(emp_id, dept, salary) be a relation. Which relational algebra expression returns the emp_id and dept of employees whose salary is greater than 80000?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Restrict selects rows, and project selects columns; when a condition uses a column, restrict must occur before projecting that column away.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Relational algebra",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#relational-algebra"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-set-operators"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 3,
+    "explanation": "Intersect returns rows common to both union-compatible relations. Union returns all rows from either relation, difference returns rows in the first but not the second, and product forms pairings of rows.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:19.586Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a2f1a2d3-c7e0-4cfb-aaf0-43518ba1b6b7"
+    },
+    "id": "ch09-ai-a2f1a2d3-c7e-3",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Union"
+      },
+      {
+        "id": "B",
+        "text": "Intersect"
+      },
+      {
+        "id": "C",
+        "text": "Difference"
+      },
+      {
+        "id": "D",
+        "text": "Product"
+      }
+    ],
+    "prompt": "Two relations have the same columns and compatible values. Which operator returns only the tuples that appear in both relations?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Intersect finds rows common to both relations.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Relational algebra",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#relational-algebra"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-product-join"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 3,
+    "explanation": "Join combines rows from two relations and keeps only the pairings that satisfy the matching condition, such as equal product_id values. Product would create every possible pairing, while difference and project do not combine related rows.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:19.586Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a2f1a2d3-c7e0-4cfb-aaf0-43518ba1b6b7"
+    },
+    "id": "ch09-ai-a2f1a2d3-c7e-4",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "Product"
+      },
+      {
+        "id": "B",
+        "text": "Join"
+      },
+      {
+        "id": "C",
+        "text": "Difference"
+      },
+      {
+        "id": "D",
+        "text": "Project"
+      }
+    ],
+    "prompt": "A store keeps tables OrderLine(order_id, product_id) and Product(product_id, name). You need a result that pairs each order line with the matching product name, but only when product_id values are equal. Which relational algebra operation is appropriate?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Join keeps pairings that satisfy a related-value condition.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Relational algebra",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#relational-algebra"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-divide-completeness"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 4,
+    "explanation": "Divide is the relational algebra operator for queries that ask which values are related to all values in another set, such as students who completed every required course. Join, union, and project do not directly express that universal condition.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:19.586Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a2f1a2d3-c7e0-4cfb-aaf0-43518ba1b6b7"
+    },
+    "id": "ch09-ai-a2f1a2d3-c7e-5",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Divide"
+      },
+      {
+        "id": "B",
+        "text": "Join"
+      },
+      {
+        "id": "C",
+        "text": "Union"
+      },
+      {
+        "id": "D",
+        "text": "Project"
+      }
+    ],
+    "prompt": "A company stores CourseTaken(student, course) and wants the students who have taken every course required for a certification. Which relational algebra operator is designed for this kind of 'all-related-to' query?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Divide expresses 'all-related-to' queries.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Relational algebra",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#relational-algebra"
+    },
+    "status": "draft"
+  }
+]

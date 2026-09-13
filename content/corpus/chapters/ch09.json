@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "chapter": 9,
+  "title": "The Relational Model and Relational Algebra",
+  "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html",
+  "summary": "Presents the relational model's structures and integrity rules, relational algebra operators, and criteria for a fully relational database system.",
+  "sections": [
+    {
+      "title": "Data structures",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#data-structures",
+      "concepts": [
+        { "id": "ch09-domain-relation", "title": "Domains and relations", "summary": "A domain defines valid atomic values, while a relation organizes domain values into uniquely identifiable rows and named columns." },
+        { "id": "ch09-degree-cardinality", "title": "Degree and cardinality", "summary": "A relation's degree is its number of columns and its cardinality is its number of rows." },
+        { "id": "ch09-keys", "title": "Relational keys", "summary": "Candidate keys can uniquely identify rows; one becomes the primary key, the others are alternate keys, and foreign keys represent relationships." }
+      ]
+    },
+    {
+      "title": "Integrity rules",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#integrity-rules",
+      "concepts": [
+        { "id": "ch09-entity-integrity", "title": "Entity integrity", "summary": "No component of a primary key may be null because every row must remain identifiable." },
+        { "id": "ch09-referential-integrity", "title": "Referential integrity", "summary": "A foreign key must be null when optional or match an existing referenced key value." }
+      ]
+    },
+    {
+      "title": "Relational algebra",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#relational-algebra",
+      "concepts": [
+        { "id": "ch09-unary-operators", "title": "Restrict and project", "summary": "Restrict selects rows and project selects columns, producing new relations without changing the source relation." },
+        { "id": "ch09-set-operators", "title": "Relational set operators", "summary": "Union, intersect, and difference combine union-compatible relations according to set membership." },
+        { "id": "ch09-product-join", "title": "Product and join", "summary": "Product creates every row pairing, while join retains pairings that satisfy a related-value condition." },
+        { "id": "ch09-divide-completeness", "title": "Divide and relational completeness", "summary": "Divide expresses all-related-to queries, and a language is relationally complete if it can express every relational algebra operation." }
+      ]
+    },
+    {
+      "title": "A fully relational database",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#a-fully-relational-database",
+      "concepts": [
+        { "id": "ch09-data-independence", "title": "Data independence", "summary": "Relational systems aim to shield applications from changes in physical storage and information-preserving logical design." },
+        { "id": "ch09-relational-rules", "title": "Fully relational behavior", "summary": "Relational-system rules cover table-based representation, guaranteed access, null handling, catalogs, integrity, set-level operations, and independence." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "chapter": 8,
+  "conceptIds": [
+    "ch08-first-normal-form"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 3,
+  "explanation": "First normal form is violated when a column contains multiple values for the same fact. The usual fix is to move the repeating fact into a separate related table so each row contains a single email address.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:43.194Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "ccaac0af-4bb3-40c1-a0cb-6ecf211957f3"
+  },
+  "id": "ch08-ai-ccaac0af-4bb-3",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "Leave the table as is and require semicolons between email addresses"
+    },
+    {
+      "id": "B",
+      "text": "Create a separate `SupplierEmail` table with one row per email address and a supplier reference"
+    },
+    {
+      "id": "C",
+      "text": "Add more columns such as `email2` and `email3` to the `Supplier` table"
+    },
+    {
+      "id": "D",
+      "text": "Store only the first email address and discard the rest"
+    }
+  ],
+  "prompt": "A `Supplier` table has columns `supplier_id`, `name`, and `contact_emails`. The `contact_emails` column sometimes contains multiple email addresses in one cell. Which design is the best first-normal-form fix? Assume you still need to keep all email addresses for each supplier.",
+  "provenance": "ai-generated",
+  "reviewConcept": "Use related rows for repeating facts so each column remains single-valued.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "First normal form",
+    "title": "Normalization and other Data Modeling Methods",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#first-normal-form"
+  },
+  "status": "approved"
+}

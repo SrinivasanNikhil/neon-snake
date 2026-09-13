@@ -1,0 +1,45 @@
+{
+  "chapter": 6,
+  "conceptIds": [
+    "ch06-one-to-one-mapping"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "Option A is correct because the mandatory side is InsuranceCard: every card must belong to a patient. Placing patient_id in InsuranceCard and declaring it NOT NULL enforces that requirement, and making patient_id UNIQUE prevents more than one card from being linked to the same patient. Option B would incorrectly force every patient to have a card. Option C neither places the foreign key appropriately nor enforces one-to-one uniqueness. Option D models a many-to-many relationship, which does not match the business rule.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:13.245Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "d4aba820-39f4-4238-9bfc-1c6c7fffec68"
+  },
+  "id": "ch06-ai-d4aba820-39f-3",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "Store patient_id in InsuranceCard, declare it NOT NULL, and add a UNIQUE constraint on patient_id"
+    },
+    {
+      "id": "B",
+      "text": "Store insurance_card_id in Patient, declare it NOT NULL, and add a UNIQUE constraint on insurance_card_id"
+    },
+    {
+      "id": "C",
+      "text": "Store patient_id in Patient, allow it to be NULL, and add no uniqueness constraint"
+    },
+    {
+      "id": "D",
+      "text": "Create a separate junction table with patient_id and insurance_card_id as a many-to-many mapping"
+    }
+  ],
+  "prompt": "A hospital stores patients and insurance cards. Business rules: each patient may have zero or one insurance card, and each insurance card must belong to exactly one patient. Which design best matches this one-to-one relationship while keeping the card's foreign key non-null?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Choosing foreign-key placement",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Mapping a one-to-one relationship",
+    "title": "One-to-One and Recursive Relationships",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#mapping-a-one-to-one-relationship"
+  },
+  "status": "approved"
+}

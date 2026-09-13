@@ -1,0 +1,46 @@
+{
+  "chapter": 4,
+  "conceptIds": [
+    "ch04-one-to-many",
+    "ch04-redundancy"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 2,
+  "explanation": "This design separates patient facts from appointment facts and connects them with `patient_id`. That matches a one-to-many relationship because one patient can have many appointments, and it avoids repeating the same phone number in multiple appointment rows.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:59:54.895Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "55c0973d-1885-4832-ba30-6231347d1472"
+  },
+  "id": "ch04-ai-55c0973d-188-4",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Keep `phone_number` in the `Appointment` table because appointments are queried more often"
+    },
+    {
+      "id": "B",
+      "text": "Create a `Patient` table with `phone_number`, and store `patient_id` in the `Appointment` table"
+    },
+    {
+      "id": "C",
+      "text": "Create one table that repeats patient data in every appointment row"
+    },
+    {
+      "id": "D",
+      "text": "Store `phone_number` in both tables so the records are easier to read"
+    }
+  ],
+  "prompt": "A clinic stores patients and appointments. A patient may have many appointments, but each appointment belongs to one patient. The clinic also wants to avoid storing the patient’s phone number repeatedly. Which design best fits both goals?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Use separate entities to avoid repeated facts in a one-to-many design.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Relationships",
+    "title": "The One-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#relationships"
+  },
+  "status": "approved"
+}

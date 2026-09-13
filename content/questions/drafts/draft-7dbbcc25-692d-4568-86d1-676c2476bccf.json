@@ -1,0 +1,137 @@
+[
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-third-normal-form"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 2,
+    "explanation": "Third normal form removes nonkey facts that depend on other nonkey facts instead of directly on the key. Here, customer details depend on CustomerID, so they belong in a separate Customer table rather than being repeated in every order row.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:55.268Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "7dbbcc25-692d-4568-86d1-676c2476bccf"
+    },
+    "id": "ch08-ai-7dbbcc25-692-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Keep all columns in one table because OrderID already identifies the row"
+      },
+      {
+        "id": "B",
+        "text": "Move CustomerName and CustomerCity to a separate Customer table keyed by CustomerID"
+      },
+      {
+        "id": "C",
+        "text": "Split OrderID into two columns so the customer data becomes atomic"
+      },
+      {
+        "id": "D",
+        "text": "Replace CustomerID with CustomerName as the primary key in the order table"
+      }
+    ],
+    "prompt": "A retail database stores each order row with OrderID, CustomerID, CustomerName, and CustomerCity. CustomerName and CustomerCity are determined by CustomerID, not by OrderID. What design change best moves the structure toward third normal form?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Identify and eliminate transitive dependencies to reach third normal form.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Third normal form",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#third-normal-form"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-third-normal-form"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 3,
+    "explanation": "Option B is correct because ProductName and UnitPrice depend on ProductID, which is a nonkey attribute in InvoiceLine. That means those product facts are transitively dependent on the key InvoiceLineID through ProductID, which violates third normal form. Separating Product(ProductID, ProductName, UnitPrice) leaves InvoiceLine with only facts about a specific invoice line: which invoice, which product, and what quantity. The other options either keep the transitive dependency, discard the identifier needed to relate products, or move Qty away from the invoice line where it belongs.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:55.268Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "7dbbcc25-692d-4568-86d1-676c2476bccf"
+    },
+    "id": "ch08-ai-7dbbcc25-692-2",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "Keep InvoiceLine(InvoiceLineID, InvoiceID, ProductID, ProductName, UnitPrice, Qty) unchanged so every invoice line stores product details"
+      },
+      {
+        "id": "B",
+        "text": "Create Product(ProductID, ProductName, UnitPrice) and keep InvoiceLine(InvoiceLineID, InvoiceID, ProductID, Qty)"
+      },
+      {
+        "id": "C",
+        "text": "Create Invoice(InvoiceID, ProductName, UnitPrice, Qty) and remove ProductID entirely"
+      },
+      {
+        "id": "D",
+        "text": "Move Qty into Product so Product(ProductID, ProductName, UnitPrice, Qty) and keep InvoiceLine(InvoiceLineID, InvoiceID, ProductID)"
+      }
+    ],
+    "prompt": "Assume InvoiceLine has a single-column primary key InvoiceLineID and columns (InvoiceLineID, InvoiceID, ProductID, ProductName, UnitPrice, Qty). Each row records one product on one invoice. ProductName and UnitPrice are determined by ProductID, not directly by InvoiceLineID. Which redesign best addresses the third-normal-form problem?",
+    "provenance": "ai-generated",
+    "reviewConcept": "In 3NF, nonkey attributes should depend directly on the key, not on another nonkey attribute such as ProductID.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Third normal form",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#third-normal-form"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-third-normal-form"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 4,
+    "explanation": "Option A is correct because DepartmentID determines ManagerID, and ManagerID determines ManagerPhone. Since ManagerID is a nonkey attribute and ManagerPhone depends on it, ManagerPhone does not depend directly on the key. That is the classic 3NF problem of a nonkey attribute depending on another nonkey attribute. Option B is wrong because ManagerPhone is a single-valued column, not a repeating group. Option C is wrong because there is no composite key in the stated assumptions. Option D is wrong because having a primary key does not by itself guarantee 3NF.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:55.268Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "7dbbcc25-692d-4568-86d1-676c2476bccf"
+    },
+    "id": "ch08-ai-7dbbcc25-692-3",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "The table violates third normal form because a nonkey attribute depends on another nonkey attribute"
+      },
+      {
+        "id": "B",
+        "text": "The table violates first normal form because ManagerPhone is a repeating group"
+      },
+      {
+        "id": "C",
+        "text": "The table violates second normal form because ManagerPhone depends on only part of a composite key"
+      },
+      {
+        "id": "D",
+        "text": "The table is already in third normal form because DepartmentID is a primary key"
+      }
+    ],
+    "prompt": "Assume DepartmentID is the only candidate key in Department(DepartmentID, DepartmentName, ManagerID, ManagerPhone), and a manager may manage multiple departments. ManagerPhone depends on ManagerID rather than directly on DepartmentID. Which statement best describes the normalization issue?",
+    "provenance": "ai-generated",
+    "reviewConcept": "A 3NF violation occurs when a nonkey fact is determined by another nonkey fact instead of directly by the key.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Third normal form",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#third-normal-form"
+    },
+    "status": "draft"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "chapter": 3,
+  "title": "The Single Entity",
+  "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html",
+  "summary": "Introduces single-entity data modeling, translation of a model into one relational table, and SQL for defining, querying, and maintaining that table.",
+  "sections": [
+    {
+      "title": "Modeling a single-entity database",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#modeling-a-single-entity-database",
+      "concepts": [
+        { "id": "ch03-entity-attributes", "title": "Entities and attributes", "summary": "An entity represents a real or conceptual thing of interest, and attributes record the facts needed about each instance." },
+        { "id": "ch03-identifiers", "title": "Identifiers", "summary": "An identifier is one attribute or a combination of attributes that uniquely distinguishes every entity instance." }
+      ]
+    },
+    {
+      "title": "Creating a single-table database",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#creating-a-single-table-database",
+      "concepts": [
+        { "id": "ch03-model-to-table", "title": "Mapping a model to a table", "summary": "An entity maps to a table, its attributes map to columns, and its identifier maps to the primary key." },
+        { "id": "ch03-create-integrity", "title": "CREATE and entity integrity", "summary": "Table definitions choose column data types and constraints; a primary key must uniquely and non-nullably identify each row." }
+      ]
+    },
+    {
+      "title": "Querying a single-table database",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#querying-a-single-table-database",
+      "concepts": [
+        { "id": "ch03-select-filter", "title": "Projection and restriction", "summary": "SELECT chooses columns while WHERE restricts rows according to predicates such as comparisons, IN, and NOT IN." },
+        { "id": "ch03-order-derived", "title": "Ordering and derived values", "summary": "ORDER BY controls report order, and expressions can calculate values from stored columns." },
+        { "id": "ch03-aggregate-subquery", "title": "Aggregates and subqueries", "summary": "Aggregate functions summarize rows, and a subquery supplies a value or set used by an enclosing query." },
+        { "id": "ch03-pattern-distinct", "title": "Patterns and duplicate removal", "summary": "Regular-expression predicates find text patterns, while DISTINCT removes duplicate result rows." }
+      ]
+    },
+    {
+      "title": "DELETE and UPDATE",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#delete",
+      "concepts": [
+        { "id": "ch03-update-delete", "title": "Maintaining rows", "summary": "UPDATE changes selected rows and DELETE removes selected rows; omitting an appropriate WHERE condition can affect every row." }
+      ]
+    }
+  ]
+}

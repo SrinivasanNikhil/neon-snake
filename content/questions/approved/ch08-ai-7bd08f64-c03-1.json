@@ -1,0 +1,45 @@
+{
+  "chapter": 8,
+  "conceptIds": [
+    "ch08-method-equivalence"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 2,
+  "explanation": "The two methods use different procedures, but the goal is the same: a structure that accurately represents the required facts. If both are applied correctly, the resulting design should be equivalent in what it models, even if the steps taken to reach it differ.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:03:56.555Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "7bd08f64-c03e-4091-ace0-a1472912a67e"
+  },
+  "id": "ch08-ai-7bd08f64-c03-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "They should usually produce completely different tables because the methods optimize for different facts."
+    },
+    {
+      "id": "B",
+      "text": "They should converge on structures that represent the same real-world facts, even if the design process differs."
+    },
+    {
+      "id": "C",
+      "text": "The normalization-based design must always contain more tables than the conceptual-model-based design."
+    },
+    {
+      "id": "D",
+      "text": "The conceptual model must always be recreated inside a single wide table for reporting."
+    }
+  ],
+  "prompt": "A team designs a customer-order database using two approaches: one person starts from a conceptual model, while another starts by checking dependencies and normal forms. If both are done well, what outcome should you expect?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Alternative design methods",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Other data modeling methods",
+    "title": "Normalization and other Data Modeling Methods",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#other-data-modeling-methods"
+  },
+  "status": "approved"
+}

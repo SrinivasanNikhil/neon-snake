@@ -1,0 +1,45 @@
+{
+  "chapter": 7,
+  "conceptIds": [
+    "ch07-model-purpose"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "A is correct because a data model is used to identify the facts and relationships that must be stored. It does not primarily decide physical storage details, application code, or interface design.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:57.134Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "c4212d19-5aeb-400c-a3af-9bb78faf9442"
+  },
+  "id": "ch07-ai-c4212d19-5ae-3",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Describing required facts and relationships for the database"
+    },
+    {
+      "id": "B",
+      "text": "Choosing the fastest physical storage layout"
+    },
+    {
+      "id": "C",
+      "text": "Writing application code for order entry"
+    },
+    {
+      "id": "D",
+      "text": "Generating user interface mockups"
+    }
+  ],
+  "prompt": "A team is designing a customer database. They want a diagram that captures which facts must be stored and how customers relate to orders, but they do not want to decide table indexes or file storage yet. What is the diagram mainly for?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Purpose and scope",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Data modeling",
+    "title": "Data Modeling",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-modeling"
+  },
+  "status": "approved"
+}

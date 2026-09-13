@@ -1,0 +1,45 @@
+{
+  "chapter": 9,
+  "conceptIds": [
+    "ch09-divide-completeness"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 4,
+  "explanation": "Divide is the relational algebra operator for queries that ask which values are related to all values in another set, such as students who completed every required course. Join, union, and project do not directly express that universal condition.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:19.586Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "a2f1a2d3-c7e0-4cfb-aaf0-43518ba1b6b7"
+  },
+  "id": "ch09-ai-a2f1a2d3-c7e-5",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Divide"
+    },
+    {
+      "id": "B",
+      "text": "Join"
+    },
+    {
+      "id": "C",
+      "text": "Union"
+    },
+    {
+      "id": "D",
+      "text": "Project"
+    }
+  ],
+  "prompt": "A company stores CourseTaken(student, course) and wants the students who have taken every course required for a certification. Which relational algebra operator is designed for this kind of 'all-related-to' query?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Divide expresses 'all-related-to' queries.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Relational algebra",
+    "title": "The Relational Model and Relational Algebra",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#relational-algebra"
+  },
+  "status": "approved"
+}

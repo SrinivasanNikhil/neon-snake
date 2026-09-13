@@ -1,0 +1,45 @@
+{
+  "chapter": 9,
+  "conceptIds": [
+    "ch09-data-independence"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 3,
+  "explanation": "This is a direct example of physical data independence. The underlying storage changes, but the interface seen by the application stays stable, so the application keeps working.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:28.444Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "a0dc8c37-07e7-4408-89a8-1b413622247b"
+  },
+  "id": "ch09-ai-a0dc8c37-07e-3",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "The application must be rewritten because any storage change alters SQL semantics"
+    },
+    {
+      "id": "B",
+      "text": "The application continues to work because the change is hidden from users and programs"
+    },
+    {
+      "id": "C",
+      "text": "The database can no longer enforce keys after a storage change"
+    },
+    {
+      "id": "D",
+      "text": "The view must be replaced by a temporary table to preserve performance"
+    }
+  ],
+  "prompt": "A sales application reads from a view named v_orders. The physical order table is moved to a different storage structure, but the view definition and query results stay the same. Which outcome best matches the goal of the relational system?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Apply data independence to a change in physical storage.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "A fully relational database",
+    "title": "The Relational Model and Relational Algebra",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#a-fully-relational-database"
+  },
+  "status": "approved"
+}

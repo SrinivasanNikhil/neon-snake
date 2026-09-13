@@ -1,0 +1,45 @@
+{
+  "chapter": 7,
+  "conceptIds": [
+    "ch07-well-formed"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "A well-formed model must name every entity, use clear labels, and show relationships. Missing names, ambiguous labels, and omitted relationships are all well-formedness problems. The other options refer to different concerns such as detail level, fidelity, or physical design.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:06.053Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "fc86de32-7466-4305-8a6c-2e92cf05ed69"
+  },
+  "id": "ch07-ai-fc86de32-746-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "The model is not well-formed because it has naming and relationship defects."
+    },
+    {
+      "id": "B",
+      "text": "The model is too detailed because it includes too many attributes."
+    },
+    {
+      "id": "C",
+      "text": "The model is high-fidelity because it reflects real business language."
+    },
+    {
+      "id": "D",
+      "text": "The model is normalized incorrectly because it needs more indexes."
+    }
+  ],
+  "prompt": "A reviewer says a draft data model is hard to use because one entity is unnamed, another is labeled with a vague business phrase, and one relationship is missing. What quality problem is the reviewer pointing to?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Well-formed models",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Data model quality",
+    "title": "Data Modeling",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-model-quality"
+  },
+  "status": "approved"
+}

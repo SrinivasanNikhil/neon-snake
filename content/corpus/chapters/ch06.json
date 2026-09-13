@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "chapter": 6,
+  "title": "One-to-One and Recursive Relationships",
+  "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html",
+  "summary": "Develops one-to-one and self-referential relationship patterns, their foreign-key mappings, and SQL techniques for querying recursive structures.",
+  "sections": [
+    {
+      "title": "Modeling a one-to-one relationship",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#modeling-a-one-to-one-relationship",
+      "concepts": [
+        { "id": "ch06-one-to-one", "title": "One-to-one modeling", "summary": "A one-to-one relationship links each participating instance to at most one instance on the other side and should be labeled when its meaning is not obvious." },
+        { "id": "ch06-relationship-labels", "title": "Relationship descriptors", "summary": "Descriptors clarify multiple or non-obvious relationships between the same entities." }
+      ]
+    },
+    {
+      "title": "Mapping a one-to-one relationship",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#mapping-a-one-to-one-relationship",
+      "concepts": [
+        { "id": "ch06-one-to-one-mapping", "title": "Choosing foreign-key placement", "summary": "Foreign-key placement should reflect mandatory participation and minimize unnecessary nulls while still enforcing uniqueness." },
+        { "id": "ch06-cycle-risk", "title": "Constraint cycles", "summary": "Mutually dependent foreign keys can prevent either participating row from being inserted, so constraint design must consider insertion order and cycles." }
+      ]
+    },
+    {
+      "title": "Mapping a recursive one-to-many relationship",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#mapping-a-recursive-one-to-many-relationship",
+      "concepts": [
+        { "id": "ch06-recursive-foreign-key", "title": "Self-referential foreign keys", "summary": "A recursive one-to-many relationship uses a foreign-key column that references the primary key of another row in the same table." }
+      ]
+    },
+    {
+      "title": "Querying a recursive 1:m relationship",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#querying-a-recursive-1m-relationship",
+      "concepts": [
+        { "id": "ch06-self-join", "title": "Self joins and aliases", "summary": "Aliases let a query treat one table as separate logical roles so a row can be matched to a related row in the same table." },
+        { "id": "ch06-recursive-query", "title": "Recursive querying", "summary": "Recursive structures can be traversed by repeatedly following self-references, using suitable common table expressions where supported." }
+      ]
+    },
+    {
+      "title": "Recursive one-to-one and many-to-many relationships",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#modeling-a-recursive-many-to-many-relationship",
+      "concepts": [
+        { "id": "ch06-recursive-cardinality", "title": "Recursive cardinalities", "summary": "Relationships among instances of one entity can be one-to-one, one-to-many, or many-to-many and require mappings that preserve those cardinalities." }
+      ]
+    }
+  ]
+}

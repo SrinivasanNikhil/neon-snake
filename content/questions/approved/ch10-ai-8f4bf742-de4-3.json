@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-scalar-functions"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "UPPER and ROUND are scalar functions because they act on individual values in each row. The query keeps the same row-level result set and adds transformed output columns; it does not group, update, or filter the table.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:44.372Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "8f4bf742-de4e-4e5d-860f-e299edeb30e1"
+  },
+  "id": "ch10-ai-8f4bf742-de4-3",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "It returns one row per order and transforms two column values in each row."
+    },
+    {
+      "id": "B",
+      "text": "It returns one row per customer with summed order totals."
+    },
+    {
+      "id": "C",
+      "text": "It changes the stored values in the orders table."
+    },
+    {
+      "id": "D",
+      "text": "It filters out rows where order_total is not numeric."
+    }
+  ],
+  "prompt": "What does the following query do?\n\n```sql\nSELECT order_id,\n       UPPER(customer_name) AS customer_name_upper,\n       ROUND(order_total, 2) AS order_total_rounded\nFROM orders;\n```",
+  "provenance": "ai-generated",
+  "reviewConcept": "Scalar functions transform one value per evaluated row, including text, numeric, and date-time values.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Scalar and aggregate functions",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=223"
+  },
+  "status": "approved"
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "chapter": 3,
+    "conceptIds": [
+      "ch03-model-to-table"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 1,
+    "explanation": "In a direct single-entity mapping, each entity type is represented by one table. The entity’s attributes are stored as columns, and the attribute or combination of attributes that uniquely identifies each instance is used as the table’s primary key.",
+    "generation": {
+      "generatedAt": "2026-08-13T15:57:26.638Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a68f1455-2bcb-4246-b7c5-9f165bc691c9"
+    },
+    "id": "ch03-ai-a68f1455-2bc-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "The entity becomes a table, the attributes become columns, and the identifier becomes the primary key"
+      },
+      {
+        "id": "B",
+        "text": "The entity becomes a column, the attributes become rows, and the identifier becomes a foreign key"
+      },
+      {
+        "id": "C",
+        "text": "The entity becomes an index, the attributes become constraints, and the identifier becomes a view"
+      },
+      {
+        "id": "D",
+        "text": "The entity becomes a trigger, the attributes become stored procedures, and the identifier becomes a unique database"
+      }
+    ],
+    "prompt": "In a one-entity design, a company turns a single business object into one relational table. What is the best mapping from the model to the table structure?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Mapping a model to a table",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a single-table database",
+      "title": "The Single Entity",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#creating-a-single-table-database"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 3,
+    "conceptIds": [
+      "ch03-create-integrity"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 2,
+    "explanation": "Entity integrity means every row can be identified without ambiguity. A primary key must therefore be unique and non-null for each row.",
+    "generation": {
+      "generatedAt": "2026-08-13T15:57:26.638Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a68f1455-2bcb-4246-b7c5-9f165bc691c9"
+    },
+    "id": "ch03-ai-a68f1455-2bc-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "The key column may contain duplicates if the names are different"
+      },
+      {
+        "id": "B",
+        "text": "The key column must uniquely identify each row and must never be NULL"
+      },
+      {
+        "id": "C",
+        "text": "The key column should be stored as text so it can hold any value"
+      },
+      {
+        "id": "D",
+        "text": "The key column only needs to be unique when rows are inserted, not after that"
+      }
+    ],
+    "prompt": "A table is being created for employee records. Which definition best satisfies entity integrity for the table's primary key?",
+    "provenance": "ai-generated",
+    "reviewConcept": "CREATE and entity integrity",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a single-table database",
+      "title": "The Single Entity",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#creating-a-single-table-database"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 3,
+    "conceptIds": [
+      "ch03-create-integrity"
+    ],
+    "correctOptionId": "C",
+    "difficulty": 3,
+    "explanation": "The primary key column cannot be NULL. A row with a NULL product_id violates entity integrity, even if all other values are valid.",
+    "generation": {
+      "generatedAt": "2026-08-13T15:57:26.638Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a68f1455-2bcb-4246-b7c5-9f165bc691c9"
+    },
+    "id": "ch03-ai-a68f1455-2bc-3",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "(101, 'Pen', 1.25)"
+      },
+      {
+        "id": "B",
+        "text": "(102, 'Notebook', 4.50)"
+      },
+      {
+        "id": "C",
+        "text": "(NULL, 'Stapler', 8.99)"
+      },
+      {
+        "id": "D",
+        "text": "(103, 'Marker', 2.00)"
+      }
+    ],
+    "prompt": "A table is defined as follows in MySQL:\n\n```sql\nCREATE TABLE Product (\n  product_id INT,\n  product_name VARCHAR(50),\n  price DECIMAL(8,2),\n  PRIMARY KEY (product_id)\n);\n```\n\nWhich inserted row would violate the table's entity integrity rules? Assume the table is otherwise empty.",
+    "provenance": "ai-generated",
+    "reviewConcept": "CREATE and entity integrity",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a single-table database",
+      "title": "The Single Entity",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#creating-a-single-table-database"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 3,
+    "conceptIds": [
+      "ch03-model-to-table"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 4,
+    "explanation": "The single-entity model maps directly to one table. The identifier should become the primary key, and the remaining attributes should become regular columns. Option A does this correctly.",
+    "generation": {
+      "generatedAt": "2026-08-13T15:57:26.638Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a68f1455-2bcb-4246-b7c5-9f165bc691c9"
+    },
+    "id": "ch03-ai-a68f1455-2bc-4",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "CREATE TABLE Patient (\n  patient_number INT PRIMARY KEY,\n  full_name VARCHAR(80),\n  date_of_birth DATE\n);"
+      },
+      {
+        "id": "B",
+        "text": "CREATE TABLE Patient (\n  full_name VARCHAR(80) PRIMARY KEY,\n  patient_number INT,\n  date_of_birth DATE\n);"
+      },
+      {
+        "id": "C",
+        "text": "CREATE TABLE Patient (\n  patient_number INT,\n  full_name VARCHAR(80),\n  date_of_birth DATE,\n  FOREIGN KEY (patient_number) REFERENCES Patient(patient_number)\n);"
+      },
+      {
+        "id": "D",
+        "text": "CREATE TABLE Patient (\n  patient_number INT,\n  full_name VARCHAR(80),\n  date_of_birth DATE,\n  INDEX(patient_number)\n);"
+      }
+    ],
+    "prompt": "A small clinic models only one entity, Patient. The business rules are:\n- each patient is identified by one patient_number\n- each patient has a full_name and a date_of_birth\n- the design must store the entity in one table\n\nWhich MySQL table definition best matches that model?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Mapping a model to a table",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Creating a single-table database",
+      "title": "The Single Entity",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#creating-a-single-table-database"
+    },
+    "status": "draft"
+  }
+]

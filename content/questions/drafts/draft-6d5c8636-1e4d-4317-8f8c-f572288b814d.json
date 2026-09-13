@@ -1,0 +1,228 @@
+[
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-domain-relation"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 1,
+    "explanation": "A domain is the allowed set of atomic values for an attribute. The other choices describe a relation, cardinality, or a key-like link between tables.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:04.847Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "6d5c8636-1e4d-4317-8f8c-f572288b814d"
+    },
+    "id": "ch09-ai-6d5c8636-1e4-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "The set of valid atomic values allowed for one attribute, such as all acceptable postal codes"
+      },
+      {
+        "id": "B",
+        "text": "Any table that stores customers and orders together"
+      },
+      {
+        "id": "C",
+        "text": "The number of rows in a table"
+      },
+      {
+        "id": "D",
+        "text": "A column used to connect two tables"
+      }
+    ],
+    "prompt": "In a customer database, which statement best describes a domain in the relational model?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Domains and relations",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Data structures",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#data-structures"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-degree-cardinality"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 2,
+    "explanation": "Degree means the number of columns, so it is 7. Cardinality means the number of rows, so it is 240.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:04.847Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "6d5c8636-1e4d-4317-8f8c-f572288b814d"
+    },
+    "id": "ch09-ai-6d5c8636-1e4-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Degree 240, cardinality 7"
+      },
+      {
+        "id": "B",
+        "text": "Degree 7, cardinality 240"
+      },
+      {
+        "id": "C",
+        "text": "Degree 7, cardinality 7"
+      },
+      {
+        "id": "D",
+        "text": "Degree 240, cardinality 240"
+      }
+    ],
+    "prompt": "A relation named Inventory has 7 attributes and 240 rows. What are its degree and cardinality?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Degree and cardinality",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Data structures",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#data-structures"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-keys"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 2,
+    "explanation": "Candidate keys are columns that can uniquely identify rows. Once one candidate key is chosen as the primary key, the other candidate key(s) are alternate keys.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:04.847Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "6d5c8636-1e4d-4317-8f8c-f572288b814d"
+    },
+    "id": "ch09-ai-6d5c8636-1e4-3",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "A foreign key"
+      },
+      {
+        "id": "B",
+        "text": "An alternate key"
+      },
+      {
+        "id": "C",
+        "text": "A composite key"
+      },
+      {
+        "id": "D",
+        "text": "A surrogate key"
+      }
+    ],
+    "prompt": "A table stores employee records. Two different columns can each uniquely identify every employee: employee_id and national_id. If employee_id is chosen as the primary key, what is national_id called?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Relational keys",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Data structures",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#data-structures"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-keys"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "customer_id in OrderHeader links each order to a row in Customer, so it is a foreign key referencing Customer(customer_id). It is not the primary key of OrderHeader because order_id identifies orders, and it is not an alternate key because many orders can belong to the same customer. A domain is the set of valid values for an attribute, not the attribute's role in another relation.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:04.847Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "6d5c8636-1e4d-4317-8f8c-f572288b814d"
+    },
+    "id": "ch09-ai-6d5c8636-1e4-4",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "A foreign key referencing Customer(customer_id)"
+      },
+      {
+        "id": "B",
+        "text": "An alternate key for OrderHeader"
+      },
+      {
+        "id": "C",
+        "text": "The primary key of OrderHeader"
+      },
+      {
+        "id": "D",
+        "text": "A domain for order dates"
+      }
+    ],
+    "prompt": "Consider two relations: Customer(customer_id, email) and OrderHeader(order_id, customer_id, order_date). In OrderHeader, what role does customer_id play if it stores the identifier of the customer who placed each order?",
+    "provenance": "ai-generated",
+    "reviewConcept": "A foreign key stores values that reference a key in another relation to represent a relationship between rows.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Data structures",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#data-structures"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-degree-cardinality",
+      "ch09-domain-relation"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "Adding an attribute increases the degree by one because degree counts columns. Removing rows decreases cardinality because cardinality counts rows.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:04.847Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "6d5c8636-1e4d-4317-8f8c-f572288b814d"
+    },
+    "id": "ch09-ai-6d5c8636-1e4-5",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Degree increases by 1; cardinality decreases by 15"
+      },
+      {
+        "id": "B",
+        "text": "Degree decreases by 1; cardinality increases by 15"
+      },
+      {
+        "id": "C",
+        "text": "Degree and cardinality both increase"
+      },
+      {
+        "id": "D",
+        "text": "Degree stays the same; cardinality stays the same"
+      }
+    ],
+    "prompt": "A relation is redesigned by adding one new attribute and removing 15 rows while keeping all remaining rows distinct. What happens to degree and cardinality?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Degree and cardinality",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Data structures",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#data-structures"
+    },
+    "status": "draft"
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-three-table-join"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "To retrieve both sides of a many-to-many relationship, each main table must be joined to the associative table using its own matching key. That is why Employees joins to Enrollments on employee_id and Courses joins to Enrollments on course_id.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:06.175Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "96582bca-6485-46f2-8712-de0188f40b7e"
+    },
+    "id": "ch05-ai-96582bca-648-1",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "Join Employees to Enrollments on employee_id, then join Courses to Enrollments on course_id."
+      },
+      {
+        "id": "B",
+        "text": "Join Employees directly to Courses on employee_id = course_id."
+      },
+      {
+        "id": "C",
+        "text": "Join Employees to Courses once, then join Enrollments only if no rows are found."
+      },
+      {
+        "id": "D",
+        "text": "Use UNION to combine employee names and course names into one list."
+      }
+    ],
+    "prompt": "A company stores training assignments in three tables: Employees(employee_id, employee_name), Courses(course_id, course_name), and Enrollments(employee_id, course_id). Which query pattern correctly returns each employee name with the courses they are enrolled in?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Three-table joins",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Querying an m:m relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#querying-an-mm-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-exists"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "EXISTS is appropriate when the outer query should keep a vendor if at least one related order meets the condition. Option A is correct because the subquery is correlated to the current vendor with o.vendor_id = v.vendor_id and checks for an order_total above 10000. Option B reverses the logic by returning vendors with no such orders. Option C compares vendor_id to order_total, which mismatches the columns. Option D is uncorrelated, so if any order over 10000 exists anywhere in the table, it would return every vendor.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:06.175Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "96582bca-6485-46f2-8712-de0188f40b7e"
+    },
+    "id": "ch05-ai-96582bca-648-2",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "WHERE EXISTS (SELECT 1 FROM Orders o WHERE o.vendor_id = v.vendor_id AND o.order_total > 10000)"
+      },
+      {
+        "id": "B",
+        "text": "WHERE NOT EXISTS (SELECT 1 FROM Orders o WHERE o.vendor_id = v.vendor_id AND o.order_total > 10000)"
+      },
+      {
+        "id": "C",
+        "text": "WHERE v.vendor_id IN (SELECT o.order_total FROM Orders o WHERE o.order_total > 10000)"
+      },
+      {
+        "id": "D",
+        "text": "WHERE EXISTS (SELECT 1 FROM Orders o WHERE o.order_total > 10000)"
+      }
+    ],
+    "prompt": "Assume the outer query is:\nSELECT v.vendor_name\nFROM Vendors v\n...\nA manager wants vendors who have at least one order over 10000, without joining Orders into the outer query. Which WHERE-clause condition correctly tests that requirement?",
+    "provenance": "ai-generated",
+    "reviewConcept": "EXISTS and NOT EXISTS",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Querying an m:m relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#querying-an-mm-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-exists"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "NOT EXISTS is the correct pattern for finding rows in the first table that have no matching related rows in the second table. The correlated subquery checks whether any membership row exists for each student.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:06.175Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "96582bca-6485-46f2-8712-de0188f40b7e"
+    },
+    "id": "ch05-ai-96582bca-648-3",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "SELECT student_name FROM Students s WHERE NOT EXISTS (SELECT 1 FROM ClubMembers cm WHERE cm.student_id = s.student_id);"
+      },
+      {
+        "id": "B",
+        "text": "SELECT student_name FROM Students s WHERE EXISTS (SELECT 1 FROM ClubMembers cm WHERE cm.student_id = s.student_id);"
+      },
+      {
+        "id": "C",
+        "text": "SELECT student_name FROM Students s JOIN ClubMembers cm ON cm.student_id = s.student_id;"
+      },
+      {
+        "id": "D",
+        "text": "SELECT student_name FROM Students s UNION SELECT student_id FROM ClubMembers;"
+      }
+    ],
+    "prompt": "A school tracks Students(student_id, student_name) and ClubMembers(student_id, club_id). You need the names of students who are not members of any club. Which query pattern is correct?",
+    "provenance": "ai-generated",
+    "reviewConcept": "EXISTS and NOT EXISTS",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Querying an m:m relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#querying-an-mm-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-division"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 4,
+    "explanation": "Relational division asks which targets are related to every item in a source set. A vendor qualifies only if no required part is missing, which can be tested with nested non-existence or with grouped counts over the required set.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:06.175Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "96582bca-6485-46f2-8712-de0188f40b7e"
+    },
+    "id": "ch05-ai-96582bca-648-4",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "Use a correlated NOT EXISTS query that checks for missing required parts for each vendor, or an equivalent grouped COUNT(DISTINCT part_id) comparison against all three required IDs."
+      },
+      {
+        "id": "B",
+        "text": "Use EXISTS with one required part ID, because one match implies all three are covered."
+      },
+      {
+        "id": "C",
+        "text": "Use UNION between the three part IDs and the vendor list, because UNION keeps only common rows."
+      },
+      {
+        "id": "D",
+        "text": "Use a three-table join and return vendors that have at least one of the required parts."
+      }
+    ],
+    "prompt": "A vendor database has Vendors(vendor_id, vendor_name), Parts(part_id, part_name), and Supplies(vendor_id, part_id). You need the vendors who supply every part in a required list of three part IDs: 11, 12, and 13. Which approach is the best match for this requirement?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Relational division",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Querying an m:m relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#querying-an-mm-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-division"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 3,
+    "explanation": "Relational division is used when you need entities that are related to every member of a specified set. Supplying every item on a required list is the classic fit for that pattern.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:06.175Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "96582bca-6485-46f2-8712-de0188f40b7e"
+    },
+    "id": "ch05-ai-96582bca-648-5",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Which customers bought at least one product last month?"
+      },
+      {
+        "id": "B",
+        "text": "Which suppliers provide every item on a required product list?"
+      },
+      {
+        "id": "C",
+        "text": "Which employees and departments should be combined into one report?"
+      },
+      {
+        "id": "D",
+        "text": "Which orders should be displayed in ascending date order?"
+      }
+    ],
+    "prompt": "Which business question is most naturally answered with relational division?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Relational division",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Querying an m:m relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#querying-an-mm-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 5,
+    "conceptIds": [
+      "ch05-set-operations"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "UNION combines rows from either compatible result set and removes duplicates. INTERSECT would keep only IDs found in both lists, while NOT EXISTS and CROSS JOIN do something different.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:06.175Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "96582bca-6485-46f2-8712-de0188f40b7e"
+    },
+    "id": "ch05-ai-96582bca-648-6",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "UNION"
+      },
+      {
+        "id": "B",
+        "text": "INTERSECT"
+      },
+      {
+        "id": "C",
+        "text": "NOT EXISTS"
+      },
+      {
+        "id": "D",
+        "text": "CROSS JOIN"
+      }
+    ],
+    "prompt": "Two compatible queries return customer IDs from different marketing lists. You want one result set containing every customer ID that appears in either list, without duplicates. Which set operation should you use?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Set operations",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Querying an m:m relationship",
+      "title": "The Many-to-Many Relationship",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#querying-an-mm-relationship"
+    },
+    "status": "draft"
+  }
+]

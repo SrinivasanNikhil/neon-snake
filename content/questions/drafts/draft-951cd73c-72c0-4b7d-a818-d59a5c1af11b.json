@@ -1,0 +1,228 @@
+[
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-entity-integrity"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 1,
+    "explanation": "Entity integrity requires that no component of a primary key be null. Because OrderID is the primary key, a row with OrderID = NULL violates entity integrity. The other options all use non-null primary-key values, so they do not violate this rule under the stated assumptions.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:12.548Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "951cd73c-72c0-4b7d-a818-d59a5c1af11b"
+    },
+    "id": "ch09-ai-951cd73c-72c-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "A row with OrderID = 1057"
+      },
+      {
+        "id": "B",
+        "text": "A row with OrderID = NULL"
+      },
+      {
+        "id": "C",
+        "text": "A row with OrderID = 2044"
+      },
+      {
+        "id": "D",
+        "text": "A row with OrderID = 3190"
+      }
+    ],
+    "prompt": "Assume OrderID is the table's primary key and all non-key domain rules are satisfied. Which row violates entity integrity?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Entity integrity means every primary-key value must be non-null.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Integrity rules",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#integrity-rules"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-referential-integrity"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "With referential integrity, a foreign key must match an existing referenced key value, or be null only when null is allowed. Here the stem states that Orders.CustomerID is NOT NULL, so NULL is not valid. Among the choices, 12 is the only value that appears in Customers, so it is the only value that satisfies referential integrity.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:12.548Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "951cd73c-72c0-4b7d-a818-d59a5c1af11b"
+    },
+    "id": "ch09-ai-951cd73c-72c-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "CustomerID = 12"
+      },
+      {
+        "id": "B",
+        "text": "CustomerID = 11"
+      },
+      {
+        "id": "C",
+        "text": "CustomerID = 99"
+      },
+      {
+        "id": "D",
+        "text": "CustomerID = NULL"
+      }
+    ],
+    "prompt": "An Orders table has a CustomerID foreign key that references Customers.CustomerID. Assume Orders.CustomerID is NOT NULL. Customers currently contains CustomerID values 10, 12, and 15. Which Orders value satisfies referential integrity?",
+    "provenance": "ai-generated",
+    "reviewConcept": "A foreign key must match an existing parent key, unless null is permitted for an optional relationship.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Integrity rules",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#integrity-rules"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-entity-integrity"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 1,
+    "explanation": "Entity integrity requires that no component of a primary key be null. Because InvoiceNo is the enforced primary key and must be supplied by the statement, inserting NULL for InvoiceNo is guaranteed to violate entity integrity. The other statements do not place NULL in the primary key; whether they succeed could depend on other constraints not stated here.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:12.548Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "951cd73c-72c0-4b7d-a818-d59a5c1af11b"
+    },
+    "id": "ch09-ai-951cd73c-72c-3",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "INSERT INTO Invoice (InvoiceNo, Amount) VALUES (NULL, 250.00);"
+      },
+      {
+        "id": "B",
+        "text": "INSERT INTO Invoice (InvoiceNo, Amount) VALUES (9001, 250.00);"
+      },
+      {
+        "id": "C",
+        "text": "INSERT INTO Invoice (InvoiceNo, Amount) VALUES (9002, NULL);"
+      },
+      {
+        "id": "D",
+        "text": "INSERT INTO Invoice (InvoiceNo, Amount) VALUES (9003, 0.00);"
+      }
+    ],
+    "prompt": "Assume Invoice is a standard relational table with an enforced primary key InvoiceNo, and InvoiceNo is supplied by the INSERT statement rather than auto-generated. Which statement is guaranteed to violate entity integrity?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Entity integrity means primary key attributes cannot be null.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Integrity rules",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#integrity-rules"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-referential-integrity"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 4,
+    "explanation": "Because ParentID is nullable, a null foreign key is allowed when the relationship is optional. Values 5, 9, and 11 do not exist in Parent, so they would violate referential integrity.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:12.548Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "951cd73c-72c0-4b7d-a818-d59a5c1af11b"
+    },
+    "id": "ch09-ai-951cd73c-72c-4",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "INSERT INTO Child (ChildID, ParentID) VALUES (21, NULL);"
+      },
+      {
+        "id": "B",
+        "text": "INSERT INTO Child (ChildID, ParentID) VALUES (22, 5);"
+      },
+      {
+        "id": "C",
+        "text": "INSERT INTO Child (ChildID, ParentID) VALUES (23, 9);"
+      },
+      {
+        "id": "D",
+        "text": "INSERT INTO Child (ChildID, ParentID) VALUES (24, 11);"
+      }
+    ],
+    "prompt": "A MySQL database has these tables: Parent(ParentID PRIMARY KEY) and Child(ChildID PRIMARY KEY, ParentID INT NULL, FOREIGN KEY (ParentID) REFERENCES Parent(ParentID)). Which insert is allowed by referential integrity? Assume Parent currently contains ParentID values 3 and 8.",
+    "provenance": "ai-generated",
+    "reviewConcept": "An optional foreign key may be null; otherwise it must match a parent key.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Integrity rules",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#integrity-rules"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-entity-integrity",
+      "ch09-referential-integrity"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 5,
+    "explanation": "Option A is correct because entity integrity requires the primary key ProjectID to be non-null, and referential integrity requires the foreign key SponsorID to be either null when optional or equal to an existing referenced SponsorID. B and D violate entity integrity by allowing a null primary key. C violates referential integrity by allowing SponsorID values that do not exist in Sponsor.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:12.548Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "951cd73c-72c0-4b7d-a818-d59a5c1af11b"
+    },
+    "id": "ch09-ai-951cd73c-72c-5",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "ProjectID must be non-null, and SponsorID must be either null or an existing SponsorID value"
+      },
+      {
+        "id": "B",
+        "text": "ProjectID may be null if SponsorID matches an existing SponsorID"
+      },
+      {
+        "id": "C",
+        "text": "ProjectID must be non-null, and SponsorID may be any integer whether or not it exists in Sponsor"
+      },
+      {
+        "id": "D",
+        "text": "SponsorID must be non-null, but ProjectID may be null"
+      }
+    ],
+    "prompt": "A company stores projects in Project(ProjectID PRIMARY KEY, SponsorID INT NULL, FOREIGN KEY (SponsorID) REFERENCES Sponsor(SponsorID)). Which rule always preserves both entity integrity and referential integrity when inserting a project row?",
+    "provenance": "ai-generated",
+    "reviewConcept": "To satisfy both rules, primary-key values must be non-null and foreign-key values must be null only when allowed or else match an existing parent key.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Integrity rules",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#integrity-rules"
+    },
+    "status": "draft"
+  }
+]

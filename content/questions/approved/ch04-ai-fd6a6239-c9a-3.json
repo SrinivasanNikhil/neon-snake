@@ -1,0 +1,45 @@
+{
+  "chapter": 4,
+  "conceptIds": [
+    "ch04-subqueries-views"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "Option A is correct because the subquery computes one intermediate value: the average `total_spent` across all customers in `CustomerTotals`. The outer query then returns only those rows whose `total_spent` is greater than that overall average.\n\nOption B is not valid SQL in this context because `AVG(total_spent)` is an aggregate and cannot be used directly in `WHERE` without being produced by a subquery or another valid aggregate context. Option C is valid SQL, but it is the wrong logic: after grouping by `customer_id, total_spent`, each group contains rows with the same `total_spent`, so `AVG(total_spent)` within each group equals that same `total_spent`, making `total_spent > AVG(total_spent)` never true. It does not compare each customer to the overall average. Option D creates a view of all rows but does not perform the required filtering against the average.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:00:28.889Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "fd6a6239-c9a5-4151-b405-020e96c02b6e"
+  },
+  "id": "ch04-ai-fd6a6239-c9a-3",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "SELECT customer_id, total_spent\nFROM CustomerTotals\nWHERE total_spent > (\n  SELECT AVG(total_spent)\n  FROM CustomerTotals\n);"
+    },
+    {
+      "id": "B",
+      "text": "SELECT customer_id, total_spent\nFROM CustomerTotals\nWHERE AVG(total_spent) > total_spent;"
+    },
+    {
+      "id": "C",
+      "text": "SELECT customer_id, total_spent\nFROM CustomerTotals\nGROUP BY customer_id, total_spent\nHAVING total_spent > AVG(total_spent);"
+    },
+    {
+      "id": "D",
+      "text": "CREATE VIEW HighSpenders AS\nSELECT customer_id, total_spent\nFROM CustomerTotals;"
+    }
+  ],
+  "prompt": "A report needs the customers whose total spending is greater than the average customer total. Assume `CustomerTotals(customer_id, total_spent)` already contains one row per customer.\n\nWhich SQL statement best uses a subquery as an intermediate result to meet this requirement?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Subqueries can isolate an intermediate result, while a view gives a saved query result a reusable virtual-table interface.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Subqueries and views",
+    "title": "The One-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#subqueries"
+  },
+  "status": "approved"
+}

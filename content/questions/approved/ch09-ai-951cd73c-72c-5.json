@@ -1,0 +1,46 @@
+{
+  "chapter": 9,
+  "conceptIds": [
+    "ch09-entity-integrity",
+    "ch09-referential-integrity"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 5,
+  "explanation": "Option A is correct because entity integrity requires the primary key ProjectID to be non-null, and referential integrity requires the foreign key SponsorID to be either null when optional or equal to an existing referenced SponsorID. B and D violate entity integrity by allowing a null primary key. C violates referential integrity by allowing SponsorID values that do not exist in Sponsor.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:12.548Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "951cd73c-72c0-4b7d-a818-d59a5c1af11b"
+  },
+  "id": "ch09-ai-951cd73c-72c-5",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "ProjectID must be non-null, and SponsorID must be either null or an existing SponsorID value"
+    },
+    {
+      "id": "B",
+      "text": "ProjectID may be null if SponsorID matches an existing SponsorID"
+    },
+    {
+      "id": "C",
+      "text": "ProjectID must be non-null, and SponsorID may be any integer whether or not it exists in Sponsor"
+    },
+    {
+      "id": "D",
+      "text": "SponsorID must be non-null, but ProjectID may be null"
+    }
+  ],
+  "prompt": "A company stores projects in Project(ProjectID PRIMARY KEY, SponsorID INT NULL, FOREIGN KEY (SponsorID) REFERENCES Sponsor(SponsorID)). Which rule always preserves both entity integrity and referential integrity when inserting a project row?",
+  "provenance": "ai-generated",
+  "reviewConcept": "To satisfy both rules, primary-key values must be non-null and foreign-key values must be null only when allowed or else match an existing parent key.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Integrity rules",
+    "title": "The Relational Model and Relational Algebra",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#integrity-rules"
+  },
+  "status": "approved"
+}

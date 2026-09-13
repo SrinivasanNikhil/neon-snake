@@ -1,0 +1,45 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-update-delete"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "The task requires both conditions: the row must be for customer 88 and must have `city = 'Boston'`. Option A updates only when both are true. Option B ignores the city requirement, option C could affect many Boston customers, and option D removes the row instead of updating it.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:57:40.347Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "6c6bf6d2-6f5d-4cef-b9c6-8b4b5a39adc6"
+  },
+  "id": "ch03-ai-6c6bf6d2-6f5-4",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "UPDATE customers SET active_flag = 0 WHERE customer_id = 88 AND city = 'Boston';"
+    },
+    {
+      "id": "B",
+      "text": "UPDATE customers SET active_flag = 0 WHERE customer_id = 88;"
+    },
+    {
+      "id": "C",
+      "text": "UPDATE customers SET active_flag = 0 WHERE city = 'Boston';"
+    },
+    {
+      "id": "D",
+      "text": "DELETE FROM customers WHERE customer_id = 88 AND city = 'Boston';"
+    }
+  ],
+  "prompt": "In `customers(customer_id, active_flag, city)`, `customer_id` uniquely identifies each customer. A manager wants to mark customer 88 as inactive, but only if that customer's row has `city = 'Boston'`. Which statement does that update?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Maintaining rows",
+  "schemaVersion": 1,
+  "source": {
+    "section": "DELETE and UPDATE",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#delete"
+  },
+  "status": "approved"
+}

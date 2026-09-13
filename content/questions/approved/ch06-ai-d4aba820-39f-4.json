@@ -1,0 +1,46 @@
+{
+  "chapter": 6,
+  "conceptIds": [
+    "ch06-relationship-labels",
+    "ch06-one-to-one"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "A label clarifies what the link means, especially when the same entity participates on both ends of a self-related one-to-one relationship.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:13.245Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "d4aba820-39f4-4238-9bfc-1c6c7fffec68"
+  },
+  "id": "ch06-ai-d4aba820-39f-4",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "It makes the direction and meaning of the one-to-one link clear"
+    },
+    {
+      "id": "B",
+      "text": "It changes the relationship into many-to-many"
+    },
+    {
+      "id": "C",
+      "text": "It removes the need to decide which table holds the foreign key"
+    },
+    {
+      "id": "D",
+      "text": "It guarantees every account must participate"
+    }
+  ],
+  "prompt": "A self-service portal links an Account to another Account when one account acts as a backup for the other. Why would adding a label such as 'backup for' or 'backs up' be helpful in the diagram?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Labeling ambiguous one-to-one relationships",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Modeling a one-to-one relationship",
+    "title": "One-to-One and Recursive Relationships",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#modeling-a-one-to-one-relationship"
+  },
+  "status": "approved"
+}

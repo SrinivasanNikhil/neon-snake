@@ -1,0 +1,6 @@
+{
+  "name": "Multiplayer Neon Snake",
+  "description": "Collect orbs and practice SQL concepts from Chapters 3–10 in a real-time multiplayer snake game.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

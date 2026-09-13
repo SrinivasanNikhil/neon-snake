@@ -1,0 +1,45 @@
+{
+  "chapter": 5,
+  "conceptIds": [
+    "ch05-relationship-facts"
+  ],
+  "correctOptionId": "C",
+  "difficulty": 2,
+  "explanation": "The number of days is a fact about the specific customer-bike rental, not about either entity on its own. Attributes like that belong on the associative entity that represents the relationship.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:00:41.144Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "a6f6fc20-1440-4e9f-becf-bf30ada502fd"
+  },
+  "id": "ch05-ai-a6f6fc20-144-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "In the customer table, because it describes the customer"
+    },
+    {
+      "id": "B",
+      "text": "In the bike table, because it describes the bike"
+    },
+    {
+      "id": "C",
+      "text": "In the table that links customers to bikes, because it describes the rental pairing"
+    },
+    {
+      "id": "D",
+      "text": "In both customer and bike tables so it can be queried from either side"
+    }
+  ],
+  "prompt": "A rental system records which customer rented which bike, and it also records the number of days rented for that specific rental. Where should the number of days be stored?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Facts about a relationship",
+  "schemaVersion": 1,
+  "source": {
+    "section": "The many-to-many relationship",
+    "title": "The Many-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#the-many-to-many-relationship"
+  },
+  "status": "approved"
+}

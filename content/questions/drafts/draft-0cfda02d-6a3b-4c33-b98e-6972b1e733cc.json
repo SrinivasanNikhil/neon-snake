@@ -1,0 +1,137 @@
+[
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-second-normal-form"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 2,
+    "explanation": "Second normal form requires that no nonkey attribute depend on only part of a composite key. EmployeeName depends on EmployeeID alone, and ProjectName depends on ProjectID alone, so each should be separated into its own table.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:48.570Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "0cfda02d-6a3b-4c33-b98e-6972b1e733cc"
+    },
+    "id": "ch08-ai-0cfda02d-6a3-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Keep one table, but add indexes on EmployeeID and ProjectID"
+      },
+      {
+        "id": "B",
+        "text": "Move EmployeeName to an Employee table and ProjectName to a Project table"
+      },
+      {
+        "id": "C",
+        "text": "Add a computed column that concatenates EmployeeID and ProjectID"
+      },
+      {
+        "id": "D",
+        "text": "Rename the primary key columns so they are more descriptive"
+      }
+    ],
+    "prompt": "A company stores project work in a table with primary key (EmployeeID, ProjectID). The table also includes EmployeeName and ProjectName. Which change would best help move this table into second normal form?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Second normal form",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Second normal form",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#second-normal-form"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-second-normal-form"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 3,
+    "explanation": "Second normal form removes nonkey attributes that depend on only part of a composite key. Here the key is (StudentID, CourseID). StudentName depends only on StudentID, not on the full key, so it is a partial dependency and a 2NF violation. Grade depends on the full enrollment, while StudentID and CourseID are key attributes rather than nonkey attributes.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:48.570Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "0cfda02d-6a3b-4c33-b98e-6972b1e733cc"
+    },
+    "id": "ch08-ai-0cfda02d-6a3-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Grade"
+      },
+      {
+        "id": "B",
+        "text": "StudentName"
+      },
+      {
+        "id": "C",
+        "text": "StudentID"
+      },
+      {
+        "id": "D",
+        "text": "CourseID"
+      }
+    ],
+    "prompt": "A table named Enrollment has this structure: Enrollment(StudentID, CourseID, StudentName, Grade), with primary key (StudentID, CourseID). Assume each StudentID identifies exactly one student name, and Grade depends on the student's enrollment in a specific course. Which attribute is a second-normal-form violation because it depends on only part of the composite key?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Second normal form",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Second normal form",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#second-normal-form"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 8,
+    "conceptIds": [
+      "ch08-second-normal-form"
+    ],
+    "correctOptionId": "C",
+    "difficulty": 4,
+    "explanation": "With a composite key, any nonkey attribute that depends on just one component is a partial dependency. OrderDate depends on OrderID alone, and ProductName depends on ProductID alone, so both break second normal form. Quantity depends on the full combination and does not create that specific problem.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:02:48.570Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "0cfda02d-6a3b-4c33-b98e-6972b1e733cc"
+    },
+    "id": "ch08-ai-0cfda02d-6a3-3",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "The table is already in second normal form because each row represents one order-product combination"
+      },
+      {
+        "id": "B",
+        "text": "Only ProductName violates second normal form because it depends on ProductID alone"
+      },
+      {
+        "id": "C",
+        "text": "OrderDate and ProductName violate second normal form because each depends on only part of the key"
+      },
+      {
+        "id": "D",
+        "text": "Quantity violates second normal form because it must depend on both key columns"
+      }
+    ],
+    "prompt": "A relation has a composite primary key (OrderID, ProductID) and the following nonkey attributes: OrderDate, ProductName, and Quantity. Assume each order can contain many products, and each product can appear in many orders. Which statement best describes the normalization issue?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Second normal form",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Second normal form",
+      "title": "Normalization and other Data Modeling Methods",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#second-normal-form"
+    },
+    "status": "draft"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "chapter": 8,
+  "conceptIds": [
+    "ch08-higher-normal-forms"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "When one attribute set determines multiple independent sets of values, and those sets combine freely with other attributes, the issue is a multivalued dependency. Higher normal forms are meant to address that kind of redundancy, which is beyond the first three normal forms.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:03:50.413Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "4d44f4f0-7520-44e9-9b81-ff794e172745"
+  },
+  "id": "ch08-ai-4d44f4f0-752-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "A multivalued dependency"
+    },
+    {
+      "id": "B",
+      "text": "A partial dependency"
+    },
+    {
+      "id": "C",
+      "text": "A transitive dependency"
+    },
+    {
+      "id": "D",
+      "text": "A key dependency caused by a composite primary key"
+    }
+  ],
+  "prompt": "A table stores product, store, and approved_vendor. For each product, the approved vendors are independent of the store: a product may be sold in many stores and may have several approved vendors, and every allowed product-vendor pair can occur with every store. If the design still keeps all three facts in one relation, which kind of dependency problem is being modeled?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Higher normal forms handle dependency types such as multivalued dependencies.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Boyce-Codd and higher normal forms",
+    "title": "Normalization and other Data Modeling Methods",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#boyce-codd-normal-form"
+  },
+  "status": "approved"
+}

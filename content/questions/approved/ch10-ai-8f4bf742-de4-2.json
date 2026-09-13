@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-aggregate-functions"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 2,
+  "explanation": "Aggregate functions summarize multiple rows, often after grouping them by a column such as region. A total revenue calculation combines values across a set, so it is an aggregate task rather than a scalar transformation.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:44.372Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "8f4bf742-de4e-4e5d-860f-e299edeb30e1"
+  },
+  "id": "ch10-ai-8f4bf742-de4-2",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "Scalar functions"
+    },
+    {
+      "id": "B",
+      "text": "Aggregate functions"
+    },
+    {
+      "id": "C",
+      "text": "Collation"
+    },
+    {
+      "id": "D",
+      "text": "Data types"
+    }
+  ],
+  "prompt": "A sales manager wants the total revenue for each region, ignoring individual orders once they have been grouped by region. Which SQL feature is the best fit?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Aggregate functions summarize sets or groups of rows, with grouping and filtering rules controlling the scope.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Scalar and aggregate functions",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=223"
+  },
+  "status": "approved"
+}

@@ -1,0 +1,45 @@
+{
+  "chapter": 9,
+  "conceptIds": [
+    "ch09-keys"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "customer_id in OrderHeader links each order to a row in Customer, so it is a foreign key referencing Customer(customer_id). It is not the primary key of OrderHeader because order_id identifies orders, and it is not an alternate key because many orders can belong to the same customer. A domain is the set of valid values for an attribute, not the attribute's role in another relation.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:04.847Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "6d5c8636-1e4d-4317-8f8c-f572288b814d"
+  },
+  "id": "ch09-ai-6d5c8636-1e4-4",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "A foreign key referencing Customer(customer_id)"
+    },
+    {
+      "id": "B",
+      "text": "An alternate key for OrderHeader"
+    },
+    {
+      "id": "C",
+      "text": "The primary key of OrderHeader"
+    },
+    {
+      "id": "D",
+      "text": "A domain for order dates"
+    }
+  ],
+  "prompt": "Consider two relations: Customer(customer_id, email) and OrderHeader(order_id, customer_id, order_date). In OrderHeader, what role does customer_id play if it stores the identifier of the customer who placed each order?",
+  "provenance": "ai-generated",
+  "reviewConcept": "A foreign key stores values that reference a key in another relation to represent a relationship between rows.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Data structures",
+    "title": "The Relational Model and Relational Algebra",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#data-structures"
+  },
+  "status": "approved"
+}

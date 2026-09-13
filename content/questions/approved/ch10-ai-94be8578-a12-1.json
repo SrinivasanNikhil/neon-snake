@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-sql-standard"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 1,
+  "explanation": "SQL is a standard language for working with relational data. It supports defining structures, querying data, and controlling access and other database operations across products that implement the standard.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:36.426Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "94be8578-a12e-4c5d-ae8d-a4f8fbfa3385"
+  },
+  "id": "ch10-ai-94be8578-a12-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is a standardized language for relational data definition, querying, and control."
+    },
+    {
+      "id": "B",
+      "text": "It is a proprietary language that only works in one vendor's database."
+    },
+    {
+      "id": "C",
+      "text": "It is a graphical tool used only for designing tables."
+    },
+    {
+      "id": "D",
+      "text": "It is a file format for moving data between databases."
+    }
+  ],
+  "prompt": "A company wants one query language that can be used across different relational database products for defining and retrieving data. Which statement best matches SQL?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Recognize SQL as a standardized relational language used for multiple database tasks.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Structured query language",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=214"
+  },
+  "status": "approved"
+}

@@ -1,0 +1,183 @@
+[
+  {
+    "chapter": 6,
+    "conceptIds": [
+      "ch06-one-to-one"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 1,
+    "explanation": "Each row on either side can match at most one row on the other side, so the relationship is one-to-one.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:13.245Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "d4aba820-39f4-4238-9bfc-1c6c7fffec68"
+    },
+    "id": "ch06-ai-d4aba820-39f-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "One-to-one"
+      },
+      {
+        "id": "B",
+        "text": "One-to-many"
+      },
+      {
+        "id": "C",
+        "text": "Many-to-many"
+      },
+      {
+        "id": "D",
+        "text": "Recursive one-to-many"
+      }
+    ],
+    "prompt": "Two tables represent people and passports. Each passport belongs to exactly one person, and each person can have at most one passport. Which relationship description best fits this situation?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Recognizing one-to-one cardinality",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Modeling a one-to-one relationship",
+      "title": "One-to-One and Recursive Relationships",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#modeling-a-one-to-one-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 6,
+    "conceptIds": [
+      "ch06-relationship-labels"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "When the same entities participate in multiple relationships, labels distinguish the different meanings so the model is unambiguous.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:13.245Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "d4aba820-39f4-4238-9bfc-1c6c7fffec68"
+    },
+    "id": "ch06-ai-d4aba820-39f-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "They clarify which relationship is meant when the same entities are connected in more than one way"
+      },
+      {
+        "id": "B",
+        "text": "They eliminate the need for foreign keys"
+      },
+      {
+        "id": "C",
+        "text": "They automatically enforce uniqueness"
+      },
+      {
+        "id": "D",
+        "text": "They turn a one-to-one relationship into a recursive relationship"
+      }
+    ],
+    "prompt": "A company has two different relationships between the same pair of entities, Employee and Department: one for where an employee works, and one for which department manages the employee record. Why are relationship labels useful here?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Using relationship descriptors to distinguish meanings",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Modeling a one-to-one relationship",
+      "title": "One-to-One and Recursive Relationships",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#modeling-a-one-to-one-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 6,
+    "conceptIds": [
+      "ch06-one-to-one-mapping"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "Option A is correct because the mandatory side is InsuranceCard: every card must belong to a patient. Placing patient_id in InsuranceCard and declaring it NOT NULL enforces that requirement, and making patient_id UNIQUE prevents more than one card from being linked to the same patient. Option B would incorrectly force every patient to have a card. Option C neither places the foreign key appropriately nor enforces one-to-one uniqueness. Option D models a many-to-many relationship, which does not match the business rule.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:13.245Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "d4aba820-39f4-4238-9bfc-1c6c7fffec68"
+    },
+    "id": "ch06-ai-d4aba820-39f-3",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "Store patient_id in InsuranceCard, declare it NOT NULL, and add a UNIQUE constraint on patient_id"
+      },
+      {
+        "id": "B",
+        "text": "Store insurance_card_id in Patient, declare it NOT NULL, and add a UNIQUE constraint on insurance_card_id"
+      },
+      {
+        "id": "C",
+        "text": "Store patient_id in Patient, allow it to be NULL, and add no uniqueness constraint"
+      },
+      {
+        "id": "D",
+        "text": "Create a separate junction table with patient_id and insurance_card_id as a many-to-many mapping"
+      }
+    ],
+    "prompt": "A hospital stores patients and insurance cards. Business rules: each patient may have zero or one insurance card, and each insurance card must belong to exactly one patient. Which design best matches this one-to-one relationship while keeping the card's foreign key non-null?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Choosing foreign-key placement",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Mapping a one-to-one relationship",
+      "title": "One-to-One and Recursive Relationships",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#mapping-a-one-to-one-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 6,
+    "conceptIds": [
+      "ch06-relationship-labels",
+      "ch06-one-to-one"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "A label clarifies what the link means, especially when the same entity participates on both ends of a self-related one-to-one relationship.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:13.245Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "d4aba820-39f4-4238-9bfc-1c6c7fffec68"
+    },
+    "id": "ch06-ai-d4aba820-39f-4",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "It makes the direction and meaning of the one-to-one link clear"
+      },
+      {
+        "id": "B",
+        "text": "It changes the relationship into many-to-many"
+      },
+      {
+        "id": "C",
+        "text": "It removes the need to decide which table holds the foreign key"
+      },
+      {
+        "id": "D",
+        "text": "It guarantees every account must participate"
+      }
+    ],
+    "prompt": "A self-service portal links an Account to another Account when one account acts as a backup for the other. Why would adding a label such as 'backup for' or 'backs up' be helpful in the diagram?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Labeling ambiguous one-to-one relationships",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Modeling a one-to-one relationship",
+      "title": "One-to-One and Recursive Relationships",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#modeling-a-one-to-one-relationship"
+    },
+    "status": "draft"
+  }
+]

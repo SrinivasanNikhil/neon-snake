@@ -1,0 +1,45 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-create-integrity"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 2,
+  "explanation": "Entity integrity means every row can be identified without ambiguity. A primary key must therefore be unique and non-null for each row.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:57:26.638Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "a68f1455-2bcb-4246-b7c5-9f165bc691c9"
+  },
+  "id": "ch03-ai-a68f1455-2bc-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "The key column may contain duplicates if the names are different"
+    },
+    {
+      "id": "B",
+      "text": "The key column must uniquely identify each row and must never be NULL"
+    },
+    {
+      "id": "C",
+      "text": "The key column should be stored as text so it can hold any value"
+    },
+    {
+      "id": "D",
+      "text": "The key column only needs to be unique when rows are inserted, not after that"
+    }
+  ],
+  "prompt": "A table is being created for employee records. Which definition best satisfies entity integrity for the table's primary key?",
+  "provenance": "ai-generated",
+  "reviewConcept": "CREATE and entity integrity",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Creating a single-table database",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#creating-a-single-table-database"
+  },
+  "status": "approved"
+}

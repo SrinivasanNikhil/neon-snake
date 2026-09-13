@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "chapter": 8,
+  "title": "Normalization and other Data Modeling Methods",
+  "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html",
+  "summary": "Introduces functional dependency, modification anomalies, progressive normal forms, and the relationship between normalization and other design methods.",
+  "sections": [
+    {
+      "title": "Normalization",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#normalization",
+      "concepts": [
+        { "id": "ch08-functional-dependency", "title": "Functional dependency", "summary": "A functional dependency exists when one attribute set determines the value of another and provides the basis for normalization decisions." },
+        { "id": "ch08-anomalies", "title": "Modification anomalies", "summary": "Poorly structured relations can make insert, update, or delete operations lose facts or require inconsistent repetition." }
+      ]
+    },
+    {
+      "title": "First normal form",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#first-normal-form",
+      "concepts": [
+        { "id": "ch08-first-normal-form", "title": "First normal form", "summary": "A first-normal-form relation has single-valued columns; repeating or multivalued facts are represented in related rows instead." }
+      ]
+    },
+    {
+      "title": "Second normal form",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#second-normal-form",
+      "concepts": [
+        { "id": "ch08-second-normal-form", "title": "Second normal form", "summary": "A relation in second normal form is in first normal form and has no nonkey attribute that depends on only part of a composite key." }
+      ]
+    },
+    {
+      "title": "Third normal form",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#third-normal-form",
+      "concepts": [
+        { "id": "ch08-third-normal-form", "title": "Third normal form", "summary": "A third-normal-form design removes nonkey facts that depend on other nonkey facts rather than directly on the key." }
+      ]
+    },
+    {
+      "title": "Boyce-Codd and higher normal forms",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#boyce-codd-normal-form",
+      "concepts": [
+        { "id": "ch08-bcnf", "title": "Boyce-Codd normal form", "summary": "BCNF strengthens dependency rules by requiring every determinant to be a candidate key." },
+        { "id": "ch08-higher-normal-forms", "title": "Higher normal forms", "summary": "Later normal forms address multivalued, join, and domain-key dependencies that are not resolved by the first three forms." }
+      ]
+    },
+    {
+      "title": "Other data modeling methods",
+      "sourceUrl": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#other-data-modeling-methods",
+      "concepts": [
+        { "id": "ch08-method-equivalence", "title": "Alternative design methods", "summary": "Normalization and conceptual data modeling use different procedures but should converge on structures that faithfully represent the same facts." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-set-processing"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "Option A correctly joins products to their August 2026 sales, restricts rows to that month with a bounded date range, and groups by product so each product appears once with its total quantity sold. B lists individual sale rows instead of totals, C finds products with sales but does not return the total quantity, and D is not the best answer because it selects `p.name` without grouping by it.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:36.426Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "94be8578-a12e-4c5d-ae8d-a4f8fbfa3385"
+  },
+  "id": "ch10-ai-94be8578-a12-3",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "SELECT p.product_id, p.name, SUM(s.qty) AS total_qty\nFROM Product p\nJOIN Sale s ON s.product_id = p.product_id\nWHERE s.sale_date >= DATE '2026-08-01'\n  AND s.sale_date < DATE '2026-09-01'\nGROUP BY p.product_id, p.name;"
+    },
+    {
+      "id": "B",
+      "text": "SELECT p.product_id, p.name, s.qty\nFROM Product p\nJOIN Sale s ON s.product_id = p.product_id\nWHERE s.sale_date >= DATE '2026-08-01'\n  AND s.sale_date < DATE '2026-09-01';"
+    },
+    {
+      "id": "C",
+      "text": "SELECT p.product_id, p.name\nFROM Product p\nWHERE EXISTS (\n  SELECT 1\n  FROM Sale s\n  WHERE s.product_id = p.product_id\n    AND s.sale_date >= DATE '2026-08-01'\n    AND s.sale_date < DATE '2026-09-01'\n);"
+    },
+    {
+      "id": "D",
+      "text": "SELECT p.product_id, p.name, SUM(s.qty) AS total_qty\nFROM Product p\nLEFT JOIN Sale s ON s.product_id = p.product_id\nWHERE s.sale_date >= DATE '2026-08-01'\n  AND s.sale_date < DATE '2026-09-01'\nGROUP BY p.product_id;"
+    }
+  ],
+  "prompt": "A retailer needs a report of all products that had at least one sale during August 2026, along with the total quantity sold per product in that month. The database has `Product(product_id, name)` and `Sale(product_id, qty, sale_date)`. Assume `sale_date` is stored as a date. Which query best matches the requirement in a set-oriented way?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Use joins, filtering, and grouping to express a result over sets of rows.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Structured query language",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=214"
+  },
+  "status": "approved"
+}

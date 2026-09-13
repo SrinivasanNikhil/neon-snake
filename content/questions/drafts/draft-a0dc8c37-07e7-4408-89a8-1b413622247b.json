@@ -1,0 +1,227 @@
+[
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-data-independence"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "Data independence means applications are insulated from changes in physical storage and from information-preserving changes to the logical design. The scenario describes both kinds of change without requiring application changes.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:28.444Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a0dc8c37-07e7-4408-89a8-1b413622247b"
+    },
+    "id": "ch09-ai-a0dc8c37-07e-1",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "Data independence"
+      },
+      {
+        "id": "B",
+        "text": "Entity integrity"
+      },
+      {
+        "id": "C",
+        "text": "Degree"
+      },
+      {
+        "id": "D",
+        "text": "Relational completeness"
+      }
+    ],
+    "prompt": "A company changes how customer records are stored on disk to improve performance. The reporting application should keep working without any code changes, and later the customer table is split into two tables while preserving the same information available to users. Which idea is being tested?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Recognize data independence as protection from physical and logical design changes.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "A fully relational database",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#a-fully-relational-database"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-relational-rules"
+    ],
+    "correctOptionId": "C",
+    "difficulty": 2,
+    "explanation": "A fully relational system is expected to provide guaranteed access to every atomic value through the relation name, primary-key value, and attribute name. Option C breaks that rule because it allows stored values that cannot be reached through this relational access method. The other options describe expected relational behavior, including table-based representation, data independence, catalogs, and set-level operations.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:28.444Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a0dc8c37-07e7-4408-89a8-1b413622247b"
+    },
+    "id": "ch09-ai-a0dc8c37-07e-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "A table stores values in rows and columns, and the database keeps a catalog of its tables"
+      },
+      {
+        "id": "B",
+        "text": "A query can retrieve data without the application knowing where the rows are physically stored"
+      },
+      {
+        "id": "C",
+        "text": "A system stores values that cannot be retrieved by specifying the table name, primary-key value, and column name"
+      },
+      {
+        "id": "D",
+        "text": "A database supports set-based operations such as combining and comparing relations"
+      }
+    ],
+    "prompt": "Which situation would violate the rules expected of a fully relational database system?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Fully relational behavior includes guaranteed access to each stored value through relational identifiers.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "A fully relational database",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#a-fully-relational-database"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-data-independence"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 3,
+    "explanation": "This is a direct example of physical data independence. The underlying storage changes, but the interface seen by the application stays stable, so the application keeps working.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:28.444Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a0dc8c37-07e7-4408-89a8-1b413622247b"
+    },
+    "id": "ch09-ai-a0dc8c37-07e-3",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "The application must be rewritten because any storage change alters SQL semantics"
+      },
+      {
+        "id": "B",
+        "text": "The application continues to work because the change is hidden from users and programs"
+      },
+      {
+        "id": "C",
+        "text": "The database can no longer enforce keys after a storage change"
+      },
+      {
+        "id": "D",
+        "text": "The view must be replaced by a temporary table to preserve performance"
+      }
+    ],
+    "prompt": "A sales application reads from a view named v_orders. The physical order table is moved to a different storage structure, but the view definition and query results stay the same. Which outcome best matches the goal of the relational system?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Apply data independence to a change in physical storage.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "A fully relational database",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#a-fully-relational-database"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-relational-rules"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 3,
+    "explanation": "The description gathers the main requirements associated with fully relational behavior: tabular representation, guaranteed access, null handling, a catalog, integrity, set-level operation support, and data independence. Those collectively identify a fully relational database system.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:28.444Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a0dc8c37-07e7-4408-89a8-1b413622247b"
+    },
+    "id": "ch09-ai-a0dc8c37-07e-4",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "A normalized schema"
+      },
+      {
+        "id": "B",
+        "text": "A fully relational database system"
+      },
+      {
+        "id": "C",
+        "text": "A star schema"
+      },
+      {
+        "id": "D",
+        "text": "A distributed transaction protocol"
+      }
+    ],
+    "prompt": "A database designer says, 'We will only consider the system acceptable if it uses tables, supports access to each value through the relational structure, handles missing values according to the system rules, keeps a catalog, enforces integrity, supports set-level operations, and protects applications from storage and logical changes.' What is the designer describing?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Recognize the combined rule set that defines fully relational behavior.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "A fully relational database",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#a-fully-relational-database"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 9,
+    "conceptIds": [
+      "ch09-data-independence"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 4,
+    "explanation": "The first change is hidden by physical data independence, while the second is hidden by logical data independence as long as the redesign preserves information exposed to the application. Together, those forms of independence explain why the reports continue to run.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:04:28.444Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "a0dc8c37-07e7-4408-89a8-1b413622247b"
+    },
+    "id": "ch09-ai-a0dc8c37-07e-5",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "The database relies on surrogate keys only"
+      },
+      {
+        "id": "B",
+        "text": "The system provides both physical and logical data independence"
+      },
+      {
+        "id": "C",
+        "text": "The reports are using only aggregate functions"
+      },
+      {
+        "id": "D",
+        "text": "The relation has no foreign keys"
+      }
+    ],
+    "prompt": "An analytics team builds reports against a customer relation. Later, the database administrator reorganizes the physical files and also renames some internal storage structures, but the relation presented to users is unchanged. A few months later, the schema is refactored in an information-preserving way, yet the same reports still run. What best explains why both changes can be tolerated?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Distinguish physical and logical data independence in a multi-step scenario.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "A fully relational database",
+      "title": "The Relational Model and Relational Algebra",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/209-relational-model.html#a-fully-relational-database"
+    },
+    "status": "draft"
+  }
+]

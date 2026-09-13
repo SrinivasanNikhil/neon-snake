@@ -1,0 +1,45 @@
+{
+  "chapter": 8,
+  "conceptIds": [
+    "ch08-first-normal-form"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 3,
+  "explanation": "The issue is that one column holds multiple skill values for some employees. First normal form requires each attribute value to be single and atomic; repeating facts should be stored in related rows.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:43.194Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "ccaac0af-4bb3-40c1-a0cb-6ecf211957f3"
+  },
+  "id": "ch08-ai-ccaac0af-4bb-4",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "The table has too many rows for each employee"
+    },
+    {
+      "id": "B",
+      "text": "The `skills` attribute is not single-valued"
+    },
+    {
+      "id": "C",
+      "text": "The employee name should be the primary key"
+    },
+    {
+      "id": "D",
+      "text": "The table must be split into one table per skill"
+    }
+  ],
+  "prompt": "A payroll table has one row per employee. The `skills` attribute contains values like `Excel;SQL;Python` for some employees and a single value for others. What is the main normalization problem here?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Detect multivalued attributes as a first-normal-form violation.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "First normal form",
+    "title": "Normalization and other Data Modeling Methods",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#first-normal-form"
+  },
+  "status": "approved"
+}

@@ -1,0 +1,45 @@
+{
+  "chapter": 7,
+  "conceptIds": [
+    "ch07-context-exceptions"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "A good model has to fit the intended context, including edge cases and exceptions. If some requests are created before a customer exists, the original rule is too narrow and should be adjusted to reflect the real business situation.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:17.503Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "645dfce9-3050-41ab-83cf-1d73c3bc8951"
+  },
+  "id": "ch07-ai-645dfce9-305-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "The model may not fit an important exception in the intended business context."
+    },
+    {
+      "id": "B",
+      "text": "The model uses too many entity types."
+    },
+    {
+      "id": "C",
+      "text": "The model cannot be implemented in SQL."
+    },
+    {
+      "id": "D",
+      "text": "The model should always treat every relationship as mandatory."
+    }
+  ],
+  "prompt": "A team models customer support requests and first draws a simple rule that every request must be linked to exactly one customer. During review, they realize some requests are created by internal staff before a customer account exists. What is the best reason to revisit the model?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Context and exceptions",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Quality improvement",
+    "title": "Data Modeling",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#quality-improvement"
+  },
+  "status": "approved"
+}

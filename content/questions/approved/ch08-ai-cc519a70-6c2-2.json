@@ -1,0 +1,45 @@
+{
+  "chapter": 8,
+  "conceptIds": [
+    "ch08-anomalies"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "When the same fact is repeated across multiple rows, updating it can require many changes and create inconsistent values if some are missed. That is a modification anomaly.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:35.687Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "cc519a70-6c2a-401a-9e05-d6fedccf712c"
+  },
+  "id": "ch08-ai-cc519a70-6c2-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "A modification anomaly"
+    },
+    {
+      "id": "B",
+      "text": "A missing foreign key"
+    },
+    {
+      "id": "C",
+      "text": "A transaction isolation issue"
+    },
+    {
+      "id": "D",
+      "text": "A view maintenance issue"
+    }
+  ],
+  "prompt": "A sales table stores customer email, customer phone, and order data in the same row. When a customer changes phone number, every past order row must be updated or the database becomes inconsistent. What kind of problem is this?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Identify insert, update, and delete anomalies caused by poor structure.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Normalization",
+    "title": "Normalization and other Data Modeling Methods",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#normalization"
+  },
+  "status": "approved"
+}

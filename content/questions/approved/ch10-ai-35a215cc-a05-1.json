@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-definition"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "CREATE TABLE is used for data definition: it specifies the relation’s columns and the rules that apply to them, such as data types, keys, and whether values may be null. The other options describe data loading, storage changes, or query results, not table definition.",
+  "generation": {
+    "generatedAt": "2026-08-12T01:38:03.014Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "35a215cc-a052-4ac6-815d-e5d1e2cfa8cc"
+  },
+  "id": "ch10-ai-35a215cc-a05-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "It defines the table structure, including columns, data types, and constraints such as keys or nullability."
+    },
+    {
+      "id": "B",
+      "text": "It inserts initial rows into the table and fills every column with default values."
+    },
+    {
+      "id": "C",
+      "text": "It changes the storage engine of an existing table without altering its columns."
+    },
+    {
+      "id": "D",
+      "text": "It creates a temporary result set that exists only for the current query."
+    }
+  ],
+  "prompt": "A company wants to create a table for tracking equipment loans. Which statement best describes what a CREATE TABLE statement does?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Data definition",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Creating a table and data types",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/Data-Management.pdf#page=216"
+  },
+  "status": "approved"
+}

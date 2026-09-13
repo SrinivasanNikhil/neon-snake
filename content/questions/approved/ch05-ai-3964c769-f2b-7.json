@@ -1,0 +1,45 @@
+{
+  "chapter": 5,
+  "conceptIds": [
+    "ch05-weak-composite"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 4,
+  "explanation": "A is correct because this is a weak/composite identifier pattern. The attempt exists only in the context of a candidate taking an exam, so candidate_id and exam_id identify the parent relationship, and attempt_no acts as a local discriminator that is unique within that candidate-exam pair. Together, candidate_id + exam_id + attempt_no uniquely identify each attempt. B fails because candidate_id + exam_id cannot distinguish multiple attempts for the same pair. C fails because attempt_no is not unique across all candidates for an exam. D denormalizes repeating attempt data into one column instead of representing each attempt as its own row.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:00:55.545Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "3964c769-f2b8-4a92-a7ec-c7261aee797f"
+  },
+  "id": "ch05-ai-3964c769-f2b-7",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use an attempt table with candidate_id, exam_id, and attempt_no as a composite identifier"
+    },
+    {
+      "id": "B",
+      "text": "Use candidate_id and exam_id as the identifier, because they already identify the candidate-exam relationship"
+    },
+    {
+      "id": "C",
+      "text": "Use exam_id and attempt_no as the identifier, because attempt numbers are tied to exams"
+    },
+    {
+      "id": "D",
+      "text": "Use a person table column that lists all exam attempts for each candidate"
+    }
+  ],
+  "prompt": "A certification system stores candidates and exams. Each candidate can take many exams, and each exam can be taken by many candidates. Multiple attempts are allowed for the same candidate-exam pair, and the system assigns an attempt_no that is unique only within each candidate-exam pair. Which design is most appropriate?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Weak entities and composite identifiers",
+  "schemaVersion": 1,
+  "source": {
+    "section": "The many-to-many relationship",
+    "title": "The Many-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/205-manytomany.html#the-many-to-many-relationship"
+  },
+  "status": "approved"
+}

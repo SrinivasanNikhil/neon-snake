@@ -1,0 +1,11 @@
+{
+  "approvedQuestionChecksum": "sha256:d2ed3b3e301d3784978b90c12e0168273e5bb4c36bb25ab62ef0ee3467b1dedb",
+  "decision": "approved",
+  "notes": "Nikhil reviewed and approved this Chapter 9 question for correctness, answer uniqueness, source fit, accessibility, and original paraphrasing; advisory audit findings were considered.",
+  "questionId": "ch09-ai-6d5c8636-1e4-2",
+  "reviewedAt": "2026-08-14T01:25:35.354Z",
+  "reviewer": "Nikhil",
+  "schemaVersion": 1,
+  "sourceDraft": "content/questions/drafts/draft-6d5c8636-1e4d-4317-8f8c-f572288b814d.json",
+  "sourceDraftChecksum": "sha256:145d692bf0ec2f25c389bed5e88e9a542314990c95be6739e216f1faaee65c4f"
+}

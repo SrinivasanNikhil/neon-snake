@@ -1,0 +1,45 @@
+{
+  "chapter": 8,
+  "conceptIds": [
+    "ch08-first-normal-form"
+  ],
+  "correctOptionId": "B",
+  "difficulty": 2,
+  "explanation": "First normal form requires each column value to be single-valued. When a fact can occur multiple times, it should be represented in related rows rather than as a repeated list inside one column.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:02:43.194Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "ccaac0af-4bb3-40c1-a0cb-6ecf211957f3"
+  },
+  "id": "ch08-ai-ccaac0af-4bb-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Keep the column and add a rule that entries must use commas consistently"
+    },
+    {
+      "id": "B",
+      "text": "Split each phone number into a separate related row"
+    },
+    {
+      "id": "C",
+      "text": "Store the phone numbers in a longer text field"
+    },
+    {
+      "id": "D",
+      "text": "Move the customer name into a separate table"
+    }
+  ],
+  "prompt": "A company stores one row per customer order. In the column `phone_numbers`, some rows contain one number, while others contain several numbers separated by commas. Which change best brings the table into first normal form?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Single-valued attributes and repeating groups belong in related rows, not in one field.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "First normal form",
+    "title": "Normalization and other Data Modeling Methods",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/208-normalization.html#first-normal-form"
+  },
+  "status": "approved"
+}

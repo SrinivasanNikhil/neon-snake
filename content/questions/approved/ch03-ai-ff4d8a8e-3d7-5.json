@@ -1,0 +1,45 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-update-delete"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "UPDATE changes existing rows, and the WHERE clause limits the change to the intended row. Without WHERE, every row would be affected. DELETE would remove the row instead of adjusting quantity.",
+  "generation": {
+    "generatedAt": "2026-08-12T17:04:47.415Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "ff4d8a8e-3d71-46b2-a36c-14c442bdd182"
+  },
+  "id": "ch03-ai-ff4d8a8e-3d7-5",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "UPDATE Inventory SET Quantity = Quantity - 1 WHERE ItemID = 42;"
+    },
+    {
+      "id": "B",
+      "text": "UPDATE Inventory SET Quantity = Quantity - 1;"
+    },
+    {
+      "id": "C",
+      "text": "DELETE FROM Inventory WHERE ItemID = 42;"
+    },
+    {
+      "id": "D",
+      "text": "UPDATE Inventory WHERE ItemID = 42 SET Quantity = Quantity - 1;"
+    }
+  ],
+  "prompt": "A table named Inventory has columns ItemID, ItemName, and Quantity. You want to reduce the quantity by 1 only for the row where ItemID = 42. Which statement does that safely?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Use UPDATE with a WHERE clause to modify only the intended row.",
+  "schemaVersion": 1,
+  "source": {
+    "section": "DELETE and UPDATE",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#delete"
+  },
+  "status": "approved"
+}

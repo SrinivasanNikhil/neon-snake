@@ -1,0 +1,45 @@
+{
+  "chapter": 4,
+  "conceptIds": [
+    "ch04-control-break"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "A control-break report groups sorted rows by a break field and prints summaries whenever the value changes. Subtotals by customer name are a classic control-break pattern.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:00:14.879Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "5edcae3f-ded9-41f7-bab0-73e326a27c1e"
+  },
+  "id": "ch04-ai-5edcae3f-ded-3",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Control-break reporting"
+    },
+    {
+      "id": "B",
+      "text": "Cartesian joining"
+    },
+    {
+      "id": "C",
+      "text": "Normalization"
+    },
+    {
+      "id": "D",
+      "text": "Referential checking"
+    }
+  ],
+  "prompt": "A report lists customers in alphabetical order and prints a subtotal each time the customer name changes. What reporting technique is being used?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Control-break reporting",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Querying a two-table database",
+    "title": "The One-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#querying-a-two-table-database"
+  },
+  "status": "approved"
+}

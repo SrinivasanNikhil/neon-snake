@@ -1,0 +1,45 @@
+{
+  "chapter": 10,
+  "conceptIds": [
+    "ch10-catalog"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 4,
+  "explanation": "The database catalog stores metadata about database objects such as tables and columns, so it is the appropriate place to check column names and data types. An index helps access rows efficiently, `GRANT` manages privileges, and embedded SQL concerns how SQL is used inside a host program rather than where metadata is stored.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:04:51.053Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "cd87e56b-3ccb-4bdb-ba20-fa3545022a3a"
+  },
+  "id": "ch10-ai-cd87e56b-3cc-4",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "The database catalog"
+    },
+    {
+      "id": "B",
+      "text": "An index on `Orders`"
+    },
+    {
+      "id": "C",
+      "text": "A `GRANT` statement"
+    },
+    {
+      "id": "D",
+      "text": "An embedded SQL program"
+    }
+  ],
+  "prompt": "An administrator wants to verify the names and data types of columns in the base table `Orders`. Which resource is designed for this kind of database metadata lookup?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Database catalog",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Views, indexes, and the catalog",
+    "title": "SQL",
+    "url": "https://www.richardtwatson.com/open/Reader/answers/chapter10.html"
+  },
+  "status": "approved"
+}

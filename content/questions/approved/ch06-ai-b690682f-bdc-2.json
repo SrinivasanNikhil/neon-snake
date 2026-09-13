@@ -1,0 +1,45 @@
+{
+  "chapter": 6,
+  "conceptIds": [
+    "ch06-recursive-cardinality"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 3,
+  "explanation": "Option A matches a recursive one-to-one relationship with optional participation. A person can have zero or one partner, and any actual partnership must be reciprocal, with each row pointing back to the other. The rule also requires exclusivity, so one person cannot be the partner of several others. Option B describes many references. Option C allows many rows to point to the same partner, which breaks one-to-one cardinality. Option D describes self-reference, not partnering with another person.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:49.782Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "b690682f-bdc6-44f9-b5f3-da5914ed9ee5"
+  },
+  "id": "ch06-ai-b690682f-bdc-2",
+  "kind": "sql-scenario",
+  "options": [
+    {
+      "id": "A",
+      "text": "A row may reference zero or one other row; if it references another row, that row references it back; and no row is partnered with more than one other row"
+    },
+    {
+      "id": "B",
+      "text": "Each row may reference many different rows, but each referenced row must be unique"
+    },
+    {
+      "id": "C",
+      "text": "Each row may reference at most one other row, and that row may be referenced by many rows"
+    },
+    {
+      "id": "D",
+      "text": "Each row must reference itself, and no other row is allowed"
+    }
+  ],
+  "prompt": "A table named `Person` has columns `person_id` and `partner_id`. The business rule is: a person may have no partner or one partner; if two people are partners, each row points to the other person's `person_id`; and no person can be partnered with more than one other person. Which data pattern best matches this rule?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Recursive cardinalities",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Recursive one-to-one and many-to-many relationships",
+    "title": "One-to-One and Recursive Relationships",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#modeling-a-recursive-many-to-many-relationship"
+  },
+  "status": "approved"
+}

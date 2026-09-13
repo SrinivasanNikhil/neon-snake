@@ -1,0 +1,45 @@
+{
+  "chapter": 4,
+  "conceptIds": [
+    "ch04-foreign-key"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "In a one-to-many design, the key from the one side is stored in the many-side table. That lets each employee row reference exactly one department while many employees can share the same department value.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:00:03.512Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "f6e2b465-d260-45c8-aa4c-ca61aab9b9be"
+  },
+  "id": "ch04-ai-f6e2b465-d26-1",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Put the department identifier in the Employees table as a foreign key"
+    },
+    {
+      "id": "B",
+      "text": "Put the employee identifier in the Departments table as a foreign key"
+    },
+    {
+      "id": "C",
+      "text": "Create one separate table row for every employee-department pair"
+    },
+    {
+      "id": "D",
+      "text": "Store the department name only in the Employees table and leave it unmatched"
+    }
+  ],
+  "prompt": "A company stores departments and employees in two tables. Each employee belongs to exactly one department, and the department identifier should be stored so that each employee row points to its department. Which design best implements this relationship?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Foreign-key mapping",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Creating a database with a 1:m relationship",
+    "title": "The One-to-Many Relationship",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/204-onetomany.html#creating-a-database-with-a-1m-relationship"
+  },
+  "status": "approved"
+}

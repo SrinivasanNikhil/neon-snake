@@ -1,0 +1,45 @@
+{
+  "chapter": 3,
+  "conceptIds": [
+    "ch03-select-filter"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 2,
+  "explanation": "`SELECT product_name` projects just the `product_name` column. The `WHERE` clause restricts rows to those where both conditions are true: `category = 'Books'` and `price >= 20`. So the result contains only product names from qualifying rows, not all columns or all rows.",
+  "generation": {
+    "generatedAt": "2026-08-13T15:57:33.176Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "1cde71c7-404f-4a5a-b9e3-9b0a32c44f5e"
+  },
+  "id": "ch03-ai-1cde71c7-404-1",
+  "kind": "sql-reading",
+  "options": [
+    {
+      "id": "A",
+      "text": "Only `product_name` values for rows where `category` is `Books` and `price` is 20 or higher."
+    },
+    {
+      "id": "B",
+      "text": "All columns for rows where `category` is `Books` and `price` is 20 or higher."
+    },
+    {
+      "id": "C",
+      "text": "Only `product_name` values for rows where `category` is not `Books` and `price` is 20 or higher."
+    },
+    {
+      "id": "D",
+      "text": "Only `product_name` values for every row in `product`, regardless of category and price."
+    }
+  ],
+  "prompt": "A table `product` has columns `product_name`, `category`, and `price`. What does this query return?\n\n```sql\nSELECT product_name\nFROM product\nWHERE category = 'Books' AND price >= 20;\n```",
+  "provenance": "ai-generated",
+  "reviewConcept": "Projection and restriction",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Querying a single-table database",
+    "title": "The Single Entity",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/203-singleentity.html#querying-a-single-table-database"
+  },
+  "status": "approved"
+}

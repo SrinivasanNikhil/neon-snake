@@ -1,0 +1,182 @@
+[
+  {
+    "chapter": 6,
+    "conceptIds": [
+      "ch06-self-join"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 2,
+    "explanation": "Option A is correct because it uses a self join, treating Employee once as the employee row and once as the manager row. The join condition matches e.manager_id to m.emp_id, which finds the manager's row. LEFT JOIN is the right choice because the requirement says 'if any,' so employees with NULL manager_id must still appear, with manager_name returned as NULL. Option B reverses the relationship and finds subordinates instead of each employee's manager. Option C returns the manager's id, not the manager's name. Option D joins each row to itself by emp_id, so it would show the employee's own name as the manager name.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:42.731Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "82c308cd-4feb-47f1-bf5c-75e646ce2e8c"
+    },
+    "id": "ch06-ai-82c308cd-4fe-1",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "SELECT e.full_name, m.full_name AS manager_name\nFROM Employee e\nLEFT JOIN Employee m ON e.manager_id = m.emp_id;"
+      },
+      {
+        "id": "B",
+        "text": "SELECT e.full_name, m.full_name AS manager_name\nFROM Employee e\nJOIN Employee m ON e.emp_id = m.manager_id;"
+      },
+      {
+        "id": "C",
+        "text": "SELECT full_name, manager_id AS manager_name\nFROM Employee;"
+      },
+      {
+        "id": "D",
+        "text": "SELECT e.full_name, m.full_name AS manager_name\nFROM Employee e\nLEFT JOIN Employee m ON e.emp_id = m.emp_id;"
+      }
+    ],
+    "prompt": "A company stores employees in a single table:\n\nEmployee(emp_id, full_name, manager_id)\n\nwhere manager_id contains the emp_id of that employee's direct manager, or NULL for top-level managers.\n\nWhich query returns each employee's name together with their manager's name, if any?\n\nAssume MySQL syntax and that the table has multiple employees.",
+    "provenance": "ai-generated",
+    "reviewConcept": "Aliases let a query treat one table as separate logical roles so a row can be matched to a related row in the same table.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Querying a recursive 1:m relationship",
+      "title": "One-to-One and Recursive Relationships",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#querying-a-recursive-1m-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 6,
+    "conceptIds": [
+      "ch06-self-join"
+    ],
+    "correctOptionId": "B",
+    "difficulty": 2,
+    "explanation": "When a row must be compared with another row in the same table, aliases give each role a separate name in the query. That makes the self join readable and unambiguous. Aliases do not enforce constraints, replace keys, or eliminate the need to store the recursive relationship.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:42.731Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "82c308cd-4feb-47f1-bf5c-75e646ce2e8c"
+    },
+    "id": "ch06-ai-82c308cd-4fe-2",
+    "kind": "concept",
+    "options": [
+      {
+        "id": "A",
+        "text": "They let the database enforce foreign keys automatically."
+      },
+      {
+        "id": "B",
+        "text": "They let one table be referenced in more than one logical role within the same query."
+      },
+      {
+        "id": "C",
+        "text": "They replace the need for a primary key."
+      },
+      {
+        "id": "D",
+        "text": "They make recursive data unnecessary to store."
+      }
+    ],
+    "prompt": "Why are table aliases especially useful when querying a recursive relationship stored in a single table?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Aliases let a query treat one table as separate logical roles so a row can be matched to a related row in the same table.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Querying a recursive 1:m relationship",
+      "title": "One-to-One and Recursive Relationships",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#querying-a-recursive-1m-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 6,
+    "conceptIds": [
+      "ch06-recursive-query"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 3,
+    "explanation": "A recursive common table expression starts with the anchor row (dept_id 10) and then repeatedly adds rows whose parent points to a row already found, which is how you traverse all descendant levels. B only finds one level and is not recursive. C returns only direct children. D does not follow the hierarchy and includes unrelated rows.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:42.731Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "82c308cd-4feb-47f1-bf5c-75e646ce2e8c"
+    },
+    "id": "ch06-ai-82c308cd-4fe-3",
+    "kind": "sql-scenario",
+    "options": [
+      {
+        "id": "A",
+        "text": "WITH RECURSIVE dept_tree AS (\n  SELECT dept_id, dept_name, parent_dept_id\n  FROM Department\n  WHERE dept_id = 10\n  UNION ALL\n  SELECT d.dept_id, d.dept_name, d.parent_dept_id\n  FROM Department d\n  JOIN dept_tree t ON d.parent_dept_id = t.dept_id\n)\nSELECT * FROM dept_tree;"
+      },
+      {
+        "id": "B",
+        "text": "SELECT d.dept_id, d.dept_name, d.parent_dept_id\nFROM Department d\nJOIN Department p ON d.dept_id = p.parent_dept_id\nWHERE p.dept_id = 10;"
+      },
+      {
+        "id": "C",
+        "text": "SELECT dept_id, dept_name, parent_dept_id\nFROM Department\nWHERE parent_dept_id = 10;"
+      },
+      {
+        "id": "D",
+        "text": "SELECT dept_id, dept_name, parent_dept_id\nFROM Department\nWHERE dept_id = 10 OR parent_dept_id IS NOT NULL;"
+      }
+    ],
+    "prompt": "A table Department(dept_id, dept_name, parent_dept_id) stores a hierarchy of departments. parent_dept_id is NULL for the top department and otherwise points to another Department row.\n\nWhich MySQL query returns every department at any depth under the department with dept_id = 10, including dept_id 10 itself?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Recursive structures can be traversed by repeatedly following self-references, using suitable common table expressions where supported.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Querying a recursive 1:m relationship",
+      "title": "One-to-One and Recursive Relationships",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#querying-a-recursive-1m-relationship"
+    },
+    "status": "draft"
+  },
+  {
+    "chapter": 6,
+    "conceptIds": [
+      "ch06-recursive-query"
+    ],
+    "correctOptionId": "A",
+    "difficulty": 4,
+    "explanation": "The recursive SELECT joins the base result to Category again, using the self-reference to keep adding deeper descendants. That is what allows the query to walk through multiple levels of the hierarchy. It is not performing deduplication, sorting, or data modification.",
+    "generation": {
+      "generatedAt": "2026-08-13T16:01:42.731Z",
+      "model": "gpt-5.4-mini",
+      "promptVersion": "questions-v1",
+      "runId": "82c308cd-4feb-47f1-bf5c-75e646ce2e8c"
+    },
+    "id": "ch06-ai-82c308cd-4fe-4",
+    "kind": "sql-reading",
+    "options": [
+      {
+        "id": "A",
+        "text": "To repeatedly add rows whose parent points to a row already in the result so the hierarchy can be expanded beyond one level"
+      },
+      {
+        "id": "B",
+        "text": "To remove duplicate category names from the table before returning rows"
+      },
+      {
+        "id": "C",
+        "text": "To sort categories so that parents appear before children"
+      },
+      {
+        "id": "D",
+        "text": "To update each child row so that its parent_category_id becomes 7"
+      }
+    ],
+    "prompt": "Consider this MySQL query against a table Category(category_id, category_name, parent_category_id):\n\nWITH RECURSIVE cte AS (\n  SELECT category_id, category_name, parent_category_id\n  FROM Category\n  WHERE category_id = 7\n  UNION ALL\n  SELECT c.category_id, c.category_name, c.parent_category_id\n  FROM Category c\n  JOIN cte ON c.parent_category_id = cte.category_id\n)\nSELECT category_name\nFROM cte;\n\nWhat is the main purpose of the recursive part of this query?",
+    "provenance": "ai-generated",
+    "reviewConcept": "Recursive structures can be traversed by repeatedly following self-references, using suitable common table expressions where supported.",
+    "schemaVersion": 1,
+    "source": {
+      "section": "Querying a recursive 1:m relationship",
+      "title": "One-to-One and Recursive Relationships",
+      "url": "https://www.richardtwatson.com/open/Reader/_book/206-recursive.html#querying-a-recursive-1m-relationship"
+    },
+    "status": "draft"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "chapter": 7,
+  "conceptIds": [
+    "ch07-building-blocks"
+  ],
+  "correctOptionId": "A",
+  "difficulty": 1,
+  "explanation": "The basic vocabulary of data modeling includes entities, attributes, identifiers, and relationships. The other choices describe implementation tools or application features, not the modeling building blocks.",
+  "generation": {
+    "generatedAt": "2026-08-13T16:01:57.134Z",
+    "model": "gpt-5.4-mini",
+    "promptVersion": "questions-v1",
+    "runId": "c4212d19-5aeb-400c-a3af-9bb78faf9442"
+  },
+  "id": "ch07-ai-c4212d19-5ae-2",
+  "kind": "concept",
+  "options": [
+    {
+      "id": "A",
+      "text": "Entities, attributes, identifiers, and relationships"
+    },
+    {
+      "id": "B",
+      "text": "Forms, macros, triggers, and indexes"
+    },
+    {
+      "id": "C",
+      "text": "Servers, schemas, backups, and jobs"
+    },
+    {
+      "id": "D",
+      "text": "Reports, dashboards, alerts, and workflows"
+    }
+  ],
+  "prompt": "Which set contains the core building blocks used to describe a database design?",
+  "provenance": "ai-generated",
+  "reviewConcept": "Modeling building blocks",
+  "schemaVersion": 1,
+  "source": {
+    "section": "Data modeling",
+    "title": "Data Modeling",
+    "url": "https://www.richardtwatson.com/open/Reader/_book/207-datamodeling.html#data-modeling"
+  },
+  "status": "approved"
+}
