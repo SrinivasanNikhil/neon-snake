@@ -43,8 +43,10 @@ runtime schemas and route each player to `chapter:3` through `chapter:10`.
   and replace the browser's Socket.IO transport with a typed native WebSocket protocol.
 - [x] Add Worker/DO configuration, free-tier-conscious transition-only input, runtime integration
   tests, deployment dry-run checks, and a Cloudflare operations guide.
-- [ ] Connect the GitHub repository in Cloudflare, deploy to a `workers.dev` staging URL, and run the
-  documented two-browser gameplay and leaderboard smoke test.
+- [x] Deploy the verified `main` revision to the `workers.dev` staging URL and confirm the public
+  health route, lobby connection, chapter selection, gameplay, scoring, growth, and hazard countdown.
+- [ ] Connect the GitHub repository in Cloudflare for automatic deployments and run the documented
+  two-browser gameplay and leaderboard smoke test.
 
 ## Release gates
 
@@ -62,3 +64,5 @@ runtime schemas and route each player to `chapter:3` through `chapter:10`.
 - [x] Desktop/mobile browser smoke tests and a 24-client load smoke pass.
 - [x] Cloudflare health routing, WebSocket upgrade, Durable Object SQLite leaderboard access, and
   deploy bundle are covered by automated checks.
+- [x] The public Cloudflare deployment passes a live Chapter 10 browser smoke test without console
+  errors or warnings.

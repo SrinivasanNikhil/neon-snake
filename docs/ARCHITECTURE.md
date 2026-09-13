@@ -128,5 +128,6 @@ not survive an object restart.
 - One global Durable Object is intentionally the only simulation authority. Future scale-out would
   shard by classroom or chapter and requires an explicit cross-room leaderboard design.
 - A live run is in-memory and restarts at the lobby after a Durable Object restart or deployment.
-- The first Cloudflare staging deployment and classroom-sized usage observation are still pending.
+- The first Cloudflare staging deployment is live. Automatic GitHub deployment, the documented
+  two-browser leaderboard smoke, and classroom-sized usage observation are still pending.
 - The client bundle still triggers Vite's 500 KiB chunk warning.
