@@ -1,0 +1,6 @@
+# Neon Snake needs no runtime secrets for normal Cloudflare development.
+#
+# If a future Worker-only secret is required, add its name to the explicit
+# `secrets.required` list in wrangler.jsonc, copy this file to `.dev.vars`, and
+# keep the real value out of Git. Never add OPENAI_API_KEY: AI question
+# authoring remains an offline development workflow.

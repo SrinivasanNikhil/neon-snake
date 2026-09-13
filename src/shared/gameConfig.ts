@@ -27,7 +27,6 @@ export const GAME_CONFIG = {
   hazardSpawnAttempts: 12,
   simulationRate: 60,
   snapshotRate: 20,
-  inputRate: 30,
 } as const;
 
 export const CHAPTER_IDS = [3, 4, 5, 6, 7, 8, 9, 10] as const;

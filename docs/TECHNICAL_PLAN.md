@@ -39,7 +39,12 @@ runtime schemas and route each player to `chapter:3` through `chapter:10`.
   unmistakable warning markers, protect joins and quiz resumes, and report the correct death reason.
 - [x] Package one bundled Node replica in a non-root container with a `/data` volume and add a
   repeatable multi-client load smoke.
-- [ ] Deploy the image to staging with durable storage and exercise backup/restore there.
+- [x] Port the supported runtime to Cloudflare Static Assets plus one SQLite-backed Durable Object,
+  and replace the browser's Socket.IO transport with a typed native WebSocket protocol.
+- [x] Add Worker/DO configuration, free-tier-conscious transition-only input, runtime integration
+  tests, deployment dry-run checks, and a Cloudflare operations guide.
+- [ ] Connect the GitHub repository in Cloudflare, deploy to a `workers.dev` staging URL, and run the
+  documented two-browser gameplay and leaderboard smoke test.
 
 ## Release gates
 
@@ -55,3 +60,5 @@ runtime schemas and route each player to `chapter:3` through `chapter:10`.
 - [x] Weekly score repository tests cover persistence rules and Monday UTC rollover.
 - [x] Production assets contain no OpenAI key or runtime OpenAI dependency path.
 - [x] Desktop/mobile browser smoke tests and a 24-client load smoke pass.
+- [x] Cloudflare health routing, WebSocket upgrade, Durable Object SQLite leaderboard access, and
+  deploy bundle are covered by automated checks.

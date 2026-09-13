@@ -227,24 +227,25 @@ export function GameScene() {
   const playerId = useGameStore((state) => state.playerId);
   const sendInput = useGameStore((state) => state.sendInput);
   const { camera } = useThree();
-  const lastInputSend = useRef(0);
   const lightRef = useRef<THREE.DirectionalLight>(null);
   const [lightTarget] = useState(() => new THREE.Object3D());
 
   const renderedPlayer = playerId && gameState ? gameState.players[playerId] : undefined;
   useKeyboardControls({ enabled: renderedPlayer?.state === 'alive', controller: gameInput });
 
-  useFrame((renderState, delta) => {
+  useEffect(() => {
+    if (renderedPlayer?.state !== 'alive') return undefined;
+
+    // The server holds the most recently received control state, so unchanged
+    // input does not need a 30 Hz network heartbeat. Sending only transitions
+    // keeps classroom usage comfortably inside Cloudflare's request allowance.
+    sendInput(gameInput.getSnapshot());
+    return gameInput.subscribe(sendInput);
+  }, [renderedPlayer?.runId, renderedPlayer?.state, sendInput]);
+
+  useFrame((_, delta) => {
     const player = playerId ? globalGameState.current?.players[playerId] : undefined;
     if (!player) return;
-
-    if (player.state === 'alive') {
-      const elapsed = renderState.clock.elapsedTime;
-      if (elapsed - lastInputSend.current >= 1 / GAME_CONFIG.inputRate) {
-        sendInput(gameInput.getSnapshot());
-        lastInputSend.current = elapsed;
-      }
-    }
 
     const head = player.segments[0];
     if (!head) return;

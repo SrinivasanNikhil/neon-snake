@@ -4,7 +4,7 @@
  */
 
 import { create } from 'zustand';
-import { io, type Socket } from 'socket.io-client';
+import { createGameSocket, type GameSocket } from '../client/realtime';
 import {
   applyQuizResult as applyProfileQuizResult,
   applyRunResult,
@@ -15,12 +15,7 @@ import {
   type BrowserProfile,
   updateProfilePreferences,
 } from '../profile';
-import type {
-  ClientToServerEvents,
-  QuizQuestionPayload,
-  QuizResultPayload,
-  ServerToClientEvents,
-} from '../shared/protocol';
+import type { QuizQuestionPayload, QuizResultPayload } from '../shared/protocol';
 import type {
   ArenaSnapshot,
   ChapterId,
@@ -30,8 +25,6 @@ import type {
 } from '../shared/types';
 
 type ConnectionState = 'connecting' | 'connected' | 'disconnected' | 'error';
-type GameSocket = Socket<ServerToClientEvents, ClientToServerEvents>;
-
 interface GameStore {
   socket: GameSocket | null;
   gameState: ArenaSnapshot | null;
@@ -84,7 +77,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
     if (get().socket) return;
 
     set({ connectionState: 'connecting', connectionError: null });
-    const socket: GameSocket = io();
+    const socket = createGameSocket();
 
     socket.on('connect', () => {
       const leaderboardChapter = get().leaderboardChapter;
@@ -109,7 +102,11 @@ export const useGameStore = create<GameStore>((set, get) => ({
         connectionState: 'disconnected',
         gameState: null,
         playerId: null,
+        chapter: null,
         leaderboardLoading: false,
+        isQuizOpen: false,
+        currentQuestion: null,
+        quizResult: null,
       });
     });
 
